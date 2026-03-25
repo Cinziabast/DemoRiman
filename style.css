@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding-top: 125px;
   font-family: "Inter", sans-serif;
-  background: var(--bg);
+  background: linear-gradient(180deg, #f6f3ee 0%, #eef2ec 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -48,11 +48,12 @@ video {
 /* HEADER */
 .header {
   width: 100%;
-  background: #f6f3ee;
+  background: rgba(246, 243, 238, 0.96);
   position: fixed;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
+  backdrop-filter: blur(8px);
 }
 
 .header-container {
@@ -60,6 +61,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
@@ -71,6 +73,7 @@ video {
 .menu {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 .menu a {
@@ -78,6 +81,31 @@ video {
   color: #233127;
   font-weight: 500;
   font-size: 16px;
+}
+
+.menu a:hover {
+  color: var(--olive);
+}
+
+.lang-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-flag {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-flag:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
 }
 
 /* HERO */
@@ -196,7 +224,7 @@ h3 {
 }
 
 .section-soft {
-  background: var(--bg-soft);
+  background: rgba(238, 242, 236, 0.75);
 }
 
 .center-intro {
@@ -453,7 +481,7 @@ h3 {
   }
 
   body {
-    padding-top: 150px;
+    padding-top: 160px;
   }
 
   .header-container {
