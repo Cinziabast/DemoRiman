@@ -15,7 +15,6 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-container">
     <img src="logoriman.webp" class="logo" alt="Logo RIMAN">
@@ -30,13 +29,12 @@
     </nav>
 
     <div class="lang-switch">
-      <img src="banderaes.png" class="lang-flag" onclick="setLanguage('es')">
-      <img src="banderain.png" class="lang-flag" onclick="setLanguage('en')">
+      <img src="banderaes.png" alt="Español" class="lang-flag" onclick="setLanguage('es')">
+      <img src="banderain.png" alt="English" class="lang-flag" onclick="setLanguage('en')">
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy" data-aos="fade-up">
@@ -55,15 +53,15 @@
 
     <div class="hero-visual" data-aos="fade-left">
       <div class="visual-frame">
-        <img src="firas.png" class="hero-img">
+        <img src="firas.png" class="hero-img" alt="Imagen principal skincare">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section section-soft">
   <div class="container about-grid">
+
     <div class="about-text" data-aos="fade-right">
       <p class="section-tag" id="about-tag">Sobre nosotros</p>
       <h2 id="about-title">Asesoría personalizada con una imagen más premium</h2>
@@ -78,21 +76,20 @@
     </div>
 
     <div class="about-image" data-aos="fade-left">
-      <img src="productos1.png">
+      <img src="productos1.png" alt="Imagen skincare natural">
     </div>
+
   </div>
 </section>
 
-<!-- BONO -->
 <section id="gift" class="section">
   <div class="container">
     <div class="gift-panel" data-aos="zoom-in">
-      <img src="bono.png" id="gift-image" class="bono-img">
+      <img src="bono.png" id="gift-image" class="bono-img" alt="Bono regalo RIMAN">
     </div>
   </div>
 </section>
 
-<!-- FORMULARIO -->
 <section id="register" class="section section-dark">
   <div class="container">
     <div class="center-intro" data-aos="fade-up">
@@ -131,26 +128,25 @@
 
           <div class="socios">
             <label class="socio-card">
-              <input type="radio" name="socio">
-              <img src="socio1.png">
+              <input type="radio" name="socio" value="socio1">
+              <img src="socio1.png" alt="Socio 1">
               <span id="socio-1-text">Socio 1</span>
             </label>
 
             <label class="socio-card">
-              <input type="radio" name="socio">
-              <img src="socio2.png">
+              <input type="radio" name="socio" value="socio2">
+              <img src="socio2.png" alt="Socio 2">
               <span id="socio-2-text">Socio 2</span>
             </label>
           </div>
         </div>
 
-        <button class="btn btn-gold" id="form-button">Obtener acceso</button>
+        <button type="button" class="btn btn-gold" id="form-button">Obtener acceso</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTOS -->
 <section id="products" class="section section-soft">
   <div class="container">
     <div class="center-intro" data-aos="fade-up">
@@ -163,19 +159,19 @@
 
     <div class="product-grid">
       <article class="product-item" data-aos="fade-up" data-aos-duration="1600">
-        <img src="productos1.png" class="product-img">
+        <img src="productos1.png" class="product-img" alt="Producto 1">
         <h3 id="product-1-title">Línea Skincare</h3>
         <p id="product-1-text">Cuidado facial premium para una rutina más completa.</p>
       </article>
 
       <article class="product-item" data-aos="fade-right" data-aos-duration="1700">
-        <img src="productos2.png" class="product-img">
+        <img src="productos2.png" class="product-img" alt="Producto 2">
         <h3 id="product-2-title">Protección solar</h3>
         <p id="product-2-text">Protección e hidratación con un acabado suave.</p>
       </article>
 
       <article class="product-item" data-aos="fade-left" data-aos-duration="1700">
-        <img src="productos1.png" class="product-img">
+        <img src="productos1.png" class="product-img" alt="Producto 3">
         <h3 id="product-3-title">Rutina facial</h3>
         <p id="product-3-text">Productos elegidos para una piel luminosa.</p>
       </article>
@@ -183,7 +179,6 @@
   </div>
 </section>
 
-<!-- VIDEOS -->
 <section id="videos" class="section">
   <div class="container">
     <div class="center-intro" data-aos="fade-up">
@@ -193,13 +188,13 @@
 
     <div class="video-grid two-videos">
       <div class="video-item" data-aos="fade-up" data-aos-duration="1600">
-        <video class="video-real" controls autoplay muted loop>
+        <video class="video-real" controls autoplay muted loop playsinline>
           <source src="video1.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="video-item" data-aos="fade-up" data-aos-duration="1700">
-        <video class="video-real" controls autoplay muted loop>
+        <video class="video-real" controls autoplay muted loop playsinline>
           <source src="video2.mp4" type="video/mp4">
         </video>
       </div>
@@ -207,7 +202,6 @@
   </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contact" class="section section-dark">
   <div class="container">
     <div class="center-intro" data-aos="fade-up">
@@ -232,34 +226,177 @@ AOS.init({
   offset: 80
 });
 
+const translations = {
+  es: {
+    menuAbout: "Nosotros",
+    menuGift: "Bono",
+    menuRegister: "Registro",
+    menuProducts: "Productos",
+    menuVideos: "Vídeos",
+    menuContact: "Contacto",
+
+    heroEyebrow: "SKINCARE PREMIUM · BIENESTAR · BELLEZA",
+    heroTitle: "Descubre una experiencia elegante de cuidado con RIMAN",
+    heroText: "Una landing pensada para presentar vuestra imagen, captar registros, ofrecer un bono de bienvenida y guiar a cada persona hacia su asesor RIMAN.",
+    heroBtn1: "Registrarme",
+    heroBtn2: "Ver productos",
+
+    aboutTag: "Sobre nosotros",
+    aboutTitle: "Asesoría personalizada con una imagen más premium",
+    aboutText1: "Ayudamos a cada persona a encontrar los productos adecuados para su piel, creando rutinas personalizadas y ofreciendo asesoría individual.",
+    aboutText2: "Nuestro objetivo es que cada cliente tenga una experiencia más cuidada, cercana y premium con la cosmética coreana RIMAN.",
+
+    registerTag: "Registro",
+    registerTitle: "Obtén acceso y elige tu persona RIMAN",
+    labelName: "Nombre",
+    labelEmail: "Email",
+    labelCity: "Ciudad",
+    labelPhone: "Teléfono",
+    labelPerson: "Elige tu persona RIMAN",
+    inputName: "Tu nombre",
+    inputEmail: "Tu email",
+    inputCity: "Tu ciudad",
+    inputPhone: "Tu teléfono",
+    socio1: "Socio 1",
+    socio2: "Socio 2",
+    formButton: "Obtener acceso",
+
+    productsTag: "Productos destacados",
+    productsTitle: "Descubre algunos de nuestros favoritos",
+    productsText: "Una selección de productos pensados para una experiencia de cuidado más elegante y premium.",
+    product1Title: "Línea Skincare",
+    product1Text: "Cuidado facial premium para una rutina más completa.",
+    product2Title: "Protección solar",
+    product2Text: "Protección e hidratación con un acabado suave.",
+    product3Title: "Rutina facial",
+    product3Text: "Productos elegidos para una piel luminosa.",
+
+    videosTag: "Vídeos",
+    videosTitle: "Contenido visual",
+
+    contactTag: "Contacto",
+    contactTitle: "Estamos aquí para ayudarte",
+
+    footerLeft: "Demo landing RIMAN",
+    footerRight: "CB Marketing & Design",
+
+    giftAlt: "Bono regalo RIMAN"
+  },
+
+  en: {
+    menuAbout: "About",
+    menuGift: "Gift",
+    menuRegister: "Register",
+    menuProducts: "Products",
+    menuVideos: "Videos",
+    menuContact: "Contact",
+
+    heroEyebrow: "PREMIUM SKINCARE · WELLNESS · BEAUTY",
+    heroTitle: "Discover an elegant skincare experience with RIMAN",
+    heroText: "A landing page designed to present your image, capture leads, offer a welcome gift and guide each person to their RIMAN advisor.",
+    heroBtn1: "Register",
+    heroBtn2: "View products",
+
+    aboutTag: "About us",
+    aboutTitle: "Personalized guidance with a more premium image",
+    aboutText1: "We help each person find the right products for their skin by creating personalized routines and offering individual guidance.",
+    aboutText2: "Our goal is for every client to enjoy a more careful, close and premium experience with Korean cosmetics from RIMAN.",
+
+    registerTag: "Register",
+    registerTitle: "Get access and choose your RIMAN advisor",
+    labelName: "Name",
+    labelEmail: "Email",
+    labelCity: "City",
+    labelPhone: "Phone",
+    labelPerson: "Choose your RIMAN advisor",
+    inputName: "Your name",
+    inputEmail: "Your email",
+    inputCity: "Your city",
+    inputPhone: "Your phone",
+    socio1: "Advisor 1",
+    socio2: "Advisor 2",
+    formButton: "Get access",
+
+    productsTag: "Featured products",
+    productsTitle: "Discover some of our favorites",
+    productsText: "A selection of products designed for a more elegant and premium skincare experience.",
+    product1Title: "Skincare line",
+    product1Text: "Premium facial care for a more complete routine.",
+    product2Title: "Sun protection",
+    product2Text: "Protection and hydration with a soft finish.",
+    product3Title: "Facial routine",
+    product3Text: "Products chosen for radiant skin.",
+
+    videosTag: "Videos",
+    videosTitle: "Visual content",
+
+    contactTag: "Contact",
+    contactTitle: "We are here to help you",
+
+    footerLeft: "RIMAN landing demo",
+    footerRight: "CB Marketing & Design",
+
+    giftAlt: "RIMAN gift voucher"
+  }
+};
+
 function setLanguage(lang) {
+  document.documentElement.lang = lang;
 
-  if(lang === "en"){
-    document.getElementById("hero-title").innerText = "Discover an elegant skincare experience with RIMAN";
-    document.getElementById("hero-text").innerText = "A landing page designed to present your image, capture leads and offer a welcome gift.";
-    document.getElementById("about-tag").innerText = "About us";
-    document.getElementById("register-title").innerText = "Get access and choose your RIMAN advisor";
-    document.getElementById("products-tag").innerText = "Featured products";
-    document.getElementById("videos-tag").innerText = "Videos";
-    document.getElementById("contact-tag").innerText = "Contact";
-    document.getElementById("form-button").innerText = "Get access";
+  document.getElementById("menu-about").innerText = translations[lang].menuAbout;
+  document.getElementById("menu-gift").innerText = translations[lang].menuGift;
+  document.getElementById("menu-register").innerText = translations[lang].menuRegister;
+  document.getElementById("menu-products").innerText = translations[lang].menuProducts;
+  document.getElementById("menu-videos").innerText = translations[lang].menuVideos;
+  document.getElementById("menu-contact").innerText = translations[lang].menuContact;
 
-    document.getElementById("gift-image").src = "bonoen.png";
-  }
+  document.getElementById("hero-eyebrow").innerText = translations[lang].heroEyebrow;
+  document.getElementById("hero-title").innerText = translations[lang].heroTitle;
+  document.getElementById("hero-text").innerText = translations[lang].heroText;
+  document.getElementById("hero-btn-1").innerText = translations[lang].heroBtn1;
+  document.getElementById("hero-btn-2").innerText = translations[lang].heroBtn2;
 
-  if(lang === "es"){
-    document.getElementById("hero-title").innerText = "Descubre una experiencia elegante de cuidado con RIMAN";
-    document.getElementById("hero-text").innerText = "Una landing pensada para presentar vuestra imagen, captar registros y ofrecer un bono de bienvenida.";
-    document.getElementById("about-tag").innerText = "Sobre nosotros";
-    document.getElementById("register-title").innerText = "Obtén acceso y elige tu persona RIMAN";
-    document.getElementById("products-tag").innerText = "Productos destacados";
-    document.getElementById("videos-tag").innerText = "Vídeos";
-    document.getElementById("contact-tag").innerText = "Contacto";
-    document.getElementById("form-button").innerText = "Obtener acceso";
+  document.getElementById("about-tag").innerText = translations[lang].aboutTag;
+  document.getElementById("about-title").innerText = translations[lang].aboutTitle;
+  document.getElementById("about-text-1").innerText = translations[lang].aboutText1;
+  document.getElementById("about-text-2").innerText = translations[lang].aboutText2;
 
-    document.getElementById("gift-image").src = "bono.png";
-  }
+  document.getElementById("register-tag").innerText = translations[lang].registerTag;
+  document.getElementById("register-title").innerText = translations[lang].registerTitle;
+  document.getElementById("label-name").innerText = translations[lang].labelName;
+  document.getElementById("label-email").innerText = translations[lang].labelEmail;
+  document.getElementById("label-city").innerText = translations[lang].labelCity;
+  document.getElementById("label-phone").innerText = translations[lang].labelPhone;
+  document.getElementById("label-person").innerText = translations[lang].labelPerson;
+  document.getElementById("input-name").placeholder = translations[lang].inputName;
+  document.getElementById("input-email").placeholder = translations[lang].inputEmail;
+  document.getElementById("input-city").placeholder = translations[lang].inputCity;
+  document.getElementById("input-phone").placeholder = translations[lang].inputPhone;
+  document.getElementById("socio-1-text").innerText = translations[lang].socio1;
+  document.getElementById("socio-2-text").innerText = translations[lang].socio2;
+  document.getElementById("form-button").innerText = translations[lang].formButton;
 
+  document.getElementById("products-tag").innerText = translations[lang].productsTag;
+  document.getElementById("products-title").innerText = translations[lang].productsTitle;
+  document.getElementById("products-text").innerText = translations[lang].productsText;
+  document.getElementById("product-1-title").innerText = translations[lang].product1Title;
+  document.getElementById("product-1-text").innerText = translations[lang].product1Text;
+  document.getElementById("product-2-title").innerText = translations[lang].product2Title;
+  document.getElementById("product-2-text").innerText = translations[lang].product2Text;
+  document.getElementById("product-3-title").innerText = translations[lang].product3Title;
+  document.getElementById("product-3-text").innerText = translations[lang].product3Text;
+
+  document.getElementById("videos-tag").innerText = translations[lang].videosTag;
+  document.getElementById("videos-title").innerText = translations[lang].videosTitle;
+
+  document.getElementById("contact-tag").innerText = translations[lang].contactTag;
+  document.getElementById("contact-title").innerText = translations[lang].contactTitle;
+
+  document.getElementById("footer-left").innerText = translations[lang].footerLeft;
+  document.getElementById("footer-right").innerText = translations[lang].footerRight;
+
+  document.getElementById("gift-image").src = lang === "en" ? "bonoen.png" : "bono.png";
+  document.getElementById("gift-image").alt = translations[lang].giftAlt;
 }
 </script>
 
