@@ -1,120 +1,192 @@
-:root {
-    --verde-claro: #e6eadf;
-    --beige: #c7ab8a;
-    --gris-claro: #e9e9e9;
-    --negro: #111111;
-    --verde-oscuro: #3f5a50;
-    --dorado: #c9a86a;
-}
-
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* BODY */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-}
-
-/* SECCIONES */
-.section {
-    padding: 80px 10%;
-}
-
-.hero {
-    background-color: var(--verde-claro);
-}
-
-.beneficios {
-    background-color: var(--beige);
-}
-
-.invitacion {
-    background-color: var(--gris-claro);
-}
-
-.glowleaders {
-    background-color: var(--verde-claro);
-}
-
-.productos {
-    background-color: var(--gris-claro);
-}
-
-.experiencia {
-    background-color: var(--negro);
-    color: white;
-}
-
-.formulario {
-    background-color: var(--verde-oscuro);
-    color: white;
-}
-
-.footer {
-    background-color: var(--verde-oscuro);
-    color: white;
-    text-align: center;
-    padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
 }
 
 /* TITULOS */
-h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #8c6a2b;
 }
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+/* SECCIONES */
+section {
+  padding: 80px 20px;
+  width: 100%;
 }
 
-p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+.container {
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* BOTONES */
 .btn {
-    background-color: var(--beige);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #c9a96e;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
 }
 
 .btn:hover {
-    background-color: var(--verde-oscuro);
+  background-color: #b8965d;
 }
 
-/* LINEA DORADA */
-.linea-dorada {
-    width: 80px;
-    height: 2px;
-    background-color: var(--dorado);
-    margin: 20px 0;
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
 }
 
-/* GRID */
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 30px;
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c9a96e;
 }
 
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 30px;
+/* HERO BANNER */
+.hero-banner {
+  background-image: url("banner.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-img {
-    width: 100%;
-    border-radius: 15px;
+.hero-overlay {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 60px;
+}
+
+.hero-overlay p {
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+/* VIDEO */
+.video-section {
+  text-align: center;
+  background-color: #f9f7f3;
+}
+
+.video-section video {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  text-align: center;
+}
+
+.beneficios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  width: 250px;
+}
+
+.beneficio img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* PRODUCTOS */
+.productos {
+  background-color: #f9f7f3;
+  text-align: center;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.producto img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+/* TESTIMONIOS */
+.testimonios {
+  text-align: center;
+}
+
+.testimonio {
+  max-width: 600px;
+  margin: 20px auto;
+  font-style: italic;
+}
+
+/* FORMULARIO */
+.formulario {
+  background-color: #f9f7f3;
+  text-align: center;
+}
+
+.formulario form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #8c6a2b;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
 }
