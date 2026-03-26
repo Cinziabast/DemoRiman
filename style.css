@@ -176,6 +176,8 @@ ul {
 .btn-nav {
   padding: 10px 20px;
   font-size: 0.82rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--white);
 }
 
 .btn-whatsapp {
@@ -245,8 +247,7 @@ ul {
    SECCIÓN 1
 ========================= */
 .section-hero-content {
-  background:
-    linear-gradient(to bottom, rgba(231, 228, 207, 0.55), rgba(250, 248, 243, 1));
+  background: linear-gradient(to bottom, rgba(231, 228, 207, 0.55), rgba(250, 248, 243, 1));
 }
 
 .video-wrapper {
@@ -314,9 +315,8 @@ ul {
 }
 
 /* =========================
-   SECCION BONO
+   BONO
 ========================= */
-
 .section-bono {
   background: #faf8f3;
 }
@@ -350,18 +350,17 @@ ul {
 
 .bono-content h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 48px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
   color: #6d5428;
   margin-bottom: 15px;
 }
 
 .bono-text {
-  font-size: 18px;
+  font-size: 1.05rem;
   color: #444;
   margin-bottom: 20px;
 }
 
-/* Lista */
 .custom-list {
   display: flex;
   flex-direction: column;
@@ -372,7 +371,7 @@ ul {
 .custom-list li {
   position: relative;
   padding-left: 30px;
-  font-size: 17px;
+  font-size: 1.05rem;
   color: #425e54;
   font-weight: 500;
 }
@@ -385,7 +384,6 @@ ul {
   font-size: 18px;
 }
 
-/* BOTON RESERVA */
 .bono-btn {
   margin-top: 30px;
   display: inline-block;
@@ -484,12 +482,42 @@ ul {
 ========================= */
 .section-products {
   background: var(--cream);
+  padding: 90px 0;
+}
+
+.products-block {
+  margin-top: 20px;
+}
+
+.products-block + .products-block {
+  margin-top: 70px;
+}
+
+.products-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  color: #5c4923;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.products-subtitle::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background: var(--gold);
+  margin: 12px auto 0;
 }
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+
+.products-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .product-card {
@@ -507,16 +535,18 @@ ul {
 
 .product-card img {
   width: 100%;
-  height: 260px;
+  height: 280px;
   object-fit: cover;
+  display: block;
 }
 
 .product-content {
   padding: 22px 18px 24px;
+  text-align: center;
 }
 
-.product-content h3 {
-  font-size: 1.15rem;
+.product-content h4 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
   color: #5c4923;
   font-family: 'Cormorant Garamond', serif;
@@ -525,6 +555,7 @@ ul {
 .product-content p {
   font-size: 0.96rem;
   color: #505050;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -532,6 +563,7 @@ ul {
 ========================= */
 .section-experience {
   background: var(--light-gray);
+  padding: 90px 0;
 }
 
 .experience-grid {
@@ -552,14 +584,14 @@ ul {
   width: 100%;
   height: 310px;
   object-fit: cover;
+  display: block;
 }
 
 /* =========================
    FORMULARIO
 ========================= */
 .section-form {
-  background:
-    linear-gradient(180deg, rgba(204, 184, 159, 0.32), rgba(250, 248, 243, 1));
+  background: linear-gradient(180deg, rgba(204, 184, 159, 0.32), rgba(250, 248, 243, 1));
 }
 
 .form-box {
@@ -710,19 +742,8 @@ ul {
    RESPONSIVE
 ========================= */
 @media (max-width: 1100px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .bono-layout {
     grid-template-columns: 1fr;
-  }
-
-  .bono-btn {
-    position: static;
-    transform: none;
-    margin: 20px auto 0;
-    display: inline-flex;
   }
 
   .team-card-center {
@@ -736,13 +757,10 @@ ul {
   }
 
   .benefits-grid,
-  .experience-grid,
   .team-grid,
+  .products-grid-3,
+  .experience-grid,
   .advisor-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .products-grid {
     grid-template-columns: 1fr;
   }
 
@@ -753,7 +771,8 @@ ul {
   .benefit-card img,
   .team-card img,
   .experience-card img,
-  .advisor-option img {
+  .advisor-option img,
+  .product-card img {
     height: auto;
   }
 
