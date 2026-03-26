@@ -129,6 +129,20 @@ ul {
 }
 
 /* =========================
+   REVEAL ANIMATION
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
    BOTONES
 ========================= */
 .btn {
@@ -165,7 +179,7 @@ ul {
   text-align: center;
 }
 
-.btn-large span {
+.btn-large span:last-child {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -177,7 +191,7 @@ ul {
   padding: 10px 20px;
   font-size: 0.82rem;
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .btn-whatsapp {
@@ -215,6 +229,43 @@ ul {
   width: 110px;
   height: auto;
   object-fit: contain;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(199, 168, 109, 0.4);
+  background: var(--white);
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--gold);
 }
 
 .nav {
@@ -332,7 +383,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 .bono-image-box {
@@ -348,6 +398,28 @@ ul {
   width: 100%;
   border-radius: 18px;
   display: block;
+}
+
+.bono-btn {
+  margin-top: 24px;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(135deg, #c7a86d, #9e7e43);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(158, 126, 67, 0.35);
+  transition: 0.3s;
+  transform: translateX(40px);
+}
+
+.bono-btn:hover {
+  transform: translateX(40px) translateY(-2px);
+  box-shadow: 0 14px 30px rgba(158, 126, 67, 0.45);
 }
 
 .bono-content {
@@ -390,46 +462,6 @@ ul {
   left: 0;
   color: #c7a86d;
   font-size: 18px;
-}
-
-.bono-btn {
-  margin-top: 24px;
-  display: inline-block;
-  text-align: center;
-  background: linear-gradient(135deg, #c7a86d, #9e7e43);
-  color: white;
-  padding: 15px 35px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(158, 126, 67, 0.35);
-  transition: 0.3s;
-
-  /* mover un poco a la derecha */
-  transform: translateX(40px);
-}
-
-.bono-btn {
-  margin-top: 24px;
-  display: inline-block;
-  text-align: center;
-  background: linear-gradient(135deg, #c7a86d, #9e7e43);
-  color: white;
-  padding: 15px 35px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(158, 126, 67, 0.35);
-  transition: 0.3s;
-}
-
-.bono-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(158, 126, 67, 0.45);
 }
 
 /* =========================
@@ -522,20 +554,23 @@ ul {
 
 .products-subtitle {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
   color: #5c4923;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
   position: relative;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .products-subtitle::after {
   content: "";
   display: block;
-  width: 70px;
+  width: 80px;
   height: 1px;
   background: var(--gold);
-  margin: 12px auto 0;
+  margin: 14px auto 0;
 }
 
 .products-grid {
@@ -553,11 +588,12 @@ ul {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
 }
 
 .product-card img {
@@ -773,12 +809,32 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .bono-btn {
+    transform: none;
+  }
+
+  .bono-btn:hover {
+    transform: translateY(-2px);
+  }
+
   .team-card-center {
     transform: translateY(-20px);
   }
 }
 
 @media (max-width: 860px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
   .nav {
     display: none;
   }
@@ -821,16 +877,13 @@ ul {
 }
 
 @media (max-width: 560px) {
-  .header-container {
-    min-height: 72px;
-  }
-
   .logo-riman {
     width: 90px;
   }
 
   .btn,
-  .btn-large {
+  .btn-large,
+  .bono-btn {
     width: 100%;
   }
 
@@ -838,5 +891,9 @@ ul {
   .section-heading h2,
   .final-title {
     line-height: 1.12;
+  }
+
+  .language-switcher {
+    justify-content: center;
   }
 }
