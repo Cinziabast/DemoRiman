@@ -1,124 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Glow Leaders - RIMAN</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Leaders | Ritual Coreano</title>
+  <meta name="description" content="Descubre el ritual coreano que transforma tu piel. Vive una experiencia exclusiva de skincare con Glow Leaders." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<section class="hero-banner">
-  <div class="hero-overlay">
-    <h1>Glow Leaders</h1>
-    <p>Discover the Korean Skincare Ritual</p>
-    <a href="#registro" class="btn">Quiero mi experiencia gratuita</a>
-  </div>
-</section>
-<!-- HERO -->
-<section class="section hero">
-    <h1>Descubre el ritual coreano que transforma tu piel</h1>
 
-    <video width="100%" controls>
-        <source src="video/riman.mp4" type="video/mp4">
-    </video>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#top" class="logo-link">
+        <img src="logoriman.webp" alt="Logo Riman" class="logo-riman" />
+      </a>
 
-    <p>
-        Una experiencia exclusiva de skincare donde aprenderás a cuidar tu piel
-        de forma real, simple y efectiva.
-    </p>
-
-    <button class="btn">Quiero mi experiencia gratuita</button>
-    <p>Incluye vale para dos personas</p>
-</section>
-
-
-<!-- BENEFICIOS -->
-<section class="section beneficios">
-    <div class="grid-3">
-        <img src="img/producto1.jpg">
-        <img src="img/producto2.jpg">
-        <img src="img/producto3.jpg">
+      <nav class="nav">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#equipo">Glow Leaders</a>
+        <a href="#productos">Best Sellers</a>
+        <a href="#reserva" class="btn btn-nav">Reservar</a>
+      </nav>
     </div>
+  </header>
 
-    <h2>No es solo skincare, es una nueva forma de cuidarte</h2>
-</section>
+  <!-- HERO BANNER -->
+  <section class="hero-banner" id="top">
+    <img src="bannerglow.jpg" alt="Glow Leaders Banner" class="hero-banner-img" />
+  </section>
 
+  <!-- SECCIÓN 1 -->
+  <section class="section section-hero-content">
+    <div class="container center-content">
+      <p class="section-label">Ritual coreano · Experiencia exclusiva</p>
 
-<!-- INVITACION -->
-<section class="section invitacion">
-    <h2>Tu invitación exclusiva</h2>
+      <h1 class="main-title">
+        DESCUBRE EL RITUAL COREANO QUE TRANSFORMA TU PIEL
+      </h1>
 
-    <img src="img/vale.jpg">
+      <div class="video-wrapper">
+        <video controls playsinline preload="metadata" class="hero-video">
+          <source src="videobanner.mp4" type="video/mp4" />
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
 
-    <p>
-        Al registrarte recibirás un vale para 2 personas para vivir un ritual
-        completo de skincare coreano totalmente gratis.
-    </p>
+      <p class="hero-text">
+        UNA EXPERIENCIA EXCLUSIVA DE SKINCARE DONDE APRENDERÁS A CUIDAR TU PIEL DE FORMA REAL, SIMPLE Y EFECTIVA.
+      </p>
 
-    <ul>
-        <li>Diagnóstico de piel</li>
-        <li>Ritual 7 pasos</li>
-        <li>Asesoría personalizada</li>
-        <li>Networking experience</li>
-    </ul>
-</section>
-
-
-<!-- GLOW LEADERS -->
-<section class="section glowleaders">
-    <h2>Glow Leaders</h2>
-
-    <div class="grid-3">
-        <img src="img/socio1.jpg">
-        <img src="img/socio2.jpg">
-        <img src="img/socio3.jpg">
+      <a href="#reserva" class="btn btn-primary btn-large">
+        QUIERO MI EXPERIENCIA GRATUITA
+        <span>INCLUYE VALE PARA DOS PERSONAS</span>
+      </a>
     </div>
+  </section>
 
-    <p>
-        Un equipo de líderes apasionado por el cuidado personal,
-        la belleza y el crecimiento.
-    </p>
+  <!-- SECCIÓN 2 BENEFICIOS -->
+  <section class="section section-benefits" id="beneficios">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Beneficios</p>
+        <h2>¿Qué vivirás en esta experiencia?</h2>
+      </div>
 
-    <h2>No vendemos productos, creamos hábitos</h2>
-</section>
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <img src="beneficio1.jpg" alt="Piel más luminosa y cuidada" />
+          <h3>PIEL MÁS LUMINOSA Y CUIDADA</h3>
+        </article>
 
+        <article class="benefit-card">
+          <img src="beneficio2.jpg" alt="Rutina personalizada" />
+          <h3>RUTINA PERSONALIZADA</h3>
+        </article>
 
-<!-- PRODUCTOS -->
-<section class="section productos">
-    <h2>Nuestros esenciales</h2>
+        <article class="benefit-card">
+          <img src="beneficio3.jpg" alt="Experiencia guiada paso a paso" />
+          <h3>EXPERIENCIA GUIADA PASO A PASO</h3>
+        </article>
+      </div>
 
-    <div class="grid-4">
-        <img src="img/producto1.jpg">
-        <img src="img/producto2.jpg">
-        <img src="img/producto3.jpg">
-        <img src="img/producto4.jpg">
+      <p class="section-highlight">
+        NO ES SOLO SKINCARE, ES UNA NUEVA FORMA DE CUIDARTE
+      </p>
     </div>
-</section>
+  </section>
 
+  <!-- SECCIÓN 3 BONO -->
+  <section class="section section-bono">
+    <div class="container bono-layout">
+      <div class="bono-image-box">
+        <img src="bono.jpg" alt="Bono Glow Leaders" class="bono-img" />
+        <a href="#reserva" class="btn btn-primary bono-btn">RESERVA MI PLAZA</a>
+      </div>
 
-<!-- EXPERIENCIA -->
-<section class="section experiencia">
-    <h2>Experiencia RIMAN</h2>
-    <p>Momentos reales, resultados reales</p>
-    <h2>No es solo skincare, es un ritual</h2>
-</section>
+      <div class="bono-content">
+        <p class="section-label">Tu invitación</p>
+        <h2>Tu experiencia gratuita empieza aquí</h2>
 
+        <p class="bono-text">
+          Al registrarte recibirás un vale para dos personas para vivir un ritual completo de skincare coreano totalmente GRATIS.
+        </p>
 
-<!-- FORMULARIO -->
-<section class="section formulario">
-    <h2>Reserva tu experiencia</h2>
+        <ul class="custom-list">
+          <li>Diagnóstico de la piel</li>
+          <li>Ritual 7 pasos</li>
+          <li>Asesoría personalizada</li>
+          <li>Networking experience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Aquí luego metemos tu formulario -->
+  <!-- SECCIÓN 4 QUIÉNES SOMOS -->
+  <section class="section section-team" id="equipo">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Glow Leaders</p>
+        <h2>¿QUIÉNES SOMOS?</h2>
+      </div>
 
-    <button class="btn">Quiero mi ritual gratuito</button>
-    <p>Plazas limitadas cada semana</p>
-</section>
+      <div class="team-grid">
+        <article class="team-card team-card-left">
+          <img src="sandra.jpg" alt="Sandra - Glow Leaders" />
+          <div class="team-card-content">
+            <h3>Sandra</h3>
+            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
+              Hablar con Sandra
+            </a>
+          </div>
+        </article>
 
+        <article class="team-card team-card-center">
+          <img src="firas.jpg" alt="Firas - Glow Leaders" />
+          <div class="team-card-content">
+            <h3>Firas</h3>
+            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
+              Hablar con Firas
+            </a>
+          </div>
+        </article>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <h2>Cuidarte no es un mito, es una decisión. Empieza hoy.</h2>
-</footer>
+        <article class="team-card team-card-right">
+          <img src="maria.jpg" alt="María - Glow Leaders" />
+          <div class="team-card-content">
+            <h3>María</h3>
+            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
+              Hablar con María
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <p class="team-text">
+        UN EQUIPO DE LÍDERES APASIONADOS POR EL CUIDADO PERSONAL, LA BELLEZA Y EL CRECIMIENTO.
+      </p>
+
+      <p class="team-note">
+        <strong>SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5 BEST SELLERS -->
+  <section class="section section-products" id="productos">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Nuestros esenciales</p>
+        <h2>BEST SELLERS</h2>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="producto1.jpg" alt="Producto 1" />
+          <div class="product-content">
+            <h3>Nombre del producto 1</h3>
+            <p>Descripción breve del producto 1. Aquí puedes explicar el beneficio principal.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="producto2.jpg" alt="Producto 2" />
+          <div class="product-content">
+            <h3>Nombre del producto 2</h3>
+            <p>Descripción breve del producto 2. Aquí puedes explicar el beneficio principal.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="producto3.jpg" alt="Producto 3" />
+          <div class="product-content">
+            <h3>Nombre del producto 3</h3>
+            <p>Descripción breve del producto 3. Aquí puedes explicar el beneficio principal.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="producto4.jpg" alt="Producto 4" />
+          <div class="product-content">
+            <h3>Nombre del producto 4</h3>
+            <p>Descripción breve del producto 4. Aquí puedes explicar el beneficio principal.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6 EXPERIENCIA -->
+  <section class="section section-experience">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Experiencia RIMAN</p>
+        <h2>Momentos que inspiran</h2>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card">
+          <img src="evento1.jpg" alt="Evento Riman 1" />
+        </article>
+
+        <article class="experience-card">
+          <img src="evento2.jpg" alt="Evento Riman 2" />
+        </article>
+
+        <article class="experience-card">
+          <img src="evento3.jpg" alt="Evento Riman 3" />
+        </article>
+      </div>
+
+      <p class="section-highlight">
+        MOMENTOS REALES, RESULTADOS REALES.
+      </p>
+      <p class="section-subhighlight">
+        “NO ES SOLO SKINCARE, ES UN RITUAL”
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7 FORMULARIO -->
+  <section class="section section-form" id="reserva">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Reserva tu experiencia</p>
+        <h2>Vive tu ritual gratuito</h2>
+      </div>
+
+      <div class="form-box">
+        <form class="reservation-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
+          </div>
+
+          <div class="form-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required />
+          </div>
+
+          <div class="form-group">
+            <label>Elige tu asesor RIMAN</label>
+            <div class="advisor-grid">
+              <label class="advisor-option">
+                <input type="radio" name="asesor" value="Sandra" required />
+                <img src="sandra.jpg" alt="Sandra" />
+                <span>Sandra</span>
+              </label>
+
+              <label class="advisor-option">
+                <input type="radio" name="asesor" value="Firas" />
+                <img src="firas.jpg" alt="Firas" />
+                <span>Firas</span>
+              </label>
+
+              <label class="advisor-option">
+                <input type="radio" name="asesor" value="Maria" />
+                <img src="maria.jpg" alt="María" />
+                <span>María</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            QUIERO MI RITUAL GRATUITO
+          </button>
+        </form>
+      </div>
+
+      <p class="urgent-call">
+        PLAZAS LIMITADAS CADA SEMANA
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 8 CIERRE -->
+  <section class="section section-final-cta">
+    <div class="container center-content">
+      <h2 class="final-title">CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN.</h2>
+      <p class="final-subtitle">EMPIEZA HOY</p>
+      <a href="#reserva" class="btn btn-primary">RESERVA TU EXPERIENCIA</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <img src="logoriman.webp" alt="Logo Riman" class="footer-logo" />
+      <p>Glow Leaders · Experiencia skincare coreana</p>
+    </div>
+  </footer>
 
 </body>
 </html>
