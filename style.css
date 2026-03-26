@@ -314,62 +314,66 @@ ul {
 }
 
 /* =========================
-   BONO
+   SECCION BONO
 ========================= */
+
 .section-bono {
-  background: var(--soft-white);
+  background: #faf8f3;
 }
 
 .bono-layout {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 46px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
   align-items: center;
 }
 
 .bono-image-box {
-  position: relative;
-  background: var(--white);
-  border-radius: 28px;
+  background: #ffffff;
+  border-radius: 25px;
   padding: 18px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(199, 168, 109, 0.35);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
 }
 
 .bono-img {
   width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
+  border-radius: 18px;
+  display: block;
 }
 
-.bono-btn {
-  margin-top: 25px;
-  display: inline-block;
+.bono-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bono-content h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: 48px;
   color: #6d5428;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .bono-text {
-  font-size: 1.05rem;
+  font-size: 18px;
   color: #444;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
+/* Lista */
 .custom-list {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .custom-list li {
   position: relative;
-  padding-left: 34px;
-  font-size: 1rem;
-  color: #33483f;
+  padding-left: 30px;
+  font-size: 17px;
+  color: #425e54;
   font-weight: 500;
 }
 
@@ -377,9 +381,30 @@ ul {
   content: "✦";
   position: absolute;
   left: 0;
-  top: -1px;
-  color: var(--gold);
-  font-size: 1.1rem;
+  color: #c7a86d;
+  font-size: 18px;
+}
+
+/* BOTON RESERVA */
+.bono-btn {
+  margin-top: 30px;
+  display: inline-block;
+  align-self: center;
+  background: linear-gradient(135deg, #c7a86d, #9e7e43);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(158, 126, 67, 0.35);
+  transition: 0.3s;
+}
+
+.bono-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(158, 126, 67, 0.45);
 }
 
 /* =========================
