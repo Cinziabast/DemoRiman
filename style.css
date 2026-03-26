@@ -343,11 +343,8 @@ ul {
 }
 
 .bono-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 36px;
-  transform: translateX(-50%);
-  white-space: nowrap;
+  margin-top: 25px;
+  display: inline-block;
 }
 
 .bono-content h2 {
