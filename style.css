@@ -569,7 +569,7 @@ ul {
 
 .products-showcase {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   margin-top: 24px;
@@ -580,7 +580,7 @@ ul {
 }
 
 .products-showcase-reverse {
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 280px;
 }
 
 .products-showcase-reverse .products-showcase-copy {
@@ -613,12 +613,9 @@ ul {
 
 .products-slider {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(250px, 290px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
+  min-width: 0;
 }
 
 .products-slider::-webkit-scrollbar {
@@ -920,6 +917,17 @@ video,
   .advisor-grid {
     grid-template-columns: 1fr;
   }
+   
+   .products-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 84%;
+  grid-template-columns: unset;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
 
   .benefit-media img,
   .experience-card img,
