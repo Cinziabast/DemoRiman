@@ -636,6 +636,12 @@
       localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
 
+      if (lang === 'en') {
+        document.body.classList.add('english');
+      } else {
+        document.body.classList.remove('english');
+      }
+
       translatableElements.forEach(el => {
         const text = el.getAttribute(`data-${lang}`);
         if (text) el.textContent = text;
