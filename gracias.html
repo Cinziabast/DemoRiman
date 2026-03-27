@@ -4,10 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gracias | Glow Leaders</title>
-  <meta
-    name="description"
-    content="Gracias por registrarte en la experiencia Glow Leaders."
-  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,8 +66,7 @@
 
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
-      line-height: 1.1;
+      font-size: 2.4rem;
       margin-bottom: 18px;
     }
 
@@ -83,93 +78,79 @@
       margin: 0 auto 18px;
     }
 
-    .highlight {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .note {
-      margin-top: 18px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .actions {
-      margin-top: 32px;
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
     .btn {
       display: inline-block;
       text-decoration: none;
       border-radius: 999px;
       padding: 14px 24px;
       font-weight: 600;
-      transition: 0.25s ease;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
-    }
-
-    .btn-secondary {
       border: 1px solid rgba(0,0,0,0.12);
       color: var(--text);
       background: transparent;
+      margin-top: 20px;
     }
 
-    .btn-secondary:hover {
+    .btn:hover {
       background: rgba(0,0,0,0.03);
-    }
-
-    @media (max-width: 640px) {
-      .thankyou-card {
-        padding: 36px 22px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .message {
-        font-size: 1rem;
-      }
     }
   </style>
 </head>
+
 <body>
   <main class="thankyou-card">
     <img src="logoriman.webp" alt="Logo Riman" class="logo" />
 
     <p class="label">Glow Leaders</p>
 
-    <h1>¡Gracias por registrarte!</h1>
+    <h1
+      data-es="¡Gracias por registrarte!"
+      data-en="Thank you for registering!"
+    >
+      ¡Gracias por registrarte!
+    </h1>
 
-    <p class="message">
-      En breve recibirás un email con los próximos pasos para beneficiarte de tu
-      <span class="highlight">ritual coreano de skincare</span>.
+    <p
+      class="message"
+      data-es="En breve recibirás un email con los próximos pasos para beneficiarte de tu ritual coreano de skincare."
+      data-en="You will shortly receive an email with the next steps to enjoy your Korean skincare ritual."
+    >
+      En breve recibirás un email con los próximos pasos para beneficiarte de tu ritual coreano de skincare.
     </p>
 
-    <p class="message">
+    <p
+      class="message"
+      data-es="También recibirás la información de tu asesor para continuar tu experiencia."
+      data-en="You will also receive the contact details of your advisor to continue your experience."
+    >
       También recibirás la información de tu asesor para continuar tu experiencia.
     </p>
 
-    <p class="note">
+    <p
+      class="message"
+      data-es="Revisa tu bandeja de entrada, promociones o spam."
+      data-en="Check your inbox, promotions tab or spam folder."
+    >
       Revisa tu bandeja de entrada, promociones o spam.
     </p>
 
-    <div class="actions">
-      <a href="index.html" class="btn btn-secondary">Volver a la landing</a>
-    </div>
+    <a
+      href="index.html"
+      class="btn"
+      data-es="Volver a la landing"
+      data-en="Back to landing page"
+    >
+      Volver a la landing
+    </a>
   </main>
+
+  <!-- Script cambio idioma -->
+  <script>
+    const lang = localStorage.getItem('lang') || 'es';
+    const elements = document.querySelectorAll('[data-es][data-en]');
+
+    elements.forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  </script>
 </body>
 </html>
