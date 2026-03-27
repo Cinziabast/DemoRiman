@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias | Glow Leaders</title>
+  <meta
+    name="description"
+    content="Gracias por registrarte en la experiencia Glow Leaders."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --cream: #f8f6f2;
+      --white: #ffffff;
+      --gold: #c7a86b;
+      --text: #2f2f2f;
+      --muted: #6f6f6f;
+      --shadow: 0 10px 35px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+    }
+
+    .thankyou-card {
+      width: 100%;
+      max-width: 760px;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 0 auto 24px;
+      display: block;
+    }
+
+    .label {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .message {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 18px;
+    }
+
+    .highlight {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(0,0,0,0.12);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0,0,0,0.03);
+    }
+
+    @media (max-width: 640px) {
+      .thankyou-card {
+        padding: 36px 22px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="thankyou-card">
+    <img src="logoriman.webp" alt="Logo Riman" class="logo" />
+
+    <p class="label">Glow Leaders</p>
+
+    <h1>¡Gracias por registrarte!</h1>
+
+    <p class="message">
+      En breve recibirás un email con los próximos pasos para beneficiarte de tu
+      <span class="highlight">ritual coreano de skincare</span>.
+    </p>
+
+    <p class="message">
+      También recibirás la información de tu asesor para continuar tu experiencia.
+    </p>
+
+    <p class="note">
+      Revisa tu bandeja de entrada, promociones o spam.
+    </p>
+
+    <div class="actions">
+      <a href="index.html" class="btn btn-secondary">Volver a la landing</a>
+      <a href="#reserva" class="btn btn-primary">Ver próximos pasos</a>
+    </div>
+  </main>
+</body>
+</html>
