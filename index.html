@@ -4,556 +4,154 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glow Leaders | Ritual Coreano</title>
-  <meta
-    name="description"
-    content="Descubre el ritual coreano que transforma tu piel. Vive una experiencia exclusiva de skincare con Glow Leaders."
-  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="#top" class="logo-link">
-        <img src="logoriman.webp" alt="Logo Riman" class="logo-riman" />
-      </a>
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-content">
 
-      <div class="header-right">
-        <!-- IDIOMAS -->
-        <div class="language-switcher">
-  <button type="button" class="lang-btn active" data-lang="es" aria-label="Español">
-    <img src="banderaes.png" alt="Español" class="flag-icon">
-  </button>
+    <div class="logo">RIMAN</div>
 
-  <button type="button" class="lang-btn" data-lang="en" aria-label="English">
-    <img src="banderain.png" alt="English" class="flag-icon">
-  </button>
-</div>
-
-        <nav class="nav">
-          <a href="#beneficios" data-es="Beneficios" data-en="Benefits">Beneficios</a>
-          <a href="#equipo" data-es="Glow Leaders" data-en="Glow Leaders">Glow Leaders</a>
-          <a href="#productos" data-es="Best Sellers" data-en="Best Sellers">Best Sellers</a>
-          <a href="#reserva" class="btn btn-nav" data-es="Reservar" data-en="Reserve">Reservar</a>
-        </nav>
+    <nav class="nav">
+      <div class="language-switcher">
+        <button class="lang-btn">
+          <img src="banderaes.png" class="flag-icon">
+        </button>
+        <button class="lang-btn">
+          <img src="banderain.png" class="flag-icon">
+        </button>
       </div>
+
+      <a href="#beneficios">Beneficios</a>
+      <a href="#glow">Glow Leaders</a>
+      <a href="#productos">Best Sellers</a>
+      <a href="#reserva" class="btn-header">RESERVAR</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- BONO -->
+<section class="bono-section" id="reserva">
+  <div class="container bono-container">
+
+    <div class="bono-left">
+      <img src="bono.jpg">
+      <a href="#" class="bono-btn">RESERVA MI PLAZA</a>
     </div>
-  </header>
 
-  <!-- BANNER -->
-  <section class="hero-banner" id="top">
-    <img src="bannerglow.jpg" alt="Glow Leaders Banner" class="hero-banner-img" />
-  </section>
+    <div class="bono-right">
+      <h2>Tu experiencia gratuita empieza aquí</h2>
+      <p>Al registrarte recibirás un vale para dos personas para vivir un ritual completo de skincare coreano totalmente GRATIS.</p>
 
-  <!-- SECCIÓN 1 -->
-  <section class="section section-hero-content">
-    <div class="container center-content">
-      <p
-        class="section-label"
-        data-es="Ritual coreano · Experiencia exclusiva"
-        data-en="Korean ritual · Exclusive experience"
-      >
-        Ritual coreano · Experiencia exclusiva
-      </p>
-
-      <h1
-        class="main-title"
-        data-es="DESCUBRE EL RITUAL COREANO QUE TRANSFORMA TU PIEL"
-        data-en="DISCOVER THE KOREAN RITUAL THAT TRANSFORMS YOUR SKIN"
-      >
-        DESCUBRE EL RITUAL COREANO QUE TRANSFORMA TU PIEL
-      </h1>
-
-      <div class="video-wrapper reveal">
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="videobanner.mp4" type="video/mp4" />
-          Tu navegador no soporta videos HTML5.
-        </video>
-      </div>
-
-      <p
-        class="hero-text"
-        data-es="UNA EXPERIENCIA EXCLUSIVA DE SKINCARE DONDE APRENDERÁS A CUIDAR TU PIEL DE FORMA REAL, SIMPLE Y EFECTIVA."
-        data-en="AN EXCLUSIVE SKINCARE EXPERIENCE WHERE YOU WILL LEARN TO CARE FOR YOUR SKIN IN A REAL, SIMPLE AND EFFECTIVE WAY."
-      >
-        UNA EXPERIENCIA EXCLUSIVA DE SKINCARE DONDE APRENDERÁS A CUIDAR TU PIEL DE FORMA REAL, SIMPLE Y EFECTIVA.
-      </p>
-
-      <a href="#reserva" class="btn btn-primary btn-large">
-        <span
-          data-es="QUIERO MI EXPERIENCIA GRATUITA"
-          data-en="I WANT MY FREE EXPERIENCE"
-        >
-          QUIERO MI EXPERIENCIA GRATUITA
-        </span>
-        <span
-          data-es="INCLUYE VALE PARA DOS PERSONAS"
-          data-en="INCLUDES A VOUCHER FOR TWO PEOPLE"
-        >
-          INCLUYE VALE PARA DOS PERSONAS
-        </span>
-      </a>
+      <ul>
+        <li>Diagnóstico de la piel</li>
+        <li>Ritual 7 pasos</li>
+        <li>Asesoría personalizada</li>
+        <li>Networking experience</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- SECCIÓN 2 BENEFICIOS -->
-  <section class="section section-benefits" id="beneficios">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Beneficios" data-en="Benefits">Beneficios</p>
-        <h2 data-es="¿Qué vivirás en esta experiencia?" data-en="What will you experience?">
-          ¿Qué vivirás en esta experiencia?
-        </h2>
-      </div>
+  </div>
+</section>
 
-      <div class="benefits-grid">
-        <article class="benefit-card reveal">
-          <img src="beneficio1.jpg" alt="Piel más luminosa y cuidada" />
-          <h3 data-es="PIEL MÁS LUMINOSA Y CUIDADA" data-en="BRIGHTER, HEALTHIER SKIN">
-            PIEL MÁS LUMINOSA Y CUIDADA
-          </h3>
-        </article>
+<!-- PRODUCTOS -->
+<section class="products-section" id="productos">
+  <div class="container">
 
-        <article class="benefit-card reveal">
-          <img src="beneficio2.jpg" alt="Rutina personalizada" />
-          <h3 data-es="RUTINA PERSONALIZADA" data-en="PERSONALIZED ROUTINE">
-            RUTINA PERSONALIZADA
-          </h3>
-        </article>
+    <p class="products-subtitle">NUESTROS ESENCIALES</p>
+    <h2 class="products-title">PRODUCTOS DESTACADOS</h2>
 
-        <article class="benefit-card reveal">
-          <img src="beneficio3.jpg" alt="Experiencia guiada paso a paso" />
-          <h3 data-es="EXPERIENCIA GUIADA PASO A PASO" data-en="STEP-BY-STEP GUIDED EXPERIENCE">
-            EXPERIENCIA GUIADA PASO A PASO
-          </h3>
-        </article>
-      </div>
+    <h3 class="best-sellers-title">BEST SELLERS</h3>
 
-      <p
-        class="section-highlight"
-        data-es="NO ES SOLO SKINCARE, ES UNA NUEVA FORMA DE CUIDARTE"
-        data-en="IT'S NOT JUST SKINCARE, IT'S A NEW WAY TO CARE FOR YOURSELF"
-      >
-        NO ES SOLO SKINCARE, ES UNA NUEVA FORMA DE CUIDARTE
-      </p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 3 BONO -->
-  <section class="section section-bono">
-    <div class="container bono-layout">
-      <div class="bono-left">
-        <div class="bono-image-box reveal">
-          <img src="bono.jpg" alt="Bono Glow Leaders" class="bono-img" />
-        </div>
-
-        <a href="#reserva" class="bono-btn" data-es="RESERVA MI PLAZA" data-en="BOOK MY SPOT">
-          RESERVA MI PLAZA
-        </a>
-      </div>
-
-      <div class="bono-content">
-        <p class="section-label" data-es="TU INVITACIÓN" data-en="YOUR INVITATION">TU INVITACIÓN</p>
-
-        <h2
-          data-es="Tu experiencia gratuita empieza aquí"
-          data-en="Your free experience starts here"
-        >
-          Tu experiencia gratuita empieza aquí
-        </h2>
-
-        <p
-          class="bono-text"
-          data-es="Al registrarte recibirás un vale para dos personas para vivir un ritual completo de skincare coreano totalmente GRATIS."
-          data-en="When you register, you will receive a voucher for two people to enjoy a complete Korean skincare ritual completely FREE."
-        >
-          Al registrarte recibirás un vale para dos personas para vivir un ritual completo de skincare coreano totalmente GRATIS.
-        </p>
-
-        <ul class="custom-list">
-          <li data-es="Diagnóstico de la piel" data-en="Skin diagnosis">Diagnóstico de la piel</li>
-          <li data-es="Ritual 7 pasos" data-en="7-step ritual">Ritual 7 pasos</li>
-          <li data-es="Asesoría personalizada" data-en="Personalized advice">Asesoría personalizada</li>
-          <li data-es="Networking experience" data-en="Networking experience">Networking experience</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 4 GLOW LEADERS -->
-  <section class="section section-team" id="equipo">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Glow Leaders" data-en="Glow Leaders">Glow Leaders</p>
-        <h2 data-es="¿QUIÉNES SOMOS?" data-en="WHO ARE WE?">¿QUIÉNES SOMOS?</h2>
-      </div>
-
-      <div class="team-grid">
-        <article class="team-card team-card-left reveal">
-          <img src="sandra.jpg" alt="Sandra - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>Sandra</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <article class="team-card team-card-center reveal">
-          <img src="firas.jpg" alt="Firas - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>Firas</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <article class="team-card team-card-right reveal">
-          <img src="maria.jpg" alt="María - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>María</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <p
-        class="team-text"
-        data-es="UN EQUIPO DE LÍDERES APASIONADOS POR EL CUIDADO PERSONAL, LA BELLEZA Y EL CRECIMIENTO."
-        data-en="A TEAM OF LEADERS PASSIONATE ABOUT SELF-CARE, BEAUTY AND GROWTH."
-      >
-        UN EQUIPO DE LÍDERES APASIONADOS POR EL CUIDADO PERSONAL, LA BELLEZA Y EL CRECIMIENTO.
-      </p>
-
-      <p
-        class="team-note"
-        data-es="SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP"
-        data-en="IF YOU WANT TO JOIN YOUR ADVISOR'S TEAM, CONTACT US ON WHATSAPP"
-      >
-        <strong>SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 5 PRODUCTOS -->
-  <section class="section section-products" id="productos">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Nuestros esenciales" data-en="Our essentials">Nuestros esenciales</p>
-        <h2 data-es="PRODUCTOS DESTACADOS" data-en="FEATURED PRODUCTS">PRODUCTOS DESTACADOS</h2>
-      </div>
-
-      <div class="products-block">
-        <h3 class="products-subtitle" data-es="BEST SELLERS" data-en="BEST SELLERS">BEST SELLERS</h3>
-
-        <div class="products-grid products-grid-3">
-          <article class="product-card reveal">
-            <img src="bestseller1.jpg" alt="Best Seller 1" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 1" data-en="Product name 1">Nombre producto 1</h4>
-              <p
-                data-es="Breve descripción del producto 1. Beneficio principal o para qué sirve."
-                data-en="Short description of product 1. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 1. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <img src="bestseller2.jpg" alt="Best Seller 2" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 2" data-en="Product name 2">Nombre producto 2</h4>
-              <p
-                data-es="Breve descripción del producto 2. Beneficio principal o para qué sirve."
-                data-en="Short description of product 2. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 2. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <img src="bestseller3.jpg" alt="Best Seller 3" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 3" data-en="Product name 3">Nombre producto 3</h4>
-              <p
-                data-es="Breve descripción del producto 3. Beneficio principal o para qué sirve."
-                data-en="Short description of product 3. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 3. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="producto1.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 1</h4>
+          <p>Breve descripción del producto.</p>
         </div>
       </div>
 
-      <div class="products-block">
-        <h3 class="products-subtitle" data-es="FAVORITOS" data-en="FAVORITES">FAVORITOS</h3>
+      <div class="product-card">
+        <img src="producto2.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 2</h4>
+          <p>Breve descripción del producto.</p>
+        </div>
+      </div>
 
-        <div class="products-grid products-grid-3">
-          <article class="product-card reveal">
-            <img src="favorito1.jpg" alt="Favorito 1" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 1" data-en="Favorite name 1">Nombre favorito 1</h4>
-              <p
-                data-es="Breve descripción del producto favorito 1. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 1. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 1. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <img src="favorito2.jpg" alt="Favorito 2" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 2" data-en="Favorite name 2">Nombre favorito 2</h4>
-              <p
-                data-es="Breve descripción del producto favorito 2. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 2. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 2. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-card reveal">
-            <img src="favorito3.jpg" alt="Favorito 3" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 3" data-en="Favorite name 3">Nombre favorito 3</h4>
-              <p
-                data-es="Breve descripción del producto favorito 3. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 3. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 3. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+      <div class="product-card">
+        <img src="producto3.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 3</h4>
+          <p>Breve descripción del producto.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- SECCIÓN 6 EXPERIENCIA -->
-  <section class="section section-experience">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Experiencia RIMAN" data-en="RIMAN Experience">Experiencia RIMAN</p>
-        <h2 data-es="Momentos que inspiran" data-en="Moments that inspire">Momentos que inspiran</h2>
+    <h3 class="favorites-title">FAVORITOS</h3>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="producto4.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 4</h4>
+          <p>Breve descripción del producto.</p>
+        </div>
       </div>
 
-      <div class="experience-grid">
-        <article class="experience-card reveal">
-          <img src="evento1.jpg" alt="Evento Riman 1" />
-        </article>
-
-        <article class="experience-card reveal">
-          <img src="evento2.jpg" alt="Evento Riman 2" />
-        </article>
-
-        <article class="experience-card reveal">
-          <img src="evento3.jpg" alt="Evento Riman 3" />
-        </article>
+      <div class="product-card">
+        <img src="producto5.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 5</h4>
+          <p>Breve descripción del producto.</p>
+        </div>
       </div>
 
-      <p
-        class="section-highlight"
-        data-es="MOMENTOS REALES, RESULTADOS REALES."
-        data-en="REAL MOMENTS, REAL RESULTS."
-      >
-        MOMENTOS REALES, RESULTADOS REALES.
-      </p>
-      <p
-        class="section-subhighlight"
-        data-es="NO ES SOLO SKINCARE, ES UN RITUAL"
-        data-en="IT'S NOT JUST SKINCARE, IT'S A RITUAL"
-      >
-        NO ES SOLO SKINCARE, ES UN RITUAL
-      </p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 7 FORMULARIO -->
-  <section class="section section-form" id="reserva">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Reserva tu experiencia" data-en="Book your experience">Reserva tu experiencia</p>
-        <h2 data-es="Vive tu ritual gratuito" data-en="Live your free ritual">Vive tu ritual gratuito</h2>
+      <div class="product-card">
+        <img src="producto6.jpg">
+        <div class="product-info">
+          <h4>Nombre producto 6</h4>
+          <p>Breve descripción del producto.</p>
+        </div>
       </div>
-
-      <div class="form-box reveal">
-        <form class="reservation-form">
-          <div class="form-group">
-            <label for="nombre" data-es="Nombre completo" data-en="Full name">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono" data-es="Teléfono" data-en="Phone">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
-          </div>
-
-          <div class="form-group">
-            <label for="ciudad" data-es="Ciudad" data-en="City">Ciudad</label>
-            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required />
-          </div>
-
-          <div class="form-group">
-            <label data-es="Elige tu asesor RIMAN" data-en="Choose your RIMAN advisor">Elige tu asesor RIMAN</label>
-            <div class="advisor-grid">
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="Sandra" required />
-                <img src="sandra.jpg" alt="Sandra" />
-                <span>Sandra</span>
-              </label>
-
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="Firas" />
-                <img src="firas.jpg" alt="Firas" />
-                <span>Firas</span>
-              </label>
-
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="Maria" />
-                <img src="maria.jpg" alt="María" />
-                <span>María</span>
-              </label>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            class="btn btn-primary btn-submit"
-            data-es="QUIERO MI RITUAL GRATUITO"
-            data-en="I WANT MY FREE RITUAL"
-          >
-            QUIERO MI RITUAL GRATUITO
-          </button>
-        </form>
-      </div>
-
-      <p
-        class="urgent-call"
-        data-es="PLAZAS LIMITADAS CADA SEMANA"
-        data-en="LIMITED SPOTS EACH WEEK"
-      >
-        PLAZAS LIMITADAS CADA SEMANA
-      </p>
     </div>
-  </section>
 
-  <!-- SECCIÓN 8 CIERRE -->
-  <section class="section section-final-cta">
-    <div class="container center-content">
-      <h2
-        class="final-title"
-        data-es="CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN."
-        data-en="TAKING CARE OF YOURSELF IS NOT A LUXURY, IT'S A DECISION."
-      >
-        CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN.
-      </h2>
+  </div>
+</section>
 
-      <p class="final-subtitle" data-es="EMPIEZA HOY" data-en="START TODAY">EMPIEZA HOY</p>
+<footer class="footer">
+  <p>Glow Leaders © 2026</p>
+</footer>
 
-      <a href="#reserva" class="btn btn-primary" data-es="RESERVA TU EXPERIENCIA" data-en="BOOK YOUR EXPERIENCE">
-        RESERVA TU EXPERIENCIA
-      </a>
-    </div>
-  </section>
+<!-- SCRIPT ANIMACION SCROLL -->
+<script>
+const cards = document.querySelectorAll(".product-card");
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <img src="logoriman.webp" alt="Logo Riman" class="footer-logo" />
-      <p
-        data-es="Glow Leaders · Experiencia skincare coreana"
-        data-en="Glow Leaders · Korean skincare experience"
-      >
-        Glow Leaders · Experiencia skincare coreana
-      </p>
-    </div>
-  </footer>
+function showCards() {
+  const trigger = window.innerHeight * 0.85;
 
-  <script>
-    // CAMBIO DE IDIOMA
-    const langButtons = document.querySelectorAll('.lang-btn');
-    const translatableElements = document.querySelectorAll('[data-es][data-en]');
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
 
-    function setLanguage(lang) {
-      document.documentElement.lang = lang;
-
-      translatableElements.forEach(el => {
-        const text = el.getAttribute(`data-${lang}`);
-        if (text) {
-          el.textContent = text;
-        }
-      });
-
-      // placeholders del formulario
-      const placeholders = {
-        es: {
-          nombre: 'Tu nombre completo',
-          email: 'Tu correo electrónico',
-          telefono: 'Tu número de teléfono',
-          ciudad: 'Tu ciudad'
-        },
-        en: {
-          nombre: 'Your full name',
-          email: 'Your email address',
-          telefono: 'Your phone number',
-          ciudad: 'Your city'
-        }
-      };
-
-      document.getElementById('nombre').placeholder = placeholders[lang].nombre;
-      document.getElementById('email').placeholder = placeholders[lang].email;
-      document.getElementById('telefono').placeholder = placeholders[lang].telefono;
-      document.getElementById('ciudad').placeholder = placeholders[lang].ciudad;
-
-      langButtons.forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+    if (top < trigger) {
+      card.classList.add("show");
     }
+  });
+}
 
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
-      });
-    });
-
-    // ANIMACIÓN SCROLL
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.15
-    });
-
-    revealElements.forEach(el => observer.observe(el));
-  </script>
+window.addEventListener("scroll", showCards);
+showCards();
+</script>
 
 </body>
 </html>
