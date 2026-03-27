@@ -16,6 +16,7 @@
   --light-gray: #ececec;
   --black: #000000;
   --green: #425e54;
+  --green-soft: #546b62;
   --white: #ffffff;
   --soft-white: #f7f6f1;
   --gold: #8d744d;
@@ -345,7 +346,7 @@ ul {
    BENEFICIOS
 ========================= */
 .section-benefits {
-  background: var(--beige);
+  background: var(--light-gray);
 }
 
 .benefit-row {
@@ -501,7 +502,7 @@ ul {
    TEAM
 ========================= */
 .section-team {
-  background: var(--black);
+  background: var(--green-soft);
   color: var(--white);
 }
 
