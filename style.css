@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- HEADER -->
   <header class="header" id="top">
     <div class="container header-container">
@@ -91,10 +90,15 @@
         <span data-es="QUIERO MI EXPERIENCIA GRATUITA" data-en="I WANT MY FREE EXPERIENCE">
           QUIERO MI EXPERIENCIA GRATUITA
         </span>
-        <span data-es="INCLUYE VALE PARA DOS PERSONAS" data-en="INCLUDES A VOUCHER FOR TWO PEOPLE">
-          INCLUYE VALE PARA DOS PERSONAS
-        </span>
       </a>
+
+      <p
+        class="hero-mini-note"
+        data-es="Incluye vale para dos personas"
+        data-en="Includes a voucher for two people"
+      >
+        Incluye vale para dos personas
+      </p>
     </div>
   </section>
 
@@ -265,7 +269,7 @@
         data-es="SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP"
         data-en="IF YOU WANT TO JOIN YOUR ADVISOR'S TEAM, CONTACT US ON WHATSAPP"
       >
-        <strong>SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP</strong>
+        SI QUIERES UNIRTE AL EQUIPO DE TU ASESOR, CONTÁCTANOS POR WHATSAPP
       </p>
     </div>
   </section>
@@ -292,67 +296,71 @@
         </div>
 
         <div class="products-carousel">
-          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
-            &#10094;
-          </button>
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">&#10094;</button>
 
           <div class="products-slider">
             <article class="product-card">
-              <img src="botalab.png" alt="Best Seller 1" />
+              <img src="botalab.png" alt="BOTALAB DESERTICOLA PLUS SHAMPOO" />
               <div class="product-content">
-                <h4 data-es="BOTALAB DESERTICOLA PLUS SHAMPOO" data-en="BOTALAB DESERTICOLA PLUS SHAMPOO">BOTALAB DESERTICOLA PLUS SHAMPOO</h4>
+                <h4 data-es="BOTALAB DESERTICOLA PLUS SHAMPOO" data-en="BOTALAB DESERTICOLA PLUS SHAMPOO">
+                  BOTALAB DESERTICOLA PLUS SHAMPOO
+                </h4>
                 <p
-                  data-es="Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota."
-                  data-en="Cleans, hydrates and balances the scalp. Hair feels lighter, fresher and shinier. A clean feeling you can really notice."
+                  data-es="Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante."
+                  data-en="Cleans, hydrates and balances the scalp. Hair feels lighter, fresher and shinier."
                 >
-                  Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota.
+                  Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="icdoil.png" alt="Best Seller 2" />
+              <img src="icdoil.png" alt="ICD MOISTURE CLEANSING OIL" />
               <div class="product-content">
-                <h4 data-es="ICD MOISTURE CLEANSING OIL" data-en="ICD MOISTURE CLEANSING OIL">ICD MOISTURE CLEANSING OIL</h4>
+                <h4 data-es="ICD MOISTURE CLEANSING OIL" data-en="ICD MOISTURE CLEANSING OIL">
+                  ICD MOISTURE CLEANSING OIL
+                </h4>
                 <p
-                  data-es="Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa."
-                  data-en="Removes makeup and impurities without drying the skin. Clean, soft and hydrated skin. The perfect first step for radiant skin."
+                  data-es="Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada."
+                  data-en="Removes makeup and impurities without drying the skin. Clean, soft and hydrated skin."
                 >
-                  Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa.
+                  Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="multistick.png" alt="Best Seller 3" />
+              <img src="multistick.png" alt="ICD MULTI STICK BALM" />
               <div class="product-content">
-                <h4 data-es="ICD MULTI STICK BALM" data-en="ICD MULTI STICK BALM">ICD MULTI STICK BALM</h4>
+                <h4 data-es="ICD MULTI STICK BALM" data-en="ICD MULTI STICK BALM">
+                  ICD MULTI STICK BALM
+                </h4>
                 <p
-                  data-es="Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante."
-                  data-en="Instant hydration anytime, anywhere. Adds a natural glow instantly. Fresh, nourished and radiant skin."
+                  data-es="Hidratación inmediata en cualquier momento. Aporta glow natural al instante."
+                  data-en="Instant hydration anytime, anywhere. Adds a natural glow instantly."
                 >
-                  Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante.
+                  Hidratación inmediata en cualquier momento. Aporta glow natural al instante.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="firstpackage.png" alt="Best Seller 4" />
+              <img src="firstpackage.png" alt="ICD DERMATOLOGY FIRST PACKAGE" />
               <div class="product-content">
-                <h4 data-es="ICD DERMATOLOGY FIRST PACKAGE" data-en="ICD DERMATOLOGY FIRST PACKAGE">ICD DERMATOLOGY FIRST PACKAGE</h4>
+                <h4 data-es="ICD DERMATOLOGY FIRST PACKAGE" data-en="ICD DERMATOLOGY FIRST PACKAGE">
+                  ICD DERMATOLOGY FIRST PACKAGE
+                </h4>
                 <p
-                  data-es="Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN."
-                  data-en="Complete ritual to transform your skin. Improves texture, hydration and luminosity. Perfect to start your RIMAN skincare routine."
+                  data-es="Ritual completo para transformar tu piel. Ideal para empezar con RIMAN."
+                  data-en="Complete ritual to transform your skin. Perfect to start with RIMAN."
                 >
-                  Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN.
+                  Ritual completo para transformar tu piel. Ideal para empezar con RIMAN.
                 </p>
               </div>
             </article>
           </div>
 
-          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
-            &#10095;
-          </button>
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">&#10095;</button>
         </div>
       </div>
 
@@ -372,67 +380,74 @@
         </div>
 
         <div class="products-carousel">
-          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
-            &#10094;
-          </button>
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">&#10094;</button>
 
           <div class="products-slider">
             <article class="product-card">
-              <img src="botalabplus.png" alt="Favorito 1" />
+              <img src="botalabplus.png" alt="BOTALAB DESERTICOLA PLUS CONDITIONER" />
               <div class="product-content">
-                <h4 data-es="BOTALAB DESERTICOLA PLUS CONDITIONER" data-en="BOTALAB DESERTICOLA PLUS CONDITIONER">BOTALAB DESERTICOLA PLUS CONDITIONER</h4>
+                <h4 data-es="BOTALAB DESERTICOLA PLUS CONDITIONER" data-en="BOTALAB DESERTICOLA PLUS CONDITIONER">
+                  BOTALAB DESERTICOLA PLUS CONDITIONER
+                </h4>
                 <p
-                  data-es="Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable."
-                  data-en="Deeply nourishes and softens the hair. Improves texture and shine. Healthier, smoother and more manageable hair."
+                  data-es="Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo."
+                  data-en="Deeply nourishes and softens the hair. Improves texture and shine."
                 >
-                  Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable.
+                  Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="icdcream.png" alt="Favorito 2" />
+              <img src="icdcream.png" alt="ICD DERMATOLOGY CREAM" />
               <div class="product-content">
-                <h4 data-es="ICD DERMATOLOGY CREAM" data-en="ICD DERMATOLOGY CREAM">ICD DERMATOLOGY CREAM</h4>
+                <h4 data-es="ICD DERMATOLOGY CREAM" data-en="ICD DERMATOLOGY CREAM">
+                  ICD DERMATOLOGY CREAM
+                </h4>
                 <p
-                  data-es="Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort."
-                  data-en="Deep yet lightweight hydration. Softer and more elastic skin. Seals your skincare routine with comfort."
+                  data-es="Hidratación profunda y ligera. Piel más suave y elástica."
+                  data-en="Deep yet lightweight hydration. Softer and more elastic skin."
                 >
-                  Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort.
+                  Hidratación profunda y ligera. Piel más suave y elástica.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="protector.png" alt="Favorito 3" />
+              <img src="protector.png" alt="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+" />
               <div class="product-content">
-                <h4 data-es="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+" data-en="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+">ICD MOISTURE LAYER SUN PROTECTOR SPF 50+</h4>
-                <p
-                  data-es="Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día."
-                  data-en="High protection with a lightweight texture. Hydrates without leaving residue. Protected and fresh skin all day long."
+                <h4
+                  data-es="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+"
+                  data-en="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+"
                 >
-                  Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día.
+                  ICD MOISTURE LAYER SUN PROTECTOR SPF 50+
+                </h4>
+                <p
+                  data-es="Alta protección con textura ligera. Hidrata sin dejar residuo."
+                  data-en="High protection with a lightweight texture. Hydrates without leaving residue."
+                >
+                  Alta protección con textura ligera. Hidrata sin dejar residuo.
                 </p>
               </div>
             </article>
 
             <article class="product-card">
-              <img src="twophase.png" alt="Favorito 4" />
+              <img src="twophase.png" alt="ICD TWO-PHASE OIL MIST" />
               <div class="product-content">
-                <h4 data-es="ICD TWO-PHASE OIL MIST" data-en="ICD TWO-PHASE OIL MIST">ICD TWO-PHASE OIL MIST</h4>
+                <h4 data-es="ICD TWO-PHASE OIL MIST" data-en="ICD TWO-PHASE OIL MIST">
+                  ICD TWO-PHASE OIL MIST
+                </h4>
                 <p
-                  data-es="Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos."
-                  data-en="Instantly hydrates and revitalizes. Adds natural luminosity. Refreshes your skin in seconds."
+                  data-es="Hidrata y revitaliza al instante. Aporta luminosidad natural."
+                  data-en="Instantly hydrates and revitalizes. Adds natural luminosity."
                 >
-                  Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos.
+                  Hidrata y revitaliza al instante. Aporta luminosidad natural.
                 </p>
               </div>
             </article>
           </div>
 
-          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
-            &#10095;
-          </button>
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">&#10095;</button>
         </div>
       </div>
 
@@ -446,24 +461,24 @@
             PRODUCTO ESTRELLA
           </h3>
           <p
-            data-es="Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)"
-            data-en="Our star product, chosen for its high demand, visible results and for representing the essence of the RIMAN experience. (COMING SOON)"
+            data-es="Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN."
+            data-en="Our star product, chosen for its high demand, visible results and for representing the essence of the RIMAN experience."
           >
-            Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)
+            Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN.
           </p>
         </div>
 
         <article class="product-card star-product-card">
-          <img src="colageno.png" alt="Producto estrella" />
+          <img src="colageno.png" alt="ICD COLLAGEN 100 MELTING MASK" />
           <div class="product-content">
             <h4 data-es="ICD COLLAGEN 100 MELTING MASK" data-en="ICD COLLAGEN 100 MELTING MASK">
               ICD COLLAGEN 100 MELTING MASK
             </h4>
             <p
-              data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso."
-              data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow. A visible skincare boost from the first use."
+              data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad."
+              data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow."
             >
-              Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso.
+              Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad.
             </p>
           </div>
         </article>
@@ -471,9 +486,9 @@
     </div>
   </section>
 
-  <!-- CTA RUTINA PERSONALIZADA -->
+  <!-- CTA RUTINA -->
   <section class="routine-cta">
-    <div class="routine-cta-container">
+    <div class="container routine-cta-container">
       <h2
         data-es="¿No sabes qué producto es para ti?"
         data-en="Not sure which product is right for you?"
@@ -490,7 +505,7 @@
 
       <a
         href="#reserva"
-        class="cta-btn"
+        class="btn btn-primary"
         data-es="QUIERO MI RUTINA PERSONALIZADA"
         data-en="GET MY PERSONALIZED ROUTINE"
       >
@@ -511,11 +526,9 @@
         <article class="experience-card">
           <img src="evento1.jpg" alt="Evento Riman 1" />
         </article>
-
         <article class="experience-card">
           <img src="evento2.jpg" alt="Evento Riman 2" />
         </article>
-
         <article class="experience-card">
           <img src="evento3.jpg" alt="Evento Riman 3" />
         </article>
@@ -661,6 +674,14 @@
       document.getElementById('telefono').placeholder = placeholders[lang].telefono;
       document.getElementById('ciudad').placeholder = placeholders[lang].ciudad;
 
+      document.querySelectorAll('.lang-es').forEach(el => {
+        el.style.display = lang === 'es' ? 'block' : 'none';
+      });
+
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = lang === 'en' ? 'block' : 'none';
+      });
+
       langButtons.forEach(btn => btn.classList.remove('active'));
       document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
     }
@@ -702,17 +723,11 @@
         if (!slider || !btnLeft || !btnRight) return;
 
         btnLeft.addEventListener("click", () => {
-          slider.scrollBy({
-            left: -slider.clientWidth * 0.9,
-            behavior: "smooth"
-          });
+          slider.scrollBy({ left: -slider.clientWidth * 0.9, behavior: "smooth" });
         });
 
         btnRight.addEventListener("click", () => {
-          slider.scrollBy({
-            left: slider.clientWidth * 0.9,
-            behavior: "smooth"
-          });
+          slider.scrollBy({ left: slider.clientWidth * 0.9, behavior: "smooth" });
         });
       });
 
@@ -725,17 +740,11 @@
 
         if (slider && btnLeft && btnRight) {
           btnLeft.addEventListener("click", () => {
-            slider.scrollBy({
-              left: -slider.clientWidth * 0.9,
-              behavior: "smooth"
-            });
+            slider.scrollBy({ left: -slider.clientWidth * 0.9, behavior: "smooth" });
           });
 
           btnRight.addEventListener("click", () => {
-            slider.scrollBy({
-              left: slider.clientWidth * 0.9,
-              behavior: "smooth"
-            });
+            slider.scrollBy({ left: slider.clientWidth * 0.9, behavior: "smooth" });
           });
         }
       }
@@ -747,10 +756,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("klaviyo-form");
 
-      if (!form) {
-        console.error("No se encontró el formulario klaviyo-form");
-        return;
-      }
+      if (!form) return;
 
       form.addEventListener("submit", async function (e) {
         e.preventDefault();
@@ -795,10 +801,6 @@
             })
           });
 
-          const responseText = await response.text();
-          console.log("STATUS KLAVIYO:", response.status);
-          console.log("RESPUESTA KLAVIYO:", responseText);
-
           if (response.ok) {
             window.location.href = "/gracias.html";
           } else {
@@ -811,6 +813,5 @@
       });
     });
   </script>
-
 </body>
 </html>
