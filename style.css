@@ -895,3 +895,14 @@ ul {
     justify-content: center;
   }
 }
+
+/* BOTÓN DORADO */
+.btn-primary {
+  background-color: #c8a96a;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #b89655;
+}
