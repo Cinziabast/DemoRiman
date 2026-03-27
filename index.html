@@ -21,7 +21,7 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header-container">
       <a href="#top" class="logo-link">
         <img src="logoriman.webp" alt="Logo Riman" class="logo-riman" />
@@ -49,11 +49,11 @@
   </header>
 
   <!-- HERO BANNER -->
-  <section class="hero-banner" id="top">
+  <section class="hero-banner">
     <img src="bannerglow.jpg" alt="Glow Leaders Banner" class="hero-banner-img" />
   </section>
 
-  <!-- SECCIÓN 1 HERO -->
+  <!-- HERO -->
   <section class="section section-hero-content">
     <div class="container center-content">
       <p
@@ -88,23 +88,17 @@
       </p>
 
       <a href="#reserva" class="btn btn-primary btn-large">
-        <span
-          data-es="QUIERO MI EXPERIENCIA GRATUITA"
-          data-en="I WANT MY FREE EXPERIENCE"
-        >
+        <span data-es="QUIERO MI EXPERIENCIA GRATUITA" data-en="I WANT MY FREE EXPERIENCE">
           QUIERO MI EXPERIENCIA GRATUITA
         </span>
-        <span
-          data-es="INCLUYE VALE PARA DOS PERSONAS"
-          data-en="INCLUDES A VOUCHER FOR TWO PEOPLE"
-        >
+        <span data-es="INCLUYE VALE PARA DOS PERSONAS" data-en="INCLUDES A VOUCHER FOR TWO PEOPLE">
           INCLUYE VALE PARA DOS PERSONAS
         </span>
       </a>
     </div>
   </section>
 
-  <!-- SECCIÓN 2 BENEFICIOS -->
+  <!-- BENEFICIOS -->
   <section class="section section-benefits" id="beneficios">
     <div class="container">
       <div class="section-heading section-heading-large">
@@ -175,16 +169,13 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 3 BONO -->
+  <!-- BONO -->
   <section class="section section-bono">
     <div class="container">
       <div class="bono-top-text reveal">
         <p class="section-label" data-es="TU INVITACIÓN" data-en="YOUR INVITATION">TU INVITACIÓN</p>
 
-        <h2
-          data-es="Tu experiencia gratuita empieza aquí"
-          data-en="Your free experience starts here"
-        >
+        <h2 data-es="Tu experiencia gratuita empieza aquí" data-en="Your free experience starts here">
           Tu experiencia gratuita empieza aquí
         </h2>
 
@@ -198,7 +189,8 @@
       </div>
 
       <div class="bono-center reveal">
-        <img src="bono.jpg" alt="Bono Glow Leaders" class="bono-img" />
+        <img src="BONOES.png" alt="Bono Glow Leaders" class="bono-img lang-es" />
+        <img src="BONOIN.png" alt="Glow Leaders Voucher" class="bono-img lang-en" />
       </div>
 
       <ul class="custom-list custom-list-centered reveal">
@@ -216,7 +208,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 4 GLOW LEADERS -->
+  <!-- GLOW LEADERS -->
   <section class="section section-team" id="equipo">
     <div class="container">
       <div class="section-heading section-heading-large section-heading-light">
@@ -224,36 +216,40 @@
         <h2 data-es="¿QUIÉNES SOMOS?" data-en="WHO ARE WE?">¿QUIÉNES SOMOS?</h2>
       </div>
 
-      <div class="team-slider reveal">
-        <article class="team-slide">
-          <img src="sandra.jpg" alt="Sandra - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>Sandra</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
+      <div class="team-carousel reveal">
+        <button class="carousel-arrow carousel-arrow-left team-arrow-left" type="button" aria-label="Anterior">
+          &#10094;
+        </button>
 
-        <article class="team-slide">
-          <img src="firas.jpg" alt="Firas - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>Firas</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
+        <div class="team-slider">
+          <article class="team-slide">
+            <img src="sandra.jpg" alt="Sandra - Glow Leaders" />
+            <div class="team-card-content">
+              <h3>Sandra</h3>
+              <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+            </div>
+          </article>
 
-        <article class="team-slide">
-          <img src="maria.jpg" alt="María - Glow Leaders" />
-          <div class="team-card-content">
-            <h3>María</h3>
-            <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">
-              WhatsApp
-            </a>
-          </div>
-        </article>
+          <article class="team-slide">
+            <img src="firas.jpg" alt="Firas - Glow Leaders" />
+            <div class="team-card-content">
+              <h3>Firas</h3>
+              <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="team-slide">
+            <img src="maria.jpg" alt="María - Glow Leaders" />
+            <div class="team-card-content">
+              <h3>María</h3>
+              <a href="https://wa.me/0000000000" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow-right team-arrow-right" type="button" aria-label="Siguiente">
+          &#10095;
+        </button>
       </div>
 
       <p
@@ -274,7 +270,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 5 PRODUCTOS -->
+  <!-- PRODUCTOS -->
   <section class="section section-products" id="productos">
     <div class="container">
       <div class="section-heading">
@@ -282,6 +278,7 @@
         <h2 data-es="PRODUCTOS DESTACADOS" data-en="FEATURED PRODUCTS">PRODUCTOS DESTACADOS</h2>
       </div>
 
+      <!-- LOS MÁS VENDIDOS -->
       <div class="products-showcase reveal">
         <div class="products-showcase-copy">
           <p class="products-kicker" data-es="Nuestros esenciales" data-en="Our essentials">Nuestros esenciales</p>
@@ -294,51 +291,77 @@
           </p>
         </div>
 
-        <div class="products-slider">
-          <article class="product-card">
-            <img src="bestseller1.jpg" alt="Best Seller 1" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 1" data-en="Product name 1">Nombre producto 1</h4>
-              <p
-                data-es="Breve descripción del producto 1. Beneficio principal o para qué sirve."
-                data-en="Short description of product 1. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 1. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+        <div class="products-carousel">
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
+            &#10094;
+          </button>
 
-          <article class="product-card">
-            <img src="bestseller2.jpg" alt="Best Seller 2" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 2" data-en="Product name 2">Nombre producto 2</h4>
-              <p
-                data-es="Breve descripción del producto 2. Beneficio principal o para qué sirve."
-                data-en="Short description of product 2. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 2. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+          <div class="products-slider">
+            <article class="product-card">
+              <img src="botalab.png" alt="Best Seller 1" />
+              <div class="product-content">
+                <h4 data-es="BOTALAB DESERTICOLA PLUS SHAMPOO" data-en="BOTALAB DESERTICOLA PLUS SHAMPOO">BOTALAB DESERTICOLA PLUS SHAMPOO</h4>
+                <p
+                  data-es="Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota."
+                  data-en="Cleans, hydrates and balances the scalp. Hair feels lighter, fresher and shinier. A clean feeling you can really notice."
+                >
+                  Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota.
+                </p>
+              </div>
+            </article>
 
-          <article class="product-card">
-            <img src="bestseller3.jpg" alt="Best Seller 3" />
-            <div class="product-content">
-              <h4 data-es="Nombre producto 3" data-en="Product name 3">Nombre producto 3</h4>
-              <p
-                data-es="Breve descripción del producto 3. Beneficio principal o para qué sirve."
-                data-en="Short description of product 3. Main benefit or what it is used for."
-              >
-                Breve descripción del producto 3. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+            <article class="product-card">
+              <img src="icdoil.png" alt="Best Seller 2" />
+              <div class="product-content">
+                <h4 data-es="ICD MOISTURE CLEANSING OIL" data-en="ICD MOISTURE CLEANSING OIL">ICD MOISTURE CLEANSING OIL</h4>
+                <p
+                  data-es="Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa."
+                  data-en="Removes makeup and impurities without drying the skin. Clean, soft and hydrated skin. The perfect first step for radiant skin."
+                >
+                  Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa.
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="multistick.png" alt="Best Seller 3" />
+              <div class="product-content">
+                <h4 data-es="ICD MULTI STICK BALM" data-en="ICD MULTI STICK BALM">ICD MULTI STICK BALM</h4>
+                <p
+                  data-es="Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante."
+                  data-en="Instant hydration anytime, anywhere. Adds a natural glow instantly. Fresh, nourished and radiant skin."
+                >
+                  Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante.
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="firstpackage.png" alt="Best Seller 4" />
+              <div class="product-content">
+                <h4 data-es="ICD DERMATOLOGY FIRST PACKAGE" data-en="ICD DERMATOLOGY FIRST PACKAGE">ICD DERMATOLOGY FIRST PACKAGE</h4>
+                <p
+                  data-es="Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN."
+                  data-en="Complete ritual to transform your skin. Improves texture, hydration and luminosity. Perfect to start your RIMAN skincare routine."
+                >
+                  Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
+            &#10095;
+          </button>
         </div>
       </div>
 
+      <!-- FAVORITOS -->
       <div class="products-showcase products-showcase-reverse reveal">
         <div class="products-showcase-copy">
-          <p class="products-kicker" data-es="Selección Glow Leaders" data-en="Glow Leaders selection">Selección Glow Leaders</p>
+          <p class="products-kicker" data-es="Selección Glow Leaders" data-en="Glow Leaders selection">
+            Selección Glow Leaders
+          </p>
           <h3 class="products-side-title" data-es="FAVORITOS" data-en="FAVORITES">FAVORITOS</h3>
           <p
             data-es="Una selección especial con productos favoritos para complementar tu ritual de cuidado."
@@ -348,51 +371,135 @@
           </p>
         </div>
 
-        <div class="products-slider">
-          <article class="product-card">
-            <img src="favorito1.jpg" alt="Favorito 1" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 1" data-en="Favorite name 1">Nombre favorito 1</h4>
-              <p
-                data-es="Breve descripción del producto favorito 1. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 1. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 1. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+        <div class="products-carousel">
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
+            &#10094;
+          </button>
 
-          <article class="product-card">
-            <img src="favorito2.jpg" alt="Favorito 2" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 2" data-en="Favorite name 2">Nombre favorito 2</h4>
-              <p
-                data-es="Breve descripción del producto favorito 2. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 2. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 2. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+          <div class="products-slider">
+            <article class="product-card">
+              <img src="botalabplus.png" alt="Favorito 1" />
+              <div class="product-content">
+                <h4 data-es="BOTALAB DESERTICOLA PLUS CONDITIONER" data-en="BOTALAB DESERTICOLA PLUS CONDITIONER">BOTALAB DESERTICOLA PLUS CONDITIONER</h4>
+                <p
+                  data-es="Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable."
+                  data-en="Deeply nourishes and softens the hair. Improves texture and shine. Healthier, smoother and more manageable hair."
+                >
+                  Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable.
+                </p>
+              </div>
+            </article>
 
-          <article class="product-card">
-            <img src="favorito3.jpg" alt="Favorito 3" />
-            <div class="product-content">
-              <h4 data-es="Nombre favorito 3" data-en="Favorite name 3">Nombre favorito 3</h4>
-              <p
-                data-es="Breve descripción del producto favorito 3. Beneficio principal o para qué sirve."
-                data-en="Short description of favorite product 3. Main benefit or what it is used for."
-              >
-                Breve descripción del producto favorito 3. Beneficio principal o para qué sirve.
-              </p>
-            </div>
-          </article>
+            <article class="product-card">
+              <img src="icdcream.png" alt="Favorito 2" />
+              <div class="product-content">
+                <h4 data-es="ICD DERMATOLOGY CREAM" data-en="ICD DERMATOLOGY CREAM">ICD DERMATOLOGY CREAM</h4>
+                <p
+                  data-es="Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort."
+                  data-en="Deep yet lightweight hydration. Softer and more elastic skin. Seals your skincare routine with comfort."
+                >
+                  Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort.
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="protector.png" alt="Favorito 3" />
+              <div class="product-content">
+                <h4 data-es="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+" data-en="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+">ICD MOISTURE LAYER SUN PROTECTOR SPF 50+</h4>
+                <p
+                  data-es="Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día."
+                  data-en="High protection with a lightweight texture. Hydrates without leaving residue. Protected and fresh skin all day long."
+                >
+                  Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día.
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="twophase.png" alt="Favorito 4" />
+              <div class="product-content">
+                <h4 data-es="ICD TWO-PHASE OIL MIST" data-en="ICD TWO-PHASE OIL MIST">ICD TWO-PHASE OIL MIST</h4>
+                <p
+                  data-es="Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos."
+                  data-en="Instantly hydrates and revitalizes. Adds natural luminosity. Refreshes your skin in seconds."
+                >
+                  Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
+            &#10095;
+          </button>
         </div>
+      </div>
+
+      <!-- PRODUCTO ESTRELLA -->
+      <div class="star-product reveal">
+        <div class="star-product-copy">
+          <p class="products-kicker" data-es="Selección destacada" data-en="Featured selection">
+            Selección destacada
+          </p>
+          <h3 class="products-side-title" data-es="PRODUCTO ESTRELLA" data-en="STAR PRODUCT">
+            PRODUCTO ESTRELLA
+          </h3>
+          <p
+            data-es="Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)"
+            data-en="Our star product, chosen for its high demand, visible results and for representing the essence of the RIMAN experience. (COMING SOON)"
+          >
+            Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)
+          </p>
+        </div>
+
+        <article class="product-card star-product-card">
+          <img src="colageno.png" alt="Producto estrella" />
+          <div class="product-content">
+            <h4 data-es="ICD COLLAGEN 100 MELTING MASK" data-en="ICD COLLAGEN 100 MELTING MASK">
+              ICD COLLAGEN 100 MELTING MASK
+            </h4>
+            <p
+              data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso."
+              data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow. A visible skincare boost from the first use."
+            >
+              Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN 6 EXPERIENCIA -->
+  <!-- CTA RUTINA PERSONALIZADA -->
+  <section class="routine-cta">
+    <div class="routine-cta-container">
+      <h2
+        data-es="¿No sabes qué producto es para ti?"
+        data-en="Not sure which product is right for you?"
+      >
+        ¿No sabes qué producto es para ti?
+      </h2>
+
+      <p
+        data-es="Te ayudamos a crear tu rutina de skincare personalizada."
+        data-en="We help you create your personalized skincare routine."
+      >
+        Te ayudamos a crear tu rutina de skincare personalizada.
+      </p>
+
+      <a
+        href="#reserva"
+        class="cta-btn"
+        data-es="QUIERO MI RUTINA PERSONALIZADA"
+        data-en="GET MY PERSONALIZED ROUTINE"
+      >
+        QUIERO MI RUTINA PERSONALIZADA
+      </a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
   <section class="section section-experience">
     <div class="container">
       <div class="section-heading section-heading-large">
@@ -414,24 +521,16 @@
         </article>
       </div>
 
-      <p
-        class="section-highlight"
-        data-es="MOMENTOS REALES, RESULTADOS REALES."
-        data-en="REAL MOMENTS, REAL RESULTS."
-      >
+      <p class="section-highlight" data-es="MOMENTOS REALES, RESULTADOS REALES." data-en="REAL MOMENTS, REAL RESULTS.">
         MOMENTOS REALES, RESULTADOS REALES.
       </p>
-      <p
-        class="section-subhighlight"
-        data-es="NO ES SOLO SKINCARE, ES UN RITUAL"
-        data-en="IT'S NOT JUST SKINCARE, IT'S A RITUAL"
-      >
+      <p class="section-subhighlight" data-es="NO ES SOLO SKINCARE, ES UN RITUAL" data-en="IT'S NOT JUST SKINCARE, IT'S A RITUAL">
         NO ES SOLO SKINCARE, ES UN RITUAL
       </p>
     </div>
   </section>
 
-  <!-- SECCIÓN 7 FORMULARIO -->
+  <!-- FORMULARIO -->
   <section class="section section-form" id="reserva">
     <div class="container">
       <div class="section-heading">
@@ -484,28 +583,19 @@
             </div>
           </div>
 
-          <button
-            type="submit"
-            class="btn btn-primary btn-submit"
-            data-es="QUIERO MI RITUAL GRATUITO"
-            data-en="I WANT MY FREE RITUAL"
-          >
+          <button type="submit" class="btn btn-primary btn-submit" data-es="QUIERO MI RITUAL GRATUITO" data-en="I WANT MY FREE RITUAL">
             QUIERO MI RITUAL GRATUITO
           </button>
         </form>
       </div>
 
-      <p
-        class="urgent-call"
-        data-es="PLAZAS LIMITADAS CADA SEMANA"
-        data-en="LIMITED SPOTS EACH WEEK"
-      >
+      <p class="urgent-call" data-es="PLAZAS LIMITADAS CADA SEMANA" data-en="LIMITED SPOTS EACH WEEK">
         PLAZAS LIMITADAS CADA SEMANA
       </p>
     </div>
   </section>
 
-  <!-- SECCIÓN 8 CIERRE -->
+  <!-- CTA FINAL -->
   <section class="section section-final-cta">
     <div class="container final-cta-layout">
       <div class="final-cta-image reveal">
@@ -513,11 +603,7 @@
       </div>
 
       <div class="final-cta-content reveal">
-        <h2
-          class="final-title"
-          data-es="CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN."
-          data-en="TAKING CARE OF YOURSELF IS NOT A LUXURY, IT'S A DECISION."
-        >
+        <h2 class="final-title" data-es="CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN." data-en="TAKING CARE OF YOURSELF IS NOT A LUXURY, IT'S A DECISION.">
           CUIDARTE NO ES UN LUJO, ES UNA DECISIÓN.
         </h2>
 
@@ -534,15 +620,13 @@
   <footer class="footer">
     <div class="container footer-container">
       <img src="logoriman.webp" alt="Logo Riman" class="footer-logo" />
-      <p
-        data-es="Glow Leaders · Experiencia skincare coreana"
-        data-en="Glow Leaders · Korean skincare experience"
-      >
+      <p data-es="Glow Leaders · Experiencia skincare coreana" data-en="Glow Leaders · Korean skincare experience">
         Glow Leaders · Experiencia skincare coreana
       </p>
     </div>
   </footer>
 
+  <!-- SCRIPT IDIOMA -->
   <script>
     const langButtons = document.querySelectorAll('.lang-btn');
     const translatableElements = document.querySelectorAll('[data-es][data-en]');
@@ -588,7 +672,10 @@
     });
 
     setLanguage(savedLang);
+  </script>
 
+  <!-- SCRIPT REVEAL -->
+  <script>
     const revealElements = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver((entries) => {
@@ -602,6 +689,60 @@
     revealElements.forEach(el => observer.observe(el));
   </script>
 
+  <!-- SCRIPT CARRUSELES -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const productCarousels = document.querySelectorAll(".products-carousel");
+
+      productCarousels.forEach((carousel) => {
+        const slider = carousel.querySelector(".products-slider");
+        const btnLeft = carousel.querySelector(".carousel-arrow-left");
+        const btnRight = carousel.querySelector(".carousel-arrow-right");
+
+        if (!slider || !btnLeft || !btnRight) return;
+
+        btnLeft.addEventListener("click", () => {
+          slider.scrollBy({
+            left: -slider.clientWidth * 0.9,
+            behavior: "smooth"
+          });
+        });
+
+        btnRight.addEventListener("click", () => {
+          slider.scrollBy({
+            left: slider.clientWidth * 0.9,
+            behavior: "smooth"
+          });
+        });
+      });
+
+      const teamCarousel = document.querySelector(".team-carousel");
+
+      if (teamCarousel) {
+        const slider = teamCarousel.querySelector(".team-slider");
+        const btnLeft = teamCarousel.querySelector(".team-arrow-left");
+        const btnRight = teamCarousel.querySelector(".team-arrow-right");
+
+        if (slider && btnLeft && btnRight) {
+          btnLeft.addEventListener("click", () => {
+            slider.scrollBy({
+              left: -slider.clientWidth * 0.9,
+              behavior: "smooth"
+            });
+          });
+
+          btnRight.addEventListener("click", () => {
+            slider.scrollBy({
+              left: slider.clientWidth * 0.9,
+              behavior: "smooth"
+            });
+          });
+        }
+      }
+    });
+  </script>
+
+  <!-- SCRIPT KLAVIYO -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("klaviyo-form");
