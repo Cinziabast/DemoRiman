@@ -494,8 +494,9 @@
   <script>
     const langButtons = document.querySelectorAll('.lang-btn');
     const translatableElements = document.querySelectorAll('[data-es][data-en]');
+    const savedLang = localStorage.getItem('lang') || 'es';
 
-    function setLanguage(lang) {
+    function setLanguage(lang) {localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
 
       translatableElements.forEach(el => {
@@ -533,6 +534,8 @@
       });
     });
 
+    setLanguage(savedLang);
+    
     const revealElements = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver((entries) => {
