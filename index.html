@@ -394,7 +394,7 @@
       </div>
 
       <div class="form-box reveal">
-        <form class="reservation-form">
+        <form id="klaviyo-form" class="reservation-form">
           <div class="form-group">
             <label for="nombre" data-es="Nombre completo" data-en="Full name">Nombre completo</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
@@ -431,7 +431,7 @@
               </label>
 
               <label class="advisor-option">
-                <input type="radio" name="asesor" value="Maria" />
+                <input type="radio" name="asesor" value="María" />
                 <img src="maria.jpg" alt="María" />
                 <span>María</span>
               </label>
@@ -458,7 +458,7 @@
       </p>
     </div>
   </section>
-
+  
   <!-- SECCIÓN 8 CIERRE -->
   <section class="section section-final-cta">
     <div class="container center-content">
@@ -545,5 +545,75 @@
 
     revealElements.forEach(el => observer.observe(el));
   </script>
+
+  <script>
+    document.getElementById("klaviyo-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const nombre = this.querySelector('input[name="nombre"]').value.trim();
+      const email = this.querySelector('input[name="email"]').value.trim();
+      const telefono = this.querySelector('input[name="telefono"]').value.trim();
+      const ciudad = this.querySelector('input[name="ciudad"]').value.trim();
+      const asesor = this.querySelector('input[name="asesor"]:checked')?.value;
+
+      if (!asesor) {
+        alert("Por favor, selecciona un asesor.");
+        return;
+      }
+
+      try {
+        const response = await fetch("https://a.klaviyo.com/client/subscriptions/?company_id=XZjNH6", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "revision": "2024-10-15"
+          },
+          body: JSON.stringify({
+            data: {
+              type: "subscription",
+              attributes: {
+                custom_source: "Glow Leaders Landing Page",
+                profile: {
+                  data: {
+                    type: "profile",
+                    attributes: {
+                      email: email,
+                      first_name: nombre,
+                      phone_number: telefono,
+                      properties: {
+                        ciudad: ciudad,
+                        asesor: asesor
+                      }
+                    }
+                  }
+                }
+              },
+              relationships: {
+                list: {
+                  data: {
+                    type: "list",
+                    id: "TtUdz8"
+                  }
+                }
+              }
+            }
+          })
+        });
+
+        if (response.ok) {
+          window.location.href = "/gracias.html";
+        } else {
+          const errorText = await response.text();
+          console.error("Error Klaviyo:", errorText);
+          alert("Hubo un problema al enviar el formulario. Inténtalo de nuevo.");
+        }
+
+      } catch (error) {
+        console.error("Error de conexión:", error);
+        alert("No se pudo enviar el formulario. Inténtalo de nuevo.");
+      }
+    });
+  </script>
+  
 </body>
 </html>
