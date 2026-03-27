@@ -1052,4 +1052,19 @@ video,
   .team-slider {
     grid-auto-columns: 88%;
   }
+
+   /* =========================
+   LANGUAGE IMAGES
+========================= */
+
+.lang-en {
+  display: none;
+}
+
+body.english .lang-es {
+  display: none;
+}
+
+body.english .lang-en {
+  display: block;
 }
