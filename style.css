@@ -84,12 +84,14 @@ IDIOMAS
 .language-switcher {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .lang-btn {
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   border: 1px solid rgba(199, 168, 109, 0.4);
   background: #ffffff;
   border-radius: 50%;
@@ -99,12 +101,19 @@ IDIOMAS
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
 .flag-icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* =========================
