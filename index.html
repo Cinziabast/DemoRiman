@@ -600,11 +600,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
       });
 
-      if (response.ok) {
-        window.location.href = "/gracias.html";
-      } else {
-        alert("Error al enviar datos a Klaviyo");
-      }
+     const responseText = await response.text();
+console.log("STATUS KLAVIYO:", response.status);
+console.log("RESPUESTA KLAVIYO:", responseText);
+
+if (response.ok) {
+  window.location.href = "/gracias.html";
+} else {
+  alert("Error al enviar datos a Klaviyo");
+}
 
     } catch (error) {
       console.error(error);
