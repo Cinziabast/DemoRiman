@@ -1072,3 +1072,46 @@ body.english .lang-es {
 body.english .lang-en {
   display: block;
 }
+
+/* =========================
+   SECCIÓN RUTINA PERSONALIZADA
+========================= */
+
+.rutina {
+  background-color: #f5f3ee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.rutina-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rutina h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.rutina p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.btn-rutina {
+  display: inline-block;
+  background-color: #425e54;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-rutina:hover {
+  background-color: #2f443c;
+}
