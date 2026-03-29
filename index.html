@@ -628,51 +628,57 @@
   </footer>
 
   <!-- SCRIPT IDIOMA -->
-  <script>
-    const langButtons = document.querySelectorAll('.lang-btn');
-    const translatableElements = document.querySelectorAll('[data-es][data-en]');
-    const savedLang = localStorage.getItem('lang') || 'es';
+<script>
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const translatableElements = document.querySelectorAll('[data-es][data-en]');
+  const savedLang = localStorage.getItem('lang') || 'es';
 
-    <script>
-function setLanguage(lang) {
-  localStorage.setItem('lang', lang);
-  document.documentElement.lang = lang;
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
 
-  // ESTO ES LO QUE FALTABA
-  if (lang === 'en') {
-    document.body.classList.add('english');
-  } else {
-    document.body.classList.remove('english');
+    if (lang === 'en') {
+      document.body.classList.add('english');
+    } else {
+      document.body.classList.remove('english');
+    }
+
+    translatableElements.forEach(el => {
+      const text = el.getAttribute(`data-${lang}`);
+      if (text) el.textContent = text;
+    });
+
+    const placeholders = {
+      es: {
+        nombre: 'Tu nombre completo',
+        email: 'Tu correo electrónico',
+        telefono: 'Tu número de teléfono',
+        ciudad: 'Tu ciudad'
+      },
+      en: {
+        nombre: 'Your full name',
+        email: 'Your email address',
+        telefono: 'Your phone number',
+        ciudad: 'Your city'
+      }
+    };
+
+    document.getElementById('nombre').placeholder = placeholders[lang].nombre;
+    document.getElementById('email').placeholder = placeholders[lang].email;
+    document.getElementById('telefono').placeholder = placeholders[lang].telefono;
+    document.getElementById('ciudad').placeholder = placeholders[lang].ciudad;
+
+    langButtons.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
   }
 
-  translatableElements.forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
-    if (text) el.textContent = text;
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+    });
   });
 
-  const placeholders = {
-    es: {
-      nombre: 'Tu nombre completo',
-      email: 'Tu correo electrónico',
-      telefono: 'Tu número de teléfono',
-      ciudad: 'Tu ciudad'
-    },
-    en: {
-      nombre: 'Your full name',
-      email: 'Your email address',
-      telefono: 'Your phone number',
-      ciudad: 'Your city'
-    }
-  };
-
-  document.getElementById('nombre').placeholder = placeholders[lang].nombre;
-  document.getElementById('email').placeholder = placeholders[lang].email;
-  document.getElementById('telefono').placeholder = placeholders[lang].telefono;
-  document.getElementById('ciudad').placeholder = placeholders[lang].ciudad;
-
-  langButtons.forEach(btn => btn.classList.remove('active'));
-  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
-}
+  setLanguage(savedLang);
 </script>
   
   <!-- SCRIPT REVEAL -->
