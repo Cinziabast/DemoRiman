@@ -1169,3 +1169,16 @@ body.english .lang-en {
     font-size: 14px;
   }
 }
+
+/* ===== CONTROL DE IDIOMA ===== */
+.lang-en {
+  display: none;
+}
+
+body.english .lang-es {
+  display: none !important;
+}
+
+body.english .lang-en {
+  display: inline-block !important;
+}
