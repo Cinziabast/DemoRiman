@@ -1182,3 +1182,30 @@ body.english .lang-es {
 body.english .lang-en {
   display: inline-block !important;
 }
+
+/* ===== PAGINA GRACIAS ===== */
+.gracias-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ece8e1;
+  padding: 40px 20px;
+}
+
+.gracias-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.gracias-box h1 {
+  margin-bottom: 20px;
+}
+
+.gracias-box p {
+  margin-bottom: 15px;
+}
