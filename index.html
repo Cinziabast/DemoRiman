@@ -895,8 +895,9 @@
         console.log("RESPUESTA KLAVIYO:", responseText);
         console.log("PAYLOAD ENVIADO:", payload);
 
-      if (response.ok) {
+   if (response.ok) {
   document.getElementById("success-modal").classList.remove("hidden");
+  updateModalLanguage();
   form.reset();
 } else {
   alert("Error al enviar datos a Klaviyo");
@@ -923,6 +924,15 @@ successModal.addEventListener("click", function (e) {
 });
     });
   });
+  function updateModalLanguage() {
+  const lang = localStorage.getItem('lang') || 'es';
+  const modalElements = document.querySelectorAll('#success-modal [data-es][data-en]');
+
+  modalElements.forEach(el => {
+    const text = el.getAttribute("data-" + lang);
+    if (text) el.textContent = text;
+  });
+}
 </script>
 
   <!-- MODAL GRACIAS -->
