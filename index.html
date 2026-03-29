@@ -815,15 +815,112 @@
         console.log("RESPUESTA KLAVIYO:", responseText);
         console.log("PAYLOAD ENVIADO:", payload);
 
-        if (response.ok) {
-          window.location.href = "/gracias.html";
-        } else {
-          alert("Error al enviar datos a Klaviyo. Revisa la consola.");
-        }
+      if (response.ok) {
+  document.getElementById("success-modal").classList.remove("hidden");
+  form.reset();
+} else {
+  alert("Error al enviar datos a Klaviyo");
+}
       } catch (error) {
         console.error("ERROR FETCH:", error);
         alert("Error de conexión");
       }
+    });
+  });
+</script>
+
+  <!-- SCRIPT KLAVIYO -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("klaviyo-form");
+
+    if (!form) {
+      console.error("No se encontró el formulario klaviyo-form");
+      return;
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const nombre = form.querySelector('input[name="nombre"]').value.trim();
+      const email = form.querySelector('input[name="email"]').value.trim();
+      const telefono = form.querySelector('input[name="telefono"]').value.trim();
+      const ciudad = form.querySelector('input[name="ciudad"]').value.trim();
+      const asesor = form.querySelector('input[name="asesor"]:checked')?.value || "";
+
+      const payload = {
+        data: {
+          type: "subscription",
+          attributes: {
+            profile: {
+              data: {
+                type: "profile",
+                attributes: {
+                  email: email,
+                  first_name: nombre,
+                  phone_number: telefono,
+                  properties: {
+                    ciudad: ciudad,
+                    asesor: asesor
+                  }
+                }
+              }
+            },
+            custom_source: "Glow Leaders Landing"
+          },
+          relationships: {
+            list: {
+              data: {
+                type: "list",
+                id: "TtUdz8"
+              }
+            }
+          }
+        }
+      };
+
+      try {
+        const response = await fetch("https://a.klaviyo.com/client/subscriptions/?company_id=XZjNH6", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "revision": "2024-10-15"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const responseText = await response.text();
+        console.log("STATUS KLAVIYO:", response.status);
+        console.log("RESPUESTA KLAVIYO:", responseText);
+        console.log("PAYLOAD ENVIADO:", payload);
+
+      if (response.ok) {
+  document.getElementById("success-modal").classList.remove("hidden");
+  form.reset();
+} else {
+  alert("Error al enviar datos a Klaviyo");
+}
+      } catch (error) {
+        console.error("ERROR FETCH:", error);
+        alert("Error de conexión");
+      }
+      const successModal = document.getElementById("success-modal");
+const closeSuccessModal = document.getElementById("close-success-modal");
+const successOk = document.getElementById("success-ok");
+
+function closeSuccessPopup() {
+  successModal.classList.add("hidden");
+}
+
+closeSuccessModal.addEventListener("click", closeSuccessPopup);
+successOk.addEventListener("click", closeSuccessPopup);
+
+successModal.addEventListener("click", function (e) {
+  if (e.target === successModal) {
+    closeSuccessPopup();
+  }
+});
     });
   });
 </script>
