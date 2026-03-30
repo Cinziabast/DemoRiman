@@ -436,40 +436,54 @@
         </div>
       </div>
 
-      <!-- PRODUCTO ESTRELLA -->
-      <div class="star-product reveal">
-        <div class="star-product-copy">
-          <p class="products-kicker" data-es="Selección destacada" data-en="Featured selection">
-            Selección destacada
-          </p>
-          <h3 class="products-side-title" data-es="PRODUCTO ESTRELLA" data-en="STAR PRODUCT">
-            PRODUCTO ESTRELLA
-          </h3>
+     <!-- PRODUCTO ESTRELLA -->
+<section class="star-product-section">
+  <div class="container">
+    <div class="star-product reveal">
+      <div class="star-product-copy">
+        <p class="products-kicker"
+           data-es="Selección destacada"
+           data-en="Featured selection">
+          Selección destacada
+        </p>
+
+        <h3 class="products-side-title"
+            data-es="PRODUCTO ESTRELLA"
+            data-en="STAR PRODUCT">
+          PRODUCTO ESTRELLA
+        </h3>
+
+        <p
+          data-es="Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN."
+          data-en="Our star product, chosen for its high demand, visible results and for representing the essence of the RIMAN experience."
+        >
+          Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN.
+        </p>
+      </div>
+
+      <article class="product-card star-product-card">
+        <video class="star-product-video" muted loop playsinline preload="metadata">
+          <source src="videomascarilla.mp4" type="video/mp4">
+        </video>
+
+        <div class="product-content">
+          <h4
+            data-es="ICD COLLAGEN 100 MELTING MASK"
+            data-en="ICD COLLAGEN 100 MELTING MASK">
+            ICD COLLAGEN 100 MELTING MASK
+          </h4>
+
           <p
-            data-es="Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)"
-            data-en="Our star product, chosen for its high demand, visible results and for representing the essence of the RIMAN experience. (COMING SOON)"
+            data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso."
+            data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow. A visible skincare boost from the first use."
           >
-            Nuestro producto estrella, elegido por su alta demanda, resultados visibles y por representar la esencia de la experiencia RIMAN. (PRÓXIMAMENTE)
+            Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso.
           </p>
         </div>
-
-        <article class="product-card star-product-card">
-          <img src="videomascarilla.mp4" alt="Producto estrella" />
-          <div class="product-content">
-            <h4 data-es="ICD COLLAGEN 100 MELTING MASK" data-en="ICD COLLAGEN 100 MELTING MASK">
-              ICD COLLAGEN 100 MELTING MASK
-            </h4>
-            <p
-              data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso."
-              data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow. A visible skincare boost from the first use."
-            >
-              Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso.
-            </p>
-          </div>
-        </article>
-      </div>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
  <!-- CTA RUTINA PERSONALIZADA -->
 <section class="rutina">
@@ -971,3 +985,23 @@ successModal.addEventListener("click", function (e) {
     </button>
   </div>
 </div>
+
+      <script>
+  const video = document.querySelector('.star-product-video');
+
+  if (video) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    observer.observe(video);
+  }
+</script>
