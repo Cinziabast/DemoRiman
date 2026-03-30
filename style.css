@@ -1340,16 +1340,18 @@ body.english .lang-en {
 .star-product-card {
   overflow: hidden;
   padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .star-product-video {
   width: 100%;
-  height: 520px;
+  height: 420px;
   object-fit: cover;
   display: block;
   background: #f5f3ee;
 }
 
 .star-product-card .product-content {
-  padding: 30px;
+  padding: 25px;
 }
