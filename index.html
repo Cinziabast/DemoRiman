@@ -1032,30 +1032,31 @@ successModal.addEventListener("click", function (e) {
 </script>
 
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const advisor = urlParams.get('advisor');
+document.addEventListener("DOMContentLoaded", function () {
 
-if(advisor === 'firas'){
-  document.getElementById('advisor_name').value = 'Firas';
-  document.getElementById('advisor_email').value = 'firas@email.com';
-  document.getElementById('advisor_phone').value = '600000000';
-  document.getElementById('riman_link').value = 'https://growandglow.riman.com';
-}
+  const urlParams = new URLSearchParams(window.location.search);
+  const advisor = urlParams.get('advisor');
 
-if(advisor === 'sandra'){
-  document.getElementById('advisor_name').value = 'Sandra';
-  document.getElementById('advisor_email').value = 'sandra@email.com';
-  document.getElementById('advisor_phone').value = '600000001';
-  document.getElementById('riman_link').value = 'https://sandraleader.riman.com';
-}
+  if(advisor === 'firas'){
+    document.getElementById('advisor_name').value = 'Firas';
+    document.getElementById('advisor_email').value = 'firas@email.com';
+    document.getElementById('advisor_phone').value = '600000000';
+    document.getElementById('riman_link').value = 'https://growandglow.riman.com';
+  }
 
-if(advisor === 'maria'){
-  document.getElementById('advisor_name').value = 'Maria';
-  document.getElementById('advisor_email').value = 'maria@email.com';
-  document.getElementById('advisor_phone').value = '600000002';
-  document.getElementById('riman_link').value = 'https://haciatubelleza.riman.com';
-}
+  if(advisor === 'sandra'){
+    document.getElementById('advisor_name').value = 'Sandra';
+    document.getElementById('advisor_email').value = 'sandra@email.com';
+    document.getElementById('advisor_phone').value = '600000001';
+    document.getElementById('riman_link').value = 'https://sandraleader.riman.com';
+  }
+
+  if(advisor === 'maria'){
+    document.getElementById('advisor_name').value = 'Maria';
+    document.getElementById('advisor_email').value = 'maria@email.com';
+    document.getElementById('advisor_phone').value = '600000002';
+    document.getElementById('riman_link').value = 'https://haciatubelleza.riman.com';
+  }
+
+});
 </script>
-
-</body>
-</html>
