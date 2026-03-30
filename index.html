@@ -1034,29 +1034,39 @@ successModal.addEventListener("click", function (e) {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const advisor = urlParams.get('advisor');
+  const advisorOptions = document.querySelectorAll('input[name="asesor"]');
 
-  if(advisor === 'firas'){
-    document.getElementById('advisor_name').value = 'Firas';
-    document.getElementById('advisor_email').value = 'firas@email.com';
-    document.getElementById('advisor_phone').value = '600000000';
-    document.getElementById('riman_link').value = 'https://growandglow.riman.com';
-  }
+  const advisorName = document.getElementById('advisor_name');
+  const advisorEmail = document.getElementById('advisor_email');
+  const advisorPhone = document.getElementById('advisor_phone');
+  const rimanLink = document.getElementById('riman_link');
 
-  if(advisor === 'sandra'){
-    document.getElementById('advisor_name').value = 'Sandra';
-    document.getElementById('advisor_email').value = 'sandra@email.com';
-    document.getElementById('advisor_phone').value = '600000001';
-    document.getElementById('riman_link').value = 'https://sandraleader.riman.com';
-  }
+  advisorOptions.forEach(option => {
+    option.addEventListener('change', function () {
 
-  if(advisor === 'maria'){
-    document.getElementById('advisor_name').value = 'Maria';
-    document.getElementById('advisor_email').value = 'maria@email.com';
-    document.getElementById('advisor_phone').value = '600000002';
-    document.getElementById('riman_link').value = 'https://haciatubelleza.riman.com';
-  }
+      if (this.value === 'Firas') {
+        advisorName.value = 'Firas';
+        advisorEmail.value = 'firas@email.com';
+        advisorPhone.value = '600000000';
+        rimanLink.value = 'https://growandglow.riman.com';
+      }
+
+      if (this.value === 'Sandra') {
+        advisorName.value = 'Sandra';
+        advisorEmail.value = 'sandra@email.com';
+        advisorPhone.value = '600000001';
+        rimanLink.value = 'https://sandraleader.riman.com';
+      }
+
+      if (this.value === 'María') {
+        advisorName.value = 'María';
+        advisorEmail.value = 'maria@email.com';
+        advisorPhone.value = '600000002';
+        rimanLink.value = 'https://haciatubelleza.riman.com';
+      }
+
+    });
+  });
 
 });
 </script>
