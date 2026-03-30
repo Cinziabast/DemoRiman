@@ -546,70 +546,94 @@
     </div>
   </section>
 
-  <!-- FORMULARIO -->
-  <section class="section section-form" id="reserva">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label" data-es="Reserva tu experiencia" data-en="Book your experience">Reserva tu experiencia</p>
-        <h2 data-es="Vive tu ritual gratuito" data-en="Live your free ritual">Vive tu ritual gratuito</h2>
-      </div>
-
-      <div class="form-box reveal">
-        <form id="klaviyo-form" class="reservation-form">
-          <div class="form-group">
-            <label for="nombre" data-es="Nombre completo" data-en="Full name">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono" data-es="Teléfono" data-en="Phone">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
-          </div>
-
-          <div class="form-group">
-            <label for="ciudad" data-es="Ciudad" data-en="City">Ciudad</label>
-            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required />
-          </div>
-
-          <div class="form-group">
-            <label data-es="Elige tu asesor RIMAN" data-en="Choose your RIMAN advisor">Elige tu asesor RIMAN</label>
-            <div class="advisor-grid">
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="Sandra" required />
-                <img src="sandraformulario.png" alt="Sandra" />
-                <span>Sandra</span>
-              </label>
-
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="Firas" />
-                <img src="firasformulario.png" alt="Firas" />
-                <span>Firas</span>
-              </label>
-
-              <label class="advisor-option">
-                <input type="radio" name="asesor" value="María" />
-                <img src="mariaformulario.png" alt="María" />
-                <span>María</span>
-              </label>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-submit" data-es="QUIERO MI RITUAL GRATUITO" data-en="I WANT MY FREE RITUAL">
-            QUIERO MI RITUAL GRATUITO
-          </button>
-        </form>
-      </div>
-
-      <p class="urgent-call" data-es="PLAZAS LIMITADAS CADA SEMANA" data-en="LIMITED SPOTS EACH WEEK">
-        PLAZAS LIMITADAS CADA SEMANA
+<!-- FORMULARIO -->
+<section class="section section-form" id="reserva">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label" data-es="Reserva tu experiencia" data-en="Book your experience">
+        Reserva tu experiencia
       </p>
+      <h2 data-es="Vive tu ritual gratuito" data-en="Live your free ritual">
+        Vive tu ritual gratuito
+      </h2>
     </div>
-  </section>
+
+    <div class="form-box reveal">
+      <form id="klaviyo-form" class="reservation-form">
+
+        <div class="form-group">
+          <label for="nombre" data-es="Nombre completo" data-en="Full name">
+            Nombre completo
+          </label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono" data-es="Teléfono" data-en="Phone">
+            Teléfono
+          </label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
+        </div>
+
+        <div class="form-group">
+          <label for="ciudad" data-es="Ciudad" data-en="City">
+            Ciudad
+          </label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required />
+        </div>
+
+        <div class="form-group">
+          <label data-es="Elige tu asesor RIMAN" data-en="Choose your RIMAN advisor">
+            Elige tu asesor RIMAN
+          </label>
+          <div class="advisor-grid">
+            <label class="advisor-option">
+              <input type="radio" name="asesor" value="Sandra" required />
+              <img src="sandraformulario.png" alt="Sandra" />
+              <span>Sandra</span>
+            </label>
+
+            <label class="advisor-option">
+              <input type="radio" name="asesor" value="Firas" />
+              <img src="firasformulario.png" alt="Firas" />
+              <span>Firas</span>
+            </label>
+
+            <label class="advisor-option">
+              <input type="radio" name="asesor" value="María" />
+              <img src="mariaformulario.png" alt="María" />
+              <span>María</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CAMPOS OCULTOS PARA KLAVIYO -->
+        <input type="hidden" name="advisor_name" id="advisor_name">
+        <input type="hidden" name="advisor_email" id="advisor_email">
+        <input type="hidden" name="advisor_phone" id="advisor_phone">
+        <input type="hidden" name="riman_link" id="riman_link">
+
+        <button type="submit" class="btn btn-primary btn-submit"
+          data-es="QUIERO MI RITUAL GRATUITO"
+          data-en="I WANT MY FREE RITUAL">
+          QUIERO MI RITUAL GRATUITO
+        </button>
+
+      </form>
+    </div>
+
+    <p class="urgent-call"
+      data-es="PLAZAS LIMITADAS CADA SEMANA"
+      data-en="LIMITED SPOTS EACH WEEK">
+      PLAZAS LIMITADAS CADA SEMANA
+    </p>
+  </div>
+</section>
 
   <!-- CTA FINAL -->
   <section class="section section-final-cta">
@@ -1006,3 +1030,32 @@ successModal.addEventListener("click", function (e) {
     observer.observe(video);
   }
 </script>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const advisor = urlParams.get('advisor');
+
+if(advisor === 'firas'){
+  document.getElementById('advisor_name').value = 'Firas';
+  document.getElementById('advisor_email').value = 'firas@email.com';
+  document.getElementById('advisor_phone').value = '600000000';
+  document.getElementById('riman_link').value = 'https://growandglow.riman.com';
+}
+
+if(advisor === 'sandra'){
+  document.getElementById('advisor_name').value = 'Sandra';
+  document.getElementById('advisor_email').value = 'sandra@email.com';
+  document.getElementById('advisor_phone').value = '600000001';
+  document.getElementById('riman_link').value = 'https://sandraleader.riman.com';
+}
+
+if(advisor === 'maria'){
+  document.getElementById('advisor_name').value = 'Maria';
+  document.getElementById('advisor_email').value = 'maria@email.com';
+  document.getElementById('advisor_phone').value = '600000002';
+  document.getElementById('riman_link').value = 'https://haciatubelleza.riman.com';
+}
+</script>
+
+</body>
+</html>
