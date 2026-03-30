@@ -1404,3 +1404,29 @@ body.english .lang-en {
   background: #c9b89a;
   margin: 14px auto 0;
 }
+
+/* =========================
+   TITULO SECCION EXPERIENCIA
+========================= */
+.section-experience .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-experience .section-heading .section-label {
+  color: #8d744d;
+}
+
+.section-experience .section-heading h2 {
+  color: #3f5f57;
+  font-weight: 500;
+}
+
+.section-experience .section-heading h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #8d744d;
+  margin: 14px auto 0;
+}
