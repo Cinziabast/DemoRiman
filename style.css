@@ -1340,17 +1340,23 @@ body.english .lang-en {
 .star-product-card {
   overflow: hidden;
   padding: 0;
-  max-width: 320px;   /* MÁS ESTRECHO */
+  max-width: 420px;
   margin: 0 auto;
   background: #f3efe8;
 }
 
+.star-product-inner {
+  display: flex;
+  align-items: center;
+}
+
 .star-product-video {
-  width: 100%;
-  height: auto;       /* MUY IMPORTANTE */
+  width: 180px;
+  height: auto;
   display: block;
 }
 
 .star-product-card .product-content {
   padding: 20px;
+  text-align: left;
 }
