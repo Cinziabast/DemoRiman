@@ -1373,23 +1373,34 @@ body.english .lang-en {
 }
 
 /* =========================
-   TITULO FORMULARIO
+   TITULO DEL FORMULARIO
 ========================= */
 
-.section-form h2 {
-  color: #3f5f57;
+.section-form .section-heading h2 {
+  color: #3f5f57 !important;
   font-size: 44px;
-  text-align: center;
-  margin-bottom: 35px;
   font-weight: 400;
-  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
 
-.section-form h2::after {
+.section-form .section-heading .section-label {
+  color: #c9b89a !important;
+  text-align: center;
+  display: block;
+}
+
+.section-form .section-heading {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.section-form .section-heading h2::after {
   content: "";
   display: block;
   width: 80px;
   height: 2px;
-  background-color: #c9b89a;
-  margin: 15px auto 0;
+  background: #c9b89a;
+  margin: 14px auto 0;
 }
