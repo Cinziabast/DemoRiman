@@ -1348,15 +1348,26 @@ body.english .lang-en {
 .star-product-inner {
   display: flex;
   align-items: center;
+  gap: 18px;
 }
 
 .star-product-video {
-  width: 180px;
+  width: 160px;
   height: auto;
   display: block;
+  flex-shrink: 0;
 }
 
 .star-product-card .product-content {
-  padding: 20px;
+  padding: 20px 20px 20px 0;
   text-align: left;
+}
+
+.star-product-card .product-content h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.star-product-card .product-content p {
+  margin: 0;
 }
