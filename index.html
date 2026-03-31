@@ -1186,3 +1186,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+      <script>
+  const testimonialsSlider = document.getElementById("testimonialsSlider");
+
+  if (testimonialsSlider) {
+    const prevBtn = document.querySelector(".testimonials-arrow.prev");
+    const nextBtn = document.querySelector(".testimonials-arrow.next");
+
+    const getScrollAmount = () => {
+      const card = testimonialsSlider.querySelector(".testimonial-card");
+      return card ? card.offsetWidth + 20 : 320;
+    };
+
+    prevBtn?.addEventListener("click", () => {
+      testimonialsSlider.scrollBy({
+        left: -getScrollAmount(),
+        behavior: "smooth"
+      });
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      testimonialsSlider.scrollBy({
+        left: getScrollAmount(),
+        behavior: "smooth"
+      });
+    });
+  }
+</script>
