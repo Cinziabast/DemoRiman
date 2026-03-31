@@ -1423,3 +1423,23 @@ body.english .lang-en {
   background: #8d744d;
   margin: 14px auto 0;
 }
+
+/* =========================
+   MOBILE PRODUCTO ESTRELLA
+========================= */
+
+@media (max-width: 768px) {
+  .star-product-inner {
+    flex-direction: column;
+  }
+
+  .star-product-video {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .star-product-card .product-content {
+    padding: 20px;
+  }
+}
