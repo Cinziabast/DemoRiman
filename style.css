@@ -1609,3 +1609,60 @@ section {
   background: #8d744d;
   margin: 14px auto 0;
 }
+
+/* =========================
+   EXPERIENCE STEPS CIRCLES
+========================= */
+
+.experience-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.step-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.step-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #e9dfcf;
+  color: #4f6f64;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #2f3a35;
+}
+
+.step-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .experience-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-steps {
+    grid-template-columns: 1fr;
+  }
+}
