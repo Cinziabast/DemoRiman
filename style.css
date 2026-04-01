@@ -1678,3 +1678,13 @@ section {
   background: transparent !important;
   color: #425e54 !important;
 }
+
+/* SUBTITULO FORMULARIO */
+.section-form .section-label {
+  color: #425e54 !important;
+  font-weight: 600;
+}
+
+.section-form .section-label::after {
+  background: #c8b096;
+}
