@@ -1471,6 +1471,7 @@ section {
 ========================= */
 .testimonials-section {
   background: var(--light-gray);
+  padding: 100px 0;
 }
 
 .testimonials-carousel {
@@ -1501,31 +1502,33 @@ section {
   border: 1px solid rgba(66, 94, 84, 0.12);
   box-shadow: var(--shadow);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card img {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
 
 .testimonial-content {
-  padding: 22px 20px 24px;
+  padding: 18px 18px 20px;
   text-align: center;
 }
 
 .testimonial-text {
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: #4a4a4a;
-  margin-bottom: 16px;
-  min-height: 120px;
+  margin-bottom: 14px;
+  min-height: 72px;
 }
 
 .testimonial-content h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #5c4923;
 }
 
@@ -1560,7 +1563,7 @@ section {
   }
 
   .testimonial-card img {
-    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .testimonial-text {
@@ -1577,11 +1580,6 @@ section {
 /* =========================
    TITULO TESTIMONIOS
 ========================= */
-.testimonials-section {
-  background: var(--light-gray);
-  padding: 100px 0;
-}
-
 .testimonials-section .section-heading {
   text-align: center;
   margin-bottom: 50px;
