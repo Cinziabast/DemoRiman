@@ -1453,6 +1453,22 @@ section {
   box-sizing: border-box;
 }
 
+/* TITULO FORMULARIO */
+.section-form h2 span {
+  background: transparent;
+  color: #425e54;
+  padding: 0;
+}
+
+.section-form h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #c8b096;
+  margin: 14px auto 0;
+}
+
 /* =========================
    TESTIMONIOS
 ========================= */
