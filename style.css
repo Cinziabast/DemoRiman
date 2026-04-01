@@ -564,6 +564,15 @@ ul {
   color: #f2ede1;
 }
 
+/* NUEVO TEXTO DEBAJO DEL NOMBRE */
+.team-card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 18px;
+  color: #f3ead4;
+}
+
 .team-text {
   max-width: 900px;
   margin: 38px auto 12px;
