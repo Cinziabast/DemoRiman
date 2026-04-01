@@ -1338,7 +1338,7 @@ body.english .lang-en {
 .star-product-card {
   overflow: hidden;
   padding: 0;
-  max-width: 560px;
+  max-width: 760px;
   margin: 0 auto;
   background: #f3efe8;
 }
@@ -1346,54 +1346,32 @@ body.english .lang-en {
 .star-product-inner {
   display: flex;
   align-items: stretch;
-  gap: 22px;
+  gap: 30px;
+  min-height: 520px;
 }
 
 .star-product-video {
-  width: 240px;
+  width: 320px;
   height: 100%;
-  min-height: 360px;
+  min-height: 520px;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
 }
 
 .star-product-card .product-content {
-  padding: 24px 24px 24px 0;
+  padding: 40px 40px 40px 0;
   text-align: left;
 }
 
-/* =========================
-   TITULO DEL FORMULARIO
-========================= */
-
-.section-form .section-heading h2 {
-  color: #3f5f57 !important;
-  font-size: 44px;
-  font-weight: 400;
-  text-align: center;
+.star-product-card h3 {
+  font-size: 2rem;
   margin-bottom: 18px;
-  letter-spacing: 0.5px;
 }
 
-.section-form .section-heading .section-label {
-  color: #c9b89a !important;
-  text-align: center;
-  display: block;
-}
-
-.section-form .section-heading {
-  text-align: center;
-  margin-bottom: 34px;
-}
-
-.section-form .section-heading h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  background: #c9b89a;
-  margin: 14px auto 0;
+.star-product-card p {
+  font-size: 1.25rem;
+  line-height: 1.7;
 }
 
 /* =========================
