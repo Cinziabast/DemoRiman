@@ -1667,3 +1667,14 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== TITULO DEL FORMULARIO SIN FONDO ===== */
+.section-form .section-heading h2,
+.section-form .main-title,
+.section-form h2,
+.section-form .section-heading h2 span,
+.section-form .main-title span,
+.section-form h2 span {
+  background: transparent !important;
+  color: #425e54 !important;
+}
