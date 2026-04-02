@@ -618,13 +618,32 @@ ul {
   color: #f2ede1;
 }
 
+.team-slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.team-card-content {
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* NUEVO TEXTO DEBAJO DEL NOMBRE */
 .team-card-description {
   font-size: 0.95rem;
   line-height: 1.5;
   opacity: 0.85;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
   color: #f3ead4;
+}
+
+.team-card-content .btn,
+.team-card-content .whatsapp-button,
+.team-card-content a {
+  margin-top: auto;
 }
 
 .team-text {
