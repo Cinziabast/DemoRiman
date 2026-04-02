@@ -1667,9 +1667,8 @@ section {
     gap: 18px;
   }
 
-  .testimonial-card {
-    padding: 14px 14px 54px;
-  }
+.polaroid-card {
+  padding: 14px 14px 54px;
 }
 
 @media (max-width: 560px) {
