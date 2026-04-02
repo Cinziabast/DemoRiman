@@ -2321,7 +2321,7 @@ section {
 .testimonials-slider {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 48px) / 3);
+  grid-auto-columns: calc((100% - 24px) / 2);
   gap: 24px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -2335,19 +2335,19 @@ section {
 
 .testimonial-card {
   background: #ffffff;
-  border-radius: 22px;
-  padding: 18px 18px 72px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.10);
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: var(--shadow);
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .testimonial-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 340px !important;
   object-fit: cover;
   display: block;
-  border-radius: 6px;
+  border-radius: 0 !important;
 }
 
 .testimonials-arrow {
