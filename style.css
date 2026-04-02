@@ -2430,38 +2430,38 @@ section {
   background: #c8b096;
 }
 
-/* ===== FIX TITULO FORMULARIO ===== */
-.section-form .section-heading,
-.section-form .section-label,
-.section-form h2,
-.section-form h2 span,
-.section-form .section-heading h2,
-.section-form .section-heading h2 span {
-  color: #425e54 !important;
-  opacity: 1 !important;
-}
-
+/* ===== FIX DEFINITIVO TITULO FORMULARIO ===== */
 .section-form .section-heading {
-  text-align: center;
-}
-
-.section-form .section-label {
-  color: #425e54 !important;
-}
-
-.section-form h2 {
-  color: #425e54 !important;
-  font-size: 2.8rem;
-  margin-bottom: 12px;
-}
-
-.section-form h2 span {
-  background: transparent !important;
-  color: #425e54 !important;
-}
-
-.section-form .reveal,
-.section-form .section-heading.reveal {
+  text-align: center !important;
   opacity: 1 !important;
   transform: none !important;
+}
+
+.section-form .section-heading .section-label {
+  color: #425e54 !important;
+  opacity: 1 !important;
+}
+
+.section-form .section-heading .section-label::after {
+  background: #c8b096 !important;
+}
+
+.section-form .section-heading h2 {
+  color: #425e54 !important;
+  opacity: 1 !important;
+  font-size: 2.8rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 600 !important;
+}
+
+.section-form h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #c8b096 !important;
+  margin: 14px auto 0;
 }
