@@ -2450,3 +2450,10 @@ section {
   background: #c8b096 !important;
   margin: 14px auto 0;
 }
+
+/* CENTRAR BOTON BONO */
+.bono-button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
