@@ -2400,9 +2400,18 @@ section {
     gap: 18px;
   }
 
-  .polaroid-card {
-    padding: 14px 14px 54px;
-  }
+ .polaroid-card {
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+   .polaroid-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 560px) {
