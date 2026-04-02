@@ -583,7 +583,7 @@
   </section>
 
   
-   <section class="section testimonials-section">
+ <section class="section testimonials-section">
   <div class="container">
 
     <div class="section-heading center-content reveal">
@@ -609,82 +609,74 @@
       <button class="carousel-arrow testimonials-arrow prev" aria-label="Anterior">&#10094;</button>
 
       <div class="testimonials-slider" id="testimonialsSlider">
-        <!-- tarjetas -->
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio1.png" alt="Testimonio 1">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio2.png" alt="Testimonio 2">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio3.png" alt="Testimonio 3">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio4.png" alt="Testimonio 4">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio5.png" alt="Testimonio 5">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio6.png" alt="Testimonio 6">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio7.png" alt="Testimonio 7">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio8.png" alt="Testimonio 8">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio9.png" alt="Testimonio 9">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio10.png" alt="Testimonio 10">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio11.png" alt="Testimonio 11">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio12.png" alt="Testimonio 12">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio13.png" alt="Testimonio 13">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio14.png" alt="Testimonio 14">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio15.png" alt="Testimonio 15">
+        </article>
+
+        <article class="testimonial-card polaroid-card">
+          <img src="testimonio16.png" alt="Testimonio 16">
+        </article>
       </div>
 
       <button class="carousel-arrow testimonials-arrow next" aria-label="Siguiente">&#10095;</button>
     </div>
 
-  </div>
-</section>
-     <div class="testimonials-slider" id="testimonialsSlider">
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio1.png" alt="Testimonio 1">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio2.png" alt="Testimonio 2">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio3.png" alt="Testimonio 3">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio4.png" alt="Testimonio 4">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio5.png" alt="Testimonio 5">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio6.png" alt="Testimonio 6">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio7.png" alt="Testimonio 7">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio8.png" alt="Testimonio 8">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio9.png" alt="Testimonio 9">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio10.png" alt="Testimonio 10">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio11.png" alt="Testimonio 11">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio12.png" alt="Testimonio 12">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio13.png" alt="Testimonio 13">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio14.png" alt="Testimonio 14">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio15.png" alt="Testimonio 15">
-  </article>
-
-  <article class="testimonial-card polaroid-card">
-    <img src="testimonio16.png" alt="Testimonio 16">
-  </article>
-</div>
-      
-      <button class="carousel-arrow testimonials-arrow next" aria-label="Siguiente">&#10095;</button>
-    </div>
   </div>
 </section>
       
@@ -1192,7 +1184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-      <script>
+<script>
   const testimonialsSlider = document.getElementById("testimonialsSlider");
 
   if (testimonialsSlider) {
@@ -1201,7 +1193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const getScrollAmount = () => {
       const card = testimonialsSlider.querySelector(".testimonial-card");
-      return card ? card.offsetWidth + 20 : 320;
+      return card ? card.offsetWidth + 24 : 320;
     };
 
     prevBtn?.addEventListener("click", () => {
@@ -1219,26 +1211,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 </script>
-
-  <script>
-const slider = document.getElementById('testimonialsSlider');
-const prevBtn = document.querySelector('.testimonials-arrow.prev');
-const nextBtn = document.querySelector('.testimonials-arrow.next');
-
-nextBtn.addEventListener('click', () => {
-  slider.scrollBy({
-    left: slider.offsetWidth / 3,
-    behavior: 'smooth'
-  });
-});
-
-prevBtn.addEventListener('click', () => {
-  slider.scrollBy({
-    left: -slider.offsetWidth / 3,
-    behavior: 'smooth'
-  });
-});
-</script>
-
-</body>
-</html>
