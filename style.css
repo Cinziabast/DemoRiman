@@ -1708,6 +1708,15 @@ section {
   margin: 14px auto 0;
 }
 
+   .ritual-subtitle {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  color: #8d744d;
+  margin-top: 10px;
+  margin-bottom: 30px;
+   }
+   
 /* =========================
    EXPERIENCE STEPS CIRCLES
 ========================= */
