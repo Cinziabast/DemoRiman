@@ -1219,3 +1219,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 </script>
+
+  <script>
+const slider = document.getElementById('testimonialsSlider');
+const prevBtn = document.querySelector('.testimonials-arrow.prev');
+const nextBtn = document.querySelector('.testimonials-arrow.next');
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({
+    left: slider.offsetWidth / 3,
+    behavior: 'smooth'
+  });
+});
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({
+    left: -slider.offsetWidth / 3,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+</body>
+</html>
