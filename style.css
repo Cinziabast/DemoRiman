@@ -2242,20 +2242,6 @@ section {
   box-sizing: border-box;
 }
 
-/* TITULO FORMULARIO */
-.section-form h2 span {
-  background: transparent;
-  color: #425e54;
-  padding: 0;
-}
-
-.section-form h2 {
-  color: #425e54;
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 20px;
-}
-
 /* =========================
    TESTIMONIOS
 ========================= */
