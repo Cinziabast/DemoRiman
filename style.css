@@ -2457,3 +2457,19 @@ section {
   justify-content: center;
   margin-top: 40px;
 }
+
+.bono-button-wrap {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-top: 40px !important;
+}
+
+.bono-button-wrap .bono-btn {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
