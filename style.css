@@ -1619,7 +1619,7 @@ section {
 
 .testimonials-arrow {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   width: 54px;
   height: 54px;
