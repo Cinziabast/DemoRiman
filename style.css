@@ -1524,6 +1524,720 @@ section {
 }
 
 /* =========================
+   FORMULARIO
+========================= */
+.section-form {
+  background: var(--light-gray);
+}
+
+.form-box {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 34px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(66, 94, 84, 0.14);
+}
+
+.reservation-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4e432c;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid rgba(66, 94, 84, 0.2);
+  background: #fffefb;
+  font-size: 0.96rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(66, 94, 84, 0.12);
+}
+
+.advisor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.advisor-option {
+  display: block;
+  cursor: pointer;
+  background: #fcfaf4;
+  border: 1px solid rgba(66, 94, 84, 0.12);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.advisor-option input {
+  display: none;
+}
+
+.advisor-option img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.advisor-option span {
+  display: block;
+  padding: 14px 10px 16px;
+  font-weight: 600;
+  color: #4b4332;
+}
+
+.advisor-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.advisor-option input:checked + img + span {
+  background: rgba(66, 94, 84, 0.08);
+  color: #33483f;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 8px;
+  border: none;
+  font-size: 0.98rem;
+}
+
+.urgent-call {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #8f2d2d;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.section-final-cta {
+  background: var(--green);
+  color: var(--white);
+  padding: 90px 0;
+}
+
+.final-cta-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.final-cta-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.final-cta-content {
+  text-align: left;
+  max-width: 520px;
+}
+
+.final-title {
+  color: #f3ead4;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.final-subtitle {
+  color: #d9d8c1;
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* Botón CTA final */
+.section-final-cta .btn-primary {
+  display: inline-block;
+  padding: 20px 52px;
+  background: #f3ead4;
+  color: #2f3e38;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.section-final-cta .btn-primary:hover {
+  background: #ffffff;
+  color: #2f3e38;
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section-final-cta {
+    padding: 70px 0;
+  }
+
+  .final-cta-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .final-cta-image img {
+    height: 380px;
+  }
+
+  .final-cta-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section-final-cta .btn-primary {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: var(--green);
+  padding: 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  text-align: center;
+  color: var(--white);
+}
+
+.footer-logo {
+  width: 95px;
+  margin: 0 auto 12px;
+}
+
+/* =========================
+   SIN ESQUINAS REDONDEADAS
+========================= */
+img,
+video,
+.product-card,
+.experience-card,
+.form-box,
+.advisor-option,
+.team-slide {
+  border-radius: 0 !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .benefit-row,
+  .products-showcase,
+  .products-showcase-reverse,
+  .star-product,
+  .final-cta-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .products-showcase-reverse .products-showcase-copy,
+  .products-showcase-reverse .products-carousel {
+    order: initial;
+  }
+
+  .final-cta-content {
+    text-align: center;
+  }
+
+  .final-cta-image img {
+    height: auto;
+  }
+
+  .star-product-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .experience-grid,
+  .advisor-grid,
+  .benefit-row {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-row-reverse .benefit-media,
+  .benefit-row-reverse .benefit-copy {
+    order: initial;
+  }
+
+  .products-carousel,
+  .team-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .products-slider {
+    grid-auto-columns: 84%;
+  }
+
+  .team-slider {
+    grid-auto-columns: 84%;
+  }
+
+  .benefit-media img,
+  .experience-card img,
+  .advisor-option img,
+  .product-card img,
+  .team-slide img,
+  .star-product-card img {
+    height: auto;
+  }
+
+  .form-box {
+    padding: 24px 18px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .main-title {
+    font-size: clamp(1.9rem, 8vw, 3rem);
+  }
+
+  .hero-text {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .logo-riman {
+    width: 90px;
+  }
+
+  .btn,
+  .btn-large,
+  .bono-btn {
+    width: 100%;
+  }
+
+  .main-title,
+  .section-heading h2,
+  .final-title {
+    line-height: 1.12;
+  }
+
+  .language-switcher {
+    justify-content: center;
+  }
+
+  .products-slider {
+    grid-auto-columns: 88%;
+  }
+
+  .team-slider {
+    grid-auto-columns: 88%;
+  }
+}
+
+/* =========================
+   LANGUAGE IMAGES
+========================= */
+.lang-es {
+  display: block;
+}
+
+.lang-en {
+  display: none;
+}
+
+body.english .lang-es {
+  display: none;
+}
+
+body.english .lang-en {
+  display: block;
+}
+
+/* =========================
+   SECCIÓN RUTINA PERSONALIZADA
+========================= */
+
+.rutina {
+  background: linear-gradient(to bottom, #f5f3ee 0%, #eeebdf 100%);
+  padding: 100px 40px;
+  width: 100%;
+}
+
+.rutina-box {
+  max-width: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.rutina-tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8e735b;
+  font-weight: 600;
+}
+
+.rutina h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: #5b432d;
+  font-weight: 500;
+}
+
+.rutina p {
+  max-width: 680px;
+  margin: 0 auto 34px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #425e54;
+}
+
+.btn-rutina {
+  display: inline-block;
+  background-color: #425e54;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 18px 38px;
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  box-shadow: 0 12px 26px rgba(66, 94, 84, 0.18);
+  transition: all 0.3s ease;
+}
+
+.btn-rutina:hover {
+  background-color: #2f443c;
+  transform: translateY(-2px);
+}
+
+/* móvil */
+@media (max-width: 768px) {
+  .rutina {
+    padding: 70px 20px;
+  }
+
+  .rutina-box {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .rutina h2 {
+    font-size: 30px;
+  }
+
+  .rutina p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .btn-rutina {
+    width: 100%;
+    max-width: 340px;
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ===== CONTROL DE IDIOMA ===== */
+.lang-en {
+  display: none;
+}
+
+body.english .lang-es {
+  display: none !important;
+}
+
+body.english .lang-en {
+  display: inline-block !important;
+}
+
+/* ===== PAGINA GRACIAS ===== */
+.gracias-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ece8e1;
+  padding: 40px 20px;
+}
+
+.gracias-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.gracias-box h1 {
+  margin-bottom: 20px;
+}
+
+.gracias-box p {
+  margin-bottom: 15px;
+}
+
+/* ===== MODAL GRACIAS ===== */
+.success-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.success-modal.hidden {
+  display: none;
+}
+
+.success-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.success-modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #6b4c36;
+}
+
+.success-modal-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #425e54;
+  margin-bottom: 16px;
+}
+
+/* Última frase destacada */
+.success-modal-content p:last-of-type {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #6b4c36;
+}
+
+.success-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #425e54;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(66, 94, 84, 0.22);
+}
+
+.success-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* =========================
+   VIDEO PRODUCTO ESTRELLA
+========================= */
+
+.star-product-card {
+  overflow: hidden;
+  padding: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  background: #f3efe8;
+}
+
+.star-product-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  min-height: 520px;
+}
+
+.star-product-video {
+  width: 320px;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.star-product-card .product-content {
+  padding: 40px 40px 40px 0;
+  text-align: left;
+}
+
+.star-product-card h3 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.star-product-card p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   TITULO SECCION EXPERIENCIA
+========================= */
+.section-experience .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-experience .section-heading .section-label {
+  color: #8d744d;
+}
+
+.section-experience .section-heading h2 {
+  color: #3f5f57;
+  font-weight: 500;
+}
+
+.section-experience .section-heading h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #8d744d;
+  margin: 14px auto 0;
+}
+
+/* =========================
+   MOBILE PRODUCTO ESTRELLA
+========================= */
+
+@media (max-width: 768px) {
+  .star-product-inner {
+    flex-direction: column;
+  }
+
+  .star-product-video {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .star-product-card .product-content {
+    padding: 20px;
+  }
+}
+
+/* =================================
+   FULL WIDTH LANDING
+================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* TITULO FORMULARIO */
+.section-form h2 span {
+  background: transparent;
+  color: #425e54;
+  padding: 0;
+}
+
+.section-form h2 {
+  color: #425e54;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+/* =========================
    TESTIMONIOS
 ========================= */
 .testimonials-section {
