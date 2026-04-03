@@ -2473,3 +2473,67 @@ section {
   align-items: center !important;
   margin: 0 auto !important;
 }
+
+/* =================================
+   FULL WIDTH LANDING
+================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* SECCIONES FULL WIDTH */
+.section-full {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-full img,
+.section-full video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 20px; }
+}
