@@ -2587,3 +2587,27 @@ video {
   }
 
 }
+
+/* BOTON SOBRE IMAGEN BONO */
+.bono-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bono-btn-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .bono-btn-overlay {
+    bottom: 14px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
