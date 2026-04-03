@@ -2637,3 +2637,24 @@ body.english .section-bono .lang-en {
     text-align: center;
   }
 }
+
+/* ===== BOTON BONO DESKTOP FIX ===== */
+
+.section-bono .bono-image-wrap {
+  position: relative;
+}
+
+.section-bono .bono-btn-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+  .section-bono .bono-btn-overlay {
+    bottom: 7%;
+  }
+}
