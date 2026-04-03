@@ -2656,5 +2656,8 @@ body.english .section-bono .lang-en {
 @media (max-width: 768px) {
   .section-bono .bono-btn-overlay {
     bottom: 7% !important;
+    padding: 6px 12px !important;
+    font-size: 10px !important;
+    max-width: 62% !important;
   }
 }
