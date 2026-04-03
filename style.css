@@ -2588,8 +2588,11 @@ video {
 
 }
 
-/* BOTON SOBRE IMAGEN BONO */
-.bono-image-wrap {
+/* =================================
+   BOTON BONO SOBRE IMAGEN
+================================= */
+
+.section-bono .bono-image-wrap {
   position: relative;
   width: 100%;
   max-width: 1100px;
@@ -2597,35 +2600,22 @@ video {
   overflow: hidden;
 }
 
-.bono-btn-overlay {
+.section-bono .bono-image-wrap .bono-btn-overlay {
   position: absolute;
   left: 50%;
-  bottom: 120px;
   transform: translateX(-50%);
+  bottom: 14%;
   z-index: 10;
 }
 
+/* MOVIL */
 @media (max-width: 768px) {
-  .bono-btn-overlay {
-    bottom: 20px;
-    padding: 12px 18px;
-    font-size: 14px;
-  }
-}
-
-/* POSICION BOTON BONO DESKTOP */
-.section-bono .bono-btn-overlay {
-  bottom: 120px !important;
-}
-
-/* POSICION BOTON BONO MOVIL */
-@media (max-width: 768px) {
-  .section-bono .bono-btn-overlay {
-    bottom: 10% !important;
-    width: auto;
-    max-width: 80%;
-    padding: 10px 18px;
-    font-size: 13px;
+  .section-bono .bono-image-wrap .bono-btn-overlay {
+    bottom: 8%;
+    padding: 8px 14px;
+    font-size: 11px;
+    max-width: 68%;
+    border-radius: 30px;
     white-space: nowrap;
     text-align: center;
   }
