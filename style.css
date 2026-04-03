@@ -2594,19 +2594,20 @@ video {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .bono-btn-overlay {
   position: absolute;
   left: 50%;
-  bottom: 28px;
+  bottom: 60px;
   transform: translateX(-50%);
   z-index: 10;
 }
 
 @media (max-width: 768px) {
   .bono-btn-overlay {
-    bottom: 14px;
+    bottom: 20px;
     padding: 12px 18px;
     font-size: 14px;
   }
