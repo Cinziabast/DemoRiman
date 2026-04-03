@@ -2661,3 +2661,40 @@ body.english .section-bono .lang-en {
     max-width: 62% !important;
   }
 }
+
+/* =================================
+   TABLET VERTICAL (iPad portrait)
+================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bono-top-text h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .section-bono .bono-btn-overlay {
+    bottom: 7% !important;
+    padding: 10px 18px !important;
+    font-size: 12px !important;
+    max-width: 70% !important;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .experience-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .step-card {
+    padding: 28px 18px 22px;
+  }
+
+  .step-card h4 {
+    font-size: 1.15rem;
+  }
+
+  .step-card p {
+    font-size: 0.98rem;
+  }
+}
