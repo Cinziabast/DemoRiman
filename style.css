@@ -753,6 +753,15 @@ ul {
   align-items: center;
 }
 
+.carousel-arrow {
+  z-index: 5;
+}
+
+.products-carousel {
+  position: relative;
+  z-index: 1;
+}
+
 .products-slider {
   display: grid;
   grid-auto-flow: column;
