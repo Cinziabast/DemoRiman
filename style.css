@@ -686,7 +686,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 30px;
   margin-top: 24px;
 }
 
@@ -696,12 +696,17 @@ ul {
 
 /* Titulo izquierda / carrusel derecha */
 .products-showcase .section-heading {
-  width: 28%;
+  width: 20%;
   margin-bottom: 0;
 }
 
 .products-showcase .products-carousel {
-  width: 72%;
+  width: 80%;
+}
+
+.products-showcase .section-heading h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1;
 }
 
 /* FAVORITOS al revés */
@@ -710,12 +715,12 @@ ul {
 }
 
 /* PRODUCTO ESTRELLA */
-.products-showcase:last-of-type {
+.products-showcase.star-layout {
   display: block;
   margin-top: 120px;
 }
 
-.products-showcase:last-of-type .section-heading {
+.products-showcase.star-layout .section-heading {
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
@@ -767,21 +772,26 @@ ul {
 }
 
 .product-content {
-  padding: 22px 18px 24px;
+  padding: 16px 14px 18px;
   text-align: center;
 }
 
 .product-content h4 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.2;
   margin-bottom: 10px;
   color: #5c4923;
   font-family: 'Cormorant Garamond', serif;
 }
 
 .product-content p {
-  font-size: 0.96rem;
+  font-size: 0.85rem;
   color: #505050;
-  line-height: 1.6;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* =========================
@@ -809,42 +819,39 @@ ul {
   border-radius: 10px;
 }
 
+.star-product-copy h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #f1eee6;
+}
+
+.star-product-copy p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f1eee6;
+}
+
 /* =========================
-   PRODUCTO ESTRELLA LAYOUT
+   RESPONSIVE
 ========================= */
 
-.products-showcase.star-layout {
-  display: block;
-  margin-top: 120px;
-}
-
-.products-showcase.star-layout .section-heading {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.star-product {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-.star-product-copy {
-  width: 45%;
-}
-
-.star-product-media {
-  width: 55%;
-}
-
-.star-product-video {
-  width: 100%;
-  border-radius: 10px;
-}
-
 @media (max-width: 900px) {
+  .products-showcase,
+  .products-showcase:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel {
+    width: 100%;
+    text-align: center;
+  }
+
+  .products-showcase.star-layout {
+    display: block;
+  }
+
   .star-product {
     flex-direction: column;
   }
