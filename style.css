@@ -3125,3 +3125,21 @@ body.english .section-bono .lang-en {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   TITULO RITUAL CENTRADO
+========================= */
+
+.testimonials-section .section-heading {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 60px auto;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+}
