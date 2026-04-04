@@ -1,49 +1,63 @@
-let heroIntervals = {};
+const heroImages = {
+  es: [
+    "images/hero/hero-es-1.png",
+    "images/hero/hero-es-2.png",
+    "images/hero/hero-es-3.png"
+  ],
+  en: [
+    "images/hero/hero-en-1.png",
+    "images/hero/hero-en-2.png",
+    "images/hero/hero-en-3.png"
+  ]
+};
 
-function initHeroSlider(sliderId) {
-  const slider = document.getElementById(sliderId);
-  if (!slider) return;
+let currentHeroIndex = 0;
+let currentHeroLang = "es";
+let heroTimer = null;
 
-  const slides = slider.querySelectorAll(".hero-slide");
-  if (!slides.length) return;
+function getActiveLanguage() {
+  const activeBtn = document.querySelector(".lang-btn.active");
+  return activeBtn ? activeBtn.dataset.lang : "es";
+}
 
-  let current = 0;
+function updateHeroImage() {
+  const heroImg = document.getElementById("hero-slide-image");
+  if (!heroImg) return;
 
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[0].classList.add("active");
+  const images = heroImages[currentHeroLang];
+  heroImg.src = images[currentHeroIndex];
+}
 
-  if (heroIntervals[sliderId]) {
-    clearInterval(heroIntervals[sliderId]);
-  }
+function startHeroSlider() {
+  clearInterval(heroTimer);
 
-  heroIntervals[sliderId] = setInterval(() => {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
+  currentHeroLang = getActiveLanguage();
+  currentHeroIndex = 0;
+  updateHeroImage();
+
+  heroTimer = setInterval(() => {
+    const langNow = getActiveLanguage();
+
+    if (langNow !== currentHeroLang) {
+      currentHeroLang = langNow;
+      currentHeroIndex = 0;
+      updateHeroImage();
+      return;
+    }
+
+    currentHeroIndex = (currentHeroIndex + 1) % heroImages[currentHeroLang].length;
+    updateHeroImage();
   }, 4000);
 }
 
-function startCurrentLanguageSlider() {
-  const activeBtn = document.querySelector(".lang-btn.active");
-  const lang = activeBtn ? activeBtn.dataset.lang : "es";
-
-  if (lang === "es") {
-    if (heroIntervals["hero-slider-en"]) clearInterval(heroIntervals["hero-slider-en"]);
-    initHeroSlider("hero-slider-es");
-  } else {
-    if (heroIntervals["hero-slider-es"]) clearInterval(heroIntervals["hero-slider-es"]);
-    initHeroSlider("hero-slider-en");
-  }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  startCurrentLanguageSlider();
+  startHeroSlider();
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
-        startCurrentLanguageSlider();
-      }, 100);
+        startHeroSlider();
+      }, 50);
     });
   });
 });
