@@ -3104,3 +3104,19 @@ body.english .section-bono .lang-en {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* =========================
+   TEAM SIN CARRUSEL
+========================= */
+
+.team-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .team-slider {
+    grid-template-columns: 1fr;
+  }
+}
