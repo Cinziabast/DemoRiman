@@ -1501,29 +1501,32 @@ body.english .lang-en {
 }
 
 /* =========================
-   TITULO SECCION EXPERIENCIA
+   EXPERIENCIA SIN TEXTOS
 ========================= */
-.section-experience .section-heading {
-  text-align: center;
-  margin-bottom: 40px;
+
+.section-experience {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.section-experience .section-heading .section-label {
-  color: #8d744d;
+.section-experience .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.section-experience .section-heading h2 {
-  color: #3f5f57;
-  font-weight: 500;
+.experience-grid {
+  width: 100%;
+  margin: 0;
+  gap: 20px;
 }
 
-.section-experience .section-heading h2::after {
-  content: "";
+.experience-card video {
+  width: 100%;
   display: block;
-  width: 80px;
-  height: 2px;
-  background: #8d744d;
-  margin: 14px auto 0;
+  object-fit: cover;
 }
 
 /* =========================
