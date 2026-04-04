@@ -13,7 +13,6 @@ const heroImages = {
 
 let currentHeroIndex = 0;
 let currentHeroLang = "es";
-let heroTimer = null;
 
 function getActiveLanguage() {
   const activeBtn = document.querySelector(".lang-btn.active");
@@ -24,40 +23,24 @@ function updateHeroImage() {
   const heroImg = document.getElementById("hero-slide-image");
   if (!heroImg) return;
 
-  const images = heroImages[currentHeroLang];
-  heroImg.src = images[currentHeroIndex];
+  currentHeroLang = getActiveLanguage();
+  heroImg.src = heroImages[currentHeroLang][currentHeroIndex];
 }
 
-function startHeroSlider() {
-  clearInterval(heroTimer);
-
+function nextHeroSlide() {
   currentHeroLang = getActiveLanguage();
-  currentHeroIndex = 0;
+  currentHeroIndex = (currentHeroIndex + 1) % heroImages[currentHeroLang].length;
   updateHeroImage();
-
-  heroTimer = setInterval(() => {
-    const langNow = getActiveLanguage();
-
-    if (langNow !== currentHeroLang) {
-      currentHeroLang = langNow;
-      currentHeroIndex = 0;
-      updateHeroImage();
-      return;
-    }
-
-    currentHeroIndex = (currentHeroIndex + 1) % heroImages[currentHeroLang].length;
-    updateHeroImage();
-  }, 4000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  startHeroSlider();
+  updateHeroImage();
+  setInterval(nextHeroSlide, 4000);
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      setTimeout(() => {
-        startHeroSlider();
-      }, 50);
+      currentHeroIndex = 0;
+      setTimeout(updateHeroImage, 100);
     });
   });
 });
