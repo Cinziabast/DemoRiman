@@ -2696,3 +2696,47 @@ body.english .section-bono .lang-en {
     min-height: 240px;
   }
 }
+
+   /* =========================
+   BOTON ENCIMA VIDEO HERO
+========================= */
+
+.hero-video-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-video {
+  width: 100%;
+  display: block;
+}
+
+.hero-video-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 20;
+  white-space: nowrap;
+}
+
+/* tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-video-btn {
+    bottom: 20px;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+}
+
+/* móvil */
+@media (max-width: 768px) {
+  .hero-video-btn {
+    bottom: 14px;
+    padding: 10px 14px;
+    font-size: 11px;
+    max-width: 80%;
+    white-space: normal;
+    text-align: center;
+  }
+}
