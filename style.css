@@ -813,70 +813,75 @@ ul {
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
-  padding: 0;
-}
-
-.products-showcase.star-layout .section-heading h2 {
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  line-height: 1;
 }
 
 .star-product {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 24px;
-  max-width: 980px;
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
+/* MISMO TAMAÑO BLOQUES */
+.star-product-copy,
+.star-product-media {
+  width: 450px;
+  height: 450px;
+}
+
+/* BLOQUE TEXTO */
 .star-product-copy {
-  width: 430px;
-  min-height: 430px;
   background: #f5f3ee;
-  padding: 40px 35px;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-sizing: border-box;
 }
 
-.star-product-media {
-  width: 430px;
-  min-height: 430px;
-  display: flex;
-}
-
+/* VIDEO */
 .star-product-video {
   width: 100%;
-  min-height: 430px;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  display: block;
 }
 
-.section-products .star-product-copy h4,
+/* TEXTO */
 .star-product-copy h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
-  line-height: 1.1;
   margin-bottom: 18px;
-  color: #5c4923 !important;
-  text-align: center;
+  color: #5c4923;
 }
 
-.section-products .star-product-copy p,
 .star-product-copy p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #505050 !important;
-  text-align: center;
+  color: #505050;
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .star-product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .star-product-copy,
+  .star-product-media {
+    width: 90%;
+    height: auto;
+  }
+
+  .star-product-video {
+    height: auto;
+  }
+}
 /* =========================
    RESPONSIVE
 ========================= */
