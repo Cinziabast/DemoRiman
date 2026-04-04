@@ -48,12 +48,31 @@
     </div>
   </header>
 
- <!-- HERO BANNER SLIDER -->
-<section class="hero-banner">
-  <div class="hero-slider">
-    <img src="hero1.jpeg" alt="Glow Leaders Banner 1" class="hero-slide active" />
-    <img src="hero2.jpeg" alt="Glow Leaders Banner 2" class="hero-slide" />
-    <img src="hero3.jpeg" alt="Glow Leaders Banner 3" class="hero-slide" />
+<!-- HERO BANNER SLIDER -->
+<section class="hero-banner" style="width:100%; overflow:hidden; position:relative; background:#f5f3ee;">
+  <div class="hero-slider" style="position:relative; width:100%; height:78vh; min-height:420px; overflow:hidden;">
+
+    <img
+      src="hero1.jpeg"
+      alt="Glow Leaders Banner 1"
+      class="hero-slide active"
+      style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; opacity:1; visibility:visible; z-index:2; transition:opacity .8s ease-in-out;"
+    />
+
+    <img
+      src="hero2.jpeg"
+      alt="Glow Leaders Banner 2"
+      class="hero-slide"
+      style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; opacity:0; visibility:hidden; z-index:1; transition:opacity .8s ease-in-out;"
+    />
+
+    <img
+      src="hero3.jpeg"
+      alt="Glow Leaders Banner 3"
+      class="hero-slide"
+      style="position:absolute !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; object-fit:cover !important; opacity:0; visibility:hidden; z-index:1; transition:opacity .8s ease-in-out;"
+    />
+
   </div>
 </section>
 
@@ -1212,13 +1231,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (heroSlides.length > 0) {
     setInterval(() => {
-      heroSlides.forEach((slide) => slide.classList.remove("active"));
+      heroSlides[heroIndex].style.opacity = "0";
+      heroSlides[heroIndex].style.visibility = "hidden";
+      heroSlides[heroIndex].style.zIndex = "1";
+
       heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add("active");
+
+      heroSlides[heroIndex].style.opacity = "1";
+      heroSlides[heroIndex].style.visibility = "visible";
+      heroSlides[heroIndex].style.zIndex = "2";
     }, 3000);
   }
 });
 </script>
-
+      
 </body>
 </html>
