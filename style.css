@@ -2801,22 +2801,44 @@ body.english .section-bono .lang-en {
   margin: 0;
 }
 
-/* PRODUCTO ESTRELLA */
+/* =========================
+   PRODUCTO ESTRELLA
+========================= */
 .star-product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+.star-product-media {
+  width: 100%;
 }
 
 .star-product-video {
   width: 100%;
+  display: block;
   box-shadow: var(--shadow);
 }
 
+.star-product-copy h4 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  color: #f5f1e8;
+}
+
+.star-product-copy p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #f5f1e8;
+}
+
+/* móvil */
 @media (max-width: 768px) {
   .star-product {
     grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
   }
 }
