@@ -2614,3 +2614,31 @@ body.english .section-bono .lang-en {
     display: block;
   }
 }
+
+   /* TABLET VERTICAL - BENEFICIOS */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .benefit-row,
+  .benefit-row-reverse {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .benefit-media {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .benefit-media img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block;
+  }
+
+  .benefit-copy {
+    width: 100%;
+    text-align: center;
+  }
+}
