@@ -696,12 +696,13 @@ ul {
 
 /* Titulo izquierda / carrusel derecha */
 .products-showcase .section-heading {
-  width: 20%;
+  width: 24%;
   margin-bottom: 0;
+  padding-right: 20px;
 }
 
 .products-showcase .products-carousel {
-  width: 80%;
+  width: 76%;
 }
 
 .products-showcase .section-heading h2 {
@@ -714,6 +715,17 @@ ul {
   flex-direction: row-reverse;
 }
 
+.products-showcase:nth-of-type(2) .section-heading {
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.products-showcase .section-heading h2 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 /* PRODUCTO ESTRELLA */
 .products-showcase.star-layout {
   display: block;
@@ -724,6 +736,13 @@ ul {
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.products-showcase.star-layout .section-heading h2 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1;
 }
 
 /* Carrusel */
@@ -800,7 +819,7 @@ ul {
 
 .star-product {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 60px;
   margin-top: 40px;
@@ -808,28 +827,69 @@ ul {
 
 .star-product-copy {
   width: 45%;
+  background: #f5f3ee;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .star-product-media {
   width: 55%;
+  display: flex;
 }
 
 .star-product-video {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .star-product-copy h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   margin-bottom: 18px;
-  color: #f1eee6;
+  color: #5c4923;
+  text-align: center;
 }
 
 .star-product-copy p {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #f1eee6;
+  color: #505050;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .products-showcase,
+  .products-showcase:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .products-showcase.star-layout {
+    display: block;
+  }
+
+  .star-product {
+    flex-direction: column;
+  }
+
+  .star-product-copy,
+  .star-product-media {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* =========================
