@@ -3127,18 +3127,30 @@ body.english .section-bono .lang-en {
 }
 
 /* =========================
-   TITULO RITUAL CENTRADO
+   RITUAL TITULO + FULL WIDTH
 ========================= */
 
-.testimonials-section .section-heading {
-  text-align: center;
+.testimonials-section {
   width: 100%;
-  margin: 0 auto 60px auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.testimonials-section h2 {
-  text-align: center;
+.testimonials-section .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.testimonials-section .section-heading {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-section .section-heading h2 {
+  text-align: center;
   margin: 0 auto;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.1;
