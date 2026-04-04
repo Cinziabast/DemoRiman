@@ -3094,7 +3094,12 @@ body.english .section-bono .lang-en {
 .section-bono .container,
 .section-ritual .container,
 .section-form .container,
-.section-team .container {
+.section-team .container,
+.section-experience .container,
+.section-results .container,
+.section-hero-content .container,
+.section-rutina .container,
+.section-final .container {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
