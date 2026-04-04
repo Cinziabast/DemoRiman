@@ -1017,6 +1017,20 @@ ul {
   background: var(--light-gray);
 }
 
+.section-form .section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-label {
+  color: #425e54;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
 .form-box {
   max-width: 860px;
   margin: 0 auto;
