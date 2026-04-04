@@ -2769,3 +2769,9 @@ body.english .section-bono .lang-en {
   background: #c8b096;
   margin: 14px auto 0;
 }
+
+/* AJUSTE ESPACIO BENEFICIOS */
+.section-benefits {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
