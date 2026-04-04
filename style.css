@@ -2833,3 +2833,36 @@ body.english .section-bono .lang-en {
     text-align: center;
   }
 }
+
+/* =========================
+   RUTINA PERSONALIZADA
+========================= */
+.rutina-section {
+  padding: 0;
+}
+
+.rutina-banner {
+  position: relative;
+  width: 100%;
+}
+
+.rutina-img {
+  width: 100%;
+  display: block;
+}
+
+.rutina-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+}
+
+/* móvil */
+@media (max-width: 768px) {
+  .rutina-btn {
+    bottom: 20px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
