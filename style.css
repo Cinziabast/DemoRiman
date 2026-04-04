@@ -2706,7 +2706,7 @@ body.english .section-bono .lang-en {
 }
 
 /* =================================
-   HERO SLIDER LIMPIO
+   HERO SLIDER DEFINITIVO
 ================================= */
 .hero-banner {
   width: 100%;
@@ -2718,9 +2718,11 @@ body.english .section-bono .lang-en {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 78vh;
-  min-height: 420px;
   overflow: hidden;
+  background: #f5f3ee;
+  aspect-ratio: 16 / 7;
+  height: auto;
+  min-height: auto;
 }
 
 .hero-slide {
@@ -2729,11 +2731,12 @@ body.english .section-bono .lang-en {
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   opacity: 0 !important;
   visibility: hidden !important;
   transition: opacity 0.8s ease-in-out;
   z-index: 1;
+  background: #f5f3ee;
 }
 
 .hero-slide.active {
@@ -2745,18 +2748,14 @@ body.english .section-bono .lang-en {
 /* tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-slider {
-    height: 58vh;
-    min-height: 340px;
+    aspect-ratio: 16 / 8;
   }
 }
 
 /* móvil */
 @media (max-width: 768px) {
   .hero-slider {
-    height: auto;
-    min-height: auto;
     aspect-ratio: 4 / 3;
-    background: #f5f3ee;
   }
 
   .hero-slide {
@@ -2765,7 +2764,7 @@ body.english .section-bono .lang-en {
   }
 }
 
-   @media (min-width: 1025px) {
+@media (min-width: 1025px) {
   .hero-video-btn {
     bottom: 70px !important;
     padding: 14px 24px !important;
