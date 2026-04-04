@@ -3084,3 +3084,18 @@ body.english .section-bono .lang-en {
   display: block;
   object-fit: contain;
 }
+
+/* =========================
+   FULL WIDTH SECTIONS
+========================= */
+
+.section-products .container,
+.section-benefits .container,
+.section-bono .container,
+.section-ritual .container,
+.section-form .container,
+.section-team .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
