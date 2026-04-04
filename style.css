@@ -659,6 +659,7 @@ ul {
 /* =========================
    PRODUCTOS
 ========================= */
+
 .section-products {
   background: var(--green);
 }
@@ -677,44 +678,50 @@ ul {
   background: #d9d8c1;
 }
 
+/* =========================
+   LAYOUT PRODUCTOS
+========================= */
+
 .products-showcase {
-  display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 28px;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   margin-top: 24px;
 }
 
 .products-showcase + .products-showcase {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
-.products-showcase-reverse {
-  grid-template-columns: minmax(0, 1fr) 280px;
+/* Titulo izquierda / carrusel derecha */
+.products-showcase .section-heading {
+  width: 28%;
+  margin-bottom: 0;
 }
 
-.products-showcase-reverse .products-showcase-copy {
-  order: 2;
+.products-showcase .products-carousel {
+  width: 72%;
 }
 
-.products-showcase-reverse .products-carousel {
-  order: 1;
+/* FAVORITOS al revés */
+.products-showcase:nth-of-type(2) {
+  flex-direction: row-reverse;
 }
 
-.products-kicker {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  margin-bottom: 10px;
+/* PRODUCTO ESTRELLA */
+.products-showcase:last-of-type {
+  display: block;
+  margin-top: 120px;
 }
 
-.products-side-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.05;
-  margin-bottom: 14px;
+.products-showcase:last-of-type .section-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
+/* Carrusel */
 .products-carousel {
   display: grid;
   grid-template-columns: 54px minmax(0, 1fr) 54px;
@@ -776,21 +783,56 @@ ul {
   line-height: 1.6;
 }
 
+/* =========================
+   PRODUCTO ESTRELLA
+========================= */
+
 .star-product {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 28px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 40px;
 }
 
-.star-product-card {
-  max-width: 420px;
+.star-product-copy {
+  width: 45%;
 }
 
-.star-product-card img {
-  height: 360px;
-  object-fit: cover;
+.star-product-media {
+  width: 55%;
+}
+
+.star-product-video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .products-showcase,
+  .products-showcase:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel {
+    width: 100%;
+    text-align: center;
+  }
+
+  .star-product {
+    flex-direction: column;
+  }
+
+  .star-product-copy,
+  .star-product-media {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* =========================
