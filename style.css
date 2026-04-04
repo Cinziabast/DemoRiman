@@ -2720,6 +2720,16 @@ body.english .section-bono .lang-en {
   white-space: nowrap;
 }
 
+   /* desktop */
+@media (min-width: 1025px) {
+  .hero-video-btn {
+    bottom: 35px;
+    padding: 14px 24px;
+    font-size: 14px;
+    max-width: none;
+  }
+}
+   
 /* tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-video-btn {
