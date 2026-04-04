@@ -2744,13 +2744,10 @@ body.english .section-bono .lang-en {
 /* =================================
    HERO SLIDER FIX
 ================================= */
-
 .hero-banner {
   width: 100%;
   overflow: hidden;
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 
 .hero-slider {
@@ -2763,23 +2760,23 @@ body.english .section-bono .lang-en {
 
 .hero-slide {
   position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+  inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  opacity: 0;
+  opacity: 0 !important;
+  visibility: hidden;
   transition: opacity 0.8s ease-in-out;
-  display: block;
 }
 
 .hero-slide.active {
-  opacity: 1;
+  opacity: 1 !important;
+  visibility: visible;
   z-index: 2;
 }
 
 /* tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .hero-slider {
     height: 58vh;
     min-height: 340px;
@@ -2789,11 +2786,17 @@ body.english .section-bono .lang-en {
 /* móvil */
 @media (max-width: 768px) {
   .hero-slider {
-    height: 42vh;
-    min-height: 240px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    min-height: auto;
+  }
+
+  .hero-slide {
+    object-fit: contain !important;
+    background: #f5f3ee;
   }
 }
-
+   
 /* HERO SLIDER - MOVIL VER IMAGEN COMPLETA */
 @media (max-width: 768px) {
   .hero-banner {
