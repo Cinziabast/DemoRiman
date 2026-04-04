@@ -2751,23 +2751,32 @@ body.english .section-bono .lang-en {
   }
 }
 
-/* =========================
-   TITULO BENEFICIOS
-========================= */
+/* BENEFICIOS - ESTILO ELEGANTE */
+.section-benefits {
+  background: transparent;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.section-benefits .container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
 .section-benefits h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 500;
+  color: #5c4923;
   text-align: center;
-  font-size: 2.6rem;
-  letter-spacing: 0.04em;
-  margin-bottom: 50px;
+  letter-spacing: 0;
+  margin-bottom: 35px;
+  text-transform: none;
 }
 
 .section-benefits h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  background: #c8b096;
-  margin: 14px auto 0;
+  content: none !important;
 }
 
 /* AJUSTE ESPACIO BENEFICIOS */
