@@ -826,17 +826,38 @@ ul {
    PRODUCTO ESTRELLA
 ========================= */
 
+.products-showcase.star-layout {
+  display: block;
+  margin-top: 120px;
+}
+
+.products-showcase.star-layout .section-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.products-showcase.star-layout .section-heading h2 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1;
+}
+
+/* Layout estrella */
 .star-product {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   margin-top: 40px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Bloque blanco */
 .star-product-copy {
-  width: 38%;
-  min-height: 420px;
+  width: 420px;
+  height: 420px;
   background: #f5f3ee;
   padding: 40px 35px;
   border-radius: 12px;
@@ -847,35 +868,54 @@ ul {
   box-sizing: border-box;
 }
 
+/* Video */
 .star-product-media {
-  width: 62%;
+  width: 420px;
+  height: 420px;
   display: flex;
-  align-items: stretch;
 }
 
 .star-product-video {
   width: 100%;
-  min-height: 420px;
-  max-height: 420px;
+  height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  display: block;
 }
 
+/* Texto */
 .star-product-copy h4 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.1;
-  margin-bottom: 20px;
-  color: #5c4923 !important;
+  margin-bottom: 18px;
+  color: #5c4923;
   text-align: center;
 }
 
 .star-product-copy p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #505050 !important;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #505050;
   text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .star-product {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .star-product-copy,
+  .star-product-media {
+    width: 90%;
+    height: auto;
+  }
+
+  .star-product-video {
+    height: auto;
+  }
 }
 
 /* =========================
