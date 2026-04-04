@@ -1207,14 +1207,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroSlides = document.querySelectorAll(".hero-slide");
   let heroIndex = 0;
 
   if (heroSlides.length > 0) {
     setInterval(() => {
-      heroSlides[heroIndex].classList.remove('active');
+      heroSlides.forEach((slide) => slide.classList.remove("active"));
       heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('active');
+      heroSlides[heroIndex].classList.add("active");
     }, 3000);
   }
 });
