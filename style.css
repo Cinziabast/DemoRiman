@@ -242,6 +242,14 @@ ul {
   object-fit: contain;
 }
 
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  color: #5c4923;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .header-right {
   display: flex;
   align-items: center;
