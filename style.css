@@ -2731,7 +2731,7 @@ body.english .section-bono .lang-en {
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   opacity: 0 !important;
   visibility: hidden !important;
   transition: opacity 0.8s ease-in-out;
