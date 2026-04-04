@@ -2764,3 +2764,11 @@ body.english .section-bono .lang-en {
     background: #f5f3ee;
   }
 }
+
+   @media (min-width: 1025px) {
+  .hero-video-btn {
+    bottom: 70px !important;
+    padding: 14px 24px !important;
+    font-size: 14px !important;
+  }
+}
