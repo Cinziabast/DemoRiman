@@ -1033,6 +1033,15 @@ ul {
   margin-bottom: 10px;
 }
 
+.section-form .section-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background: #c8b096;
+  margin: 12px auto 30px auto;
+}
+
 .form-box {
   max-width: 860px;
   margin: 0 auto;
