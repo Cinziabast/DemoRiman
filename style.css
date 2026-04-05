@@ -236,17 +236,10 @@ ul {
   align-items: center;
 }
 
-.logo-glow {
-  width: 20px;
-  height: auto;
+.logo-img {
+  height: 55px;
+  width: auto;
   display: block;
-  object-fit: contain;
-}
-
-.logo-riman {
-  width: 110px;
-  height: auto;
-  object-fit: contain;
 }
 
 .logo-text {
