@@ -3223,3 +3223,34 @@ body.english .section-bono .lang-en {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* =========================
+   CTA FINAL FULL WIDTH
+========================= */
+
+.section-final-cta {
+  padding: 0;
+}
+
+.section-final-cta .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.final-video-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.final-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
