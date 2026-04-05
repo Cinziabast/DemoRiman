@@ -3264,3 +3264,28 @@ body.english .section-bono .lang-en {
   padding-left: 0;
   padding-right: 0;
 }
+
+.bono-center {
+  width: 100%;
+}
+
+.bono-image-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.bono-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botón encima del bono */
+.bono-btn-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 5;
+}
