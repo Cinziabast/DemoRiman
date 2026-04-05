@@ -718,7 +718,7 @@ ul {
 }
 
 .products-showcase:nth-of-type(2) .section-heading {
-  width: 24%;
+  width: 30%;
   text-align: center;
   padding-left: 20px;
   padding-right: 0;
@@ -728,7 +728,7 @@ ul {
 }
 
 .products-showcase:nth-of-type(2) .section-heading h2 {
-  font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
   line-height: 1.05;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -736,7 +736,7 @@ ul {
 }
 
 .products-showcase:nth-of-type(2) .products-carousel {
-  width: 70%;
+  width: 66%;
   position: relative;
   margin-right: auto;
   margin-left: 0;
@@ -817,6 +817,12 @@ ul {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* AJUSTE EXTRA SOLO FAVORITOS */
+.products-showcase:nth-of-type(2) .products-slider {
+  grid-auto-columns: calc((100% - 32px) / 3);
+  gap: 16px;
 }
 
 /* =========================
