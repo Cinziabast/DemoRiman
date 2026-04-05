@@ -3302,9 +3302,11 @@ body.english .section-bono .lang-en {
 /* =========================
    HERO VIDEO FULL WIDTH
 ========================= */
+
 .hero-video-wrap {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   overflow: hidden;
 }
 
@@ -3321,4 +3323,28 @@ body.english .section-bono .lang-en {
   bottom: 60px;
   transform: translateX(-50%);
   z-index: 10;
+}
+
+/* TITULO HERO */
+.section-hero-content .main-title {
+  text-align: center;
+  max-width: 900px;
+  margin: 60px auto 40px;
+}
+
+/* HERO MOBILE */
+@media (max-width: 768px) {
+  .hero-video {
+    height: 55vh;
+  }
+
+  .hero-video-btn {
+    bottom: 30px;
+  }
+
+  .section-hero-content .main-title {
+    margin: 40px auto 25px;
+    font-size: 1.8rem;
+    padding: 0 20px;
+  }
 }
