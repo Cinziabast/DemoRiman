@@ -236,6 +236,13 @@ ul {
   align-items: center;
 }
 
+.logo-glow {
+  width: 170px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .logo-riman {
   width: 110px;
   height: auto;
