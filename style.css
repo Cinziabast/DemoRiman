@@ -3254,3 +3254,13 @@ body.english .section-bono .lang-en {
   object-fit: cover;
   display: block;
 }
+
+/* =========================
+   BONO FULL WIDTH
+========================= */
+
+.section-bono .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
