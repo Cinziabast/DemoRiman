@@ -3322,3 +3322,89 @@ html[lang="en"] .bono-img.lang-en {
   transform: none !important;
   margin: 0 auto;
 }
+
+   /* =========================
+   HERO ARREGLO FINAL
+========================= */
+
+.section-hero-content {
+  padding-top: 24px !important;
+  padding-bottom: 0 !important;
+}
+
+.section-hero-content .center-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-title-two-lines {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* VIDEO FULL WIDTH */
+.hero-video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  display: block;
+}
+
+/* SOLO ORDENADOR */
+@media (min-width: 1024px) {
+  .hero-video-wrap {
+    aspect-ratio: 16 / 6;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* TABLET Y MOVIL */
+@media (max-width: 1023px) {
+  .hero-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* BOTON DENTRO DEL VIDEO */
+.hero-video-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* TABLET */
+@media (max-width: 1023px) {
+  .hero-video-btn {
+    bottom: 20px;
+  }
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+  .hero-video-btn {
+    bottom: 16px;
+    width: calc(100% - 32px);
+    max-width: 320px;
+    white-space: normal;
+    text-align: center;
+  }
+}
