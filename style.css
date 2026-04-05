@@ -1023,12 +1023,14 @@ ul {
 }
 
 .form-label {
-  color: #425e54;
-  font-size: 2rem;
-  letter-spacing: 4px;
+  color: #425e54 !important;
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
+  letter-spacing: 6px;
   text-transform: uppercase;
   text-align: center;
   display: block;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
 }
 
 .form-box {
