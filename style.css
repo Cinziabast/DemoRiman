@@ -3252,3 +3252,13 @@ html[lang="en"] .bono-img.lang-en {
     text-align: center;
   }
 }
+
+.hero-final-title h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-final-title h1 span {
+  display: block;
+}
