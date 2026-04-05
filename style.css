@@ -3224,28 +3224,6 @@ html[lang="en"] .bono-img.lang-en {
   }
 }
 
-/* HERO DESKTOP SIN ESPACIO A LA DERECHA */
-@media (min-width: 1025px) {
-  .section-hero-content,
-  .section-hero-content .container,
-  .hero-banner,
-  .hero-slider {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .hero-slide {
-    width: 100vw !important;
-    max-width: none !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  }
-}
-
 /* HERO VIDEO FULL WIDTH REAL */
 .video-wrapper.hero-video-wrap {
   width: 100vw !important;
