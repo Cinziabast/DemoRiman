@@ -3477,48 +3477,42 @@ html[lang="en"] .bono-img.lang-en {
   margin-top: 120px;
 }
 
-/* OCULTAR TITULO FAVORITOS ORIGINAL */
-.products-showcase:nth-of-type(2) .section-heading {
-  display: none;
-}
-
-/* CONTENEDOR LADO DERECHO FAVORITOS */
+/* FAVORITOS */
 .products-showcase:nth-of-type(2) {
+  flex-direction: row-reverse;
+  align-items: center;
   position: relative;
 }
 
-/* TITULO FAVORITOS A LA DERECHA */
-.products-showcase:nth-of-type(2)::after {
-  content: "FAVORITOS";
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  transform: translateY(-120%);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 3.5vw, 3.8rem);
-  letter-spacing: 2px;
-  color: #f5f3ee;
+.products-showcase:nth-of-type(2) .section-heading {
+  width: 30%;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* FLECHA DERECHA */
-.products-showcase:nth-of-type(2) .carousel-arrow-right {
-  position: absolute;
-  right: 8%;
-  top: 50%;
-  transform: translateY(20px);
+.products-showcase:nth-of-type(2) .section-heading h2 {
+  font-size: clamp(2.5rem, 3.4vw, 3.7rem);
+  line-height: 1.05;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 
-/* FAVORITOS - MOVER CARRUSEL A LA IZQUIERDA */
 .products-showcase:nth-of-type(2) .products-carousel {
   width: 70%;
+  position: relative;
   margin-right: auto;
   margin-left: 0;
 }
 
-/* MÁS ESPACIO PARA EL TITULO FAVORITOS */
-.products-showcase:nth-of-type(2) .section-heading {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.products-showcase:nth-of-type(2) .carousel-arrow-right {
+  position: absolute;
+  right: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
