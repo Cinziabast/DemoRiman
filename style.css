@@ -3499,3 +3499,18 @@ html[lang="en"] .bono-img.lang-en {
   top: 50%;
   transform: translateY(20px);
 }
+
+/* FAVORITOS - MOVER CARRUSEL A LA IZQUIERDA */
+.products-showcase:nth-of-type(2) .products-carousel {
+  width: 70%;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* MÁS ESPACIO PARA EL TITULO FAVORITOS */
+.products-showcase:nth-of-type(2) .section-heading {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
