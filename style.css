@@ -3433,3 +3433,12 @@ html[lang="en"] .bono-img.lang-en {
   color: #505050 !important;
   opacity: 1 !important;
 }
+
+/* ESPACIO ENTRE SECCIONES */
+.section-products {
+  margin-bottom: 120px;
+}
+
+.rutina-section {
+  margin-top: 120px;
+}
