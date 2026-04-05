@@ -3289,3 +3289,25 @@ body.english .section-bono .lang-en {
   transform: translateX(-50%);
   z-index: 5;
 }
+
+/* VIDEO FINAL FULL WIDTH REAL */
+.section-final-cta {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+}
+
+.final-video-wrapper {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
