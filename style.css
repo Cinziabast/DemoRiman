@@ -3348,3 +3348,55 @@ body.english .section-bono .lang-en {
     padding: 0 20px;
   }
 }
+
+/* =========================
+   BONO FULL WIDTH
+========================= */
+
+.section-bono {
+  padding: 0;
+}
+
+.section-bono .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bono-center {
+  width: 100%;
+}
+
+.bono-image-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bono-img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.bono-img.lang-es {
+  display: block;
+}
+
+/* cuando la web esté en inglés */
+html[lang="en"] .bono-img.lang-es {
+  display: none;
+}
+
+html[lang="en"] .bono-img.lang-en {
+  display: block;
+}
+
+.bono-btn-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 5;
+}
