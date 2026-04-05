@@ -3262,3 +3262,9 @@ html[lang="en"] .bono-img.lang-en {
 .hero-final-title h1 span {
   display: block;
 }
+
+@media (min-width: 1024px) {
+  .hero-final-title h1 span:first-child {
+    margin-bottom: 8px;
+  }
+}
