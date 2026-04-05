@@ -3418,3 +3418,18 @@ html[lang="en"] .bono-img.lang-en {
   transform: translateX(-50%);
   z-index: 5;
 }
+
+/* FORZAR VISIBILIDAD PRODUCTO ESTRELLA */
+.star-product-copy {
+  opacity: 1 !important;
+}
+
+.star-product-copy h4 {
+  color: #5c4923 !important;
+  opacity: 1 !important;
+}
+
+.star-product-copy p {
+  color: #505050 !important;
+  opacity: 1 !important;
+}
