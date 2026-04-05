@@ -3303,6 +3303,10 @@ body.english .section-bono .lang-en {
    HERO VIDEO FULL WIDTH
 ========================= */
 
+.section-hero-content {
+  padding: 0;
+}
+
 .hero-video-wrap {
   position: relative;
   width: 100vw;
@@ -3320,7 +3324,7 @@ body.english .section-bono .lang-en {
 .hero-video-btn {
   position: absolute;
   left: 50%;
-  bottom: 60px;
+  bottom: 80px;
   transform: translateX(-50%);
   z-index: 10;
 }
