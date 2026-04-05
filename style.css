@@ -3535,3 +3535,14 @@ html[lang="en"] .bono-img.lang-en {
     transform: translateX(-50%) !important;
   }
 }
+
+/* HERO VIDEO FULL WIDTH REAL */
+.video-wrapper.hero-video-wrap {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-bottom: 40px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
