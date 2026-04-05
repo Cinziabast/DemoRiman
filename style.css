@@ -728,7 +728,7 @@ ul {
 }
 
 .products-showcase:nth-of-type(2) .section-heading h2 {
-  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  font-size: clamp(2.6rem, 3.4vw, 3.6rem);
   line-height: 1.05;
   word-break: keep-all;
   overflow-wrap: normal;
