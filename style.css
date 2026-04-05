@@ -1144,56 +1144,59 @@ ul {
 }
 
 /* =========================
-   CTA FINAL
+   CTA FINAL VIDEO
 ========================= */
+
 .section-final-cta {
-  background: var(--green);
-  color: var(--white);
-  padding: 90px 0;
-}
-
-.final-cta-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.final-cta-image img {
+  padding: 0;
   width: 100%;
-  height: 520px;
+}
+
+.final-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 420px;
+  max-height: 620px;
+  overflow: hidden;
+}
+
+.final-video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  display: block;
 }
 
-.final-cta-content {
-  text-align: left;
-  max-width: 520px;
+/* Texto arriba derecha */
+.final-text-top {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  color: #111;
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-weight: 700;
+  text-align: right;
+  max-width: 420px;
+  line-height: 1.2;
+  text-shadow: none;
 }
 
-.final-title {
-  color: #f3ead4;
-  font-size: clamp(2rem, 4vw, 3.8rem);
-  margin-bottom: 18px;
-  line-height: 1.1;
+/* Botón dentro del video */
+.final-button {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
 }
 
-.final-subtitle {
-  color: #d9d8c1;
-  font-size: 1.1rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-}
-
-/* Botón CTA final */
 .section-final-cta .btn-primary {
   display: inline-block;
-  padding: 20px 52px;
+  padding: 18px 42px;
   background: #f3ead4;
   color: #2f3e38;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   border-radius: 999px;
@@ -1208,31 +1211,29 @@ ul {
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.25);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .section-final-cta {
-    padding: 70px 0;
+  .final-video-wrapper {
+    height: 50vh;
+    min-height: 340px;
   }
 
-  .final-cta-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .final-text-top {
+    top: 24px;
+    right: 24px;
+    max-width: 260px;
+    font-size: 1.2rem;
   }
 
-  .final-cta-image img {
-    height: 380px;
-  }
-
-  .final-cta-content {
-    text-align: center;
-    margin: 0 auto;
+  .final-button {
+    bottom: 35px;
   }
 
   .section-final-cta .btn-primary {
-    width: 100%;
-    max-width: 320px;
+    padding: 16px 30px;
+    font-size: 0.95rem;
   }
 }
+
 /* =========================
    FOOTER
 ========================= */
