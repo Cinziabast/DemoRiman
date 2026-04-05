@@ -736,8 +736,10 @@ ul {
 }
 
 .products-showcase:nth-of-type(2) .products-carousel {
-  width: 76%;
+  width: 70%;
   position: relative;
+  margin-right: auto;
+  margin-left: 0;
 }
 
 /* =========================
