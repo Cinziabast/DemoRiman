@@ -3258,3 +3258,67 @@ html[lang="en"] .bono-img.lang-en {
     bottom: 20px;
   }
 }
+
+/* =========================
+   HERO FIX URGENTE
+========================= */
+
+/* Banner */
+.hero-banner {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-slide-single,
+#hero-slide-image {
+  width: 100%;
+  display: block;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-slider {
+    aspect-ratio: 16 / 6;
+  }
+
+  .hero-slide-single,
+  #hero-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Sección del título y botón */
+.section-hero-content {
+  padding-top: 24px !important;
+  padding-bottom: 30px !important;
+}
+
+.section-hero-content .center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-hero-content .main-title {
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+/* Si el botón está debajo del título dentro de esta sección */
+.section-hero-content .btn,
+.section-hero-content .hero-button,
+.section-hero-content .hero-btn {
+  position: static !important;
+  transform: none !important;
+  margin: 0 auto;
+}
