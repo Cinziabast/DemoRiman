@@ -1282,7 +1282,9 @@ ul {
 }
 
 .footer-logo {
-  width: 95px;
+  height: 90px;
+  width: auto;
+  display: block;
   margin: 0 auto 12px;
 }
 
