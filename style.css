@@ -3291,14 +3291,20 @@ body.english .section-bono .lang-en {
 }
 
 /* =========================
-   HERO VIDEO FULL WIDTH
+   SECCIONES FULL WIDTH
 ========================= */
-
-.hero-video-wrap {
-  position: relative;
+.section-full {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  padding: 0;
+}
+
+/* =========================
+   HERO VIDEO FULL WIDTH
+========================= */
+.hero-video-wrap {
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -3315,9 +3321,4 @@ body.english .section-bono .lang-en {
   bottom: 60px;
   transform: translateX(-50%);
   z-index: 10;
-}
-
-.section-full {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
 }
