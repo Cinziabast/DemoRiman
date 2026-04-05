@@ -3180,3 +3180,45 @@ body.english .section-bono .lang-en {
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.1;
 }
+
+/* =========================
+   CTA FINAL VIDEO
+========================= */
+
+.section-final-cta {
+  padding: 0;
+}
+
+.final-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.final-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto arriba derecha */
+.final-text-top {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  max-width: 300px;
+  text-align: right;
+}
+
+/* Botón abajo centro */
+.final-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
