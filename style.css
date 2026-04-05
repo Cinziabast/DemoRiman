@@ -834,7 +834,7 @@ ul {
 .star-product-copy {
   background: #f5f3ee;
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
@@ -842,12 +842,19 @@ ul {
   text-align: center;
 }
 
+/* CONTENEDOR VIDEO */
+.star-product-media {
+  overflow: hidden;
+  border-radius: 0;
+}
+
 /* VIDEO */
 .star-product-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
+  display: block;
 }
 
 /* TEXTO */
@@ -881,6 +888,7 @@ ul {
     height: auto;
   }
 }
+
 /* =========================
    RESPONSIVE
 ========================= */
