@@ -211,6 +211,12 @@ ul {
   background: #33483f;
 }
 
+/* BOTON HERO NO SE MUEVE */
+.hero-video-btn.btn-primary:hover,
+.hero-video-btn:hover {
+  transform: translateX(-50%) !important;
+}
+
 /* =========================
    HEADER
 ========================= */
