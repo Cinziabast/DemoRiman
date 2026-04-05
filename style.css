@@ -2657,65 +2657,6 @@ body.english .section-bono .lang-en {
     text-align: center;
   }
 }
-   
-/* =================================
-   HERO SLIDER DEFINITIVO
-================================= */
-.hero-banner {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  background: transparent;
-}
-
-.hero-slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  aspect-ratio: 16 / 7;
-  height: auto;
-  min-height: auto;
-}
-
-.hero-slide {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.8s ease-in-out;
-  z-index: 1;
-  background: transparent;
-}
-
-.hero-slide.active {
-  opacity: 1 !important;
-  visibility: visible !important;
-  z-index: 2 !important;
-}
-
-/* tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-slider {
-    aspect-ratio: 16 / 8;
-  }
-}
-
-/* móvil */
-@media (max-width: 768px) {
-  .hero-slider {
-    aspect-ratio: 4 / 3 !important;
-  }
-}
-
-  .hero-slide {
-    object-fit: cover !important;
-    background: transparent;
-  }
-}
 
 /* BENEFICIOS - ESTILO ELEGANTE */
 .section-benefits {
