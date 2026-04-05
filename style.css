@@ -2964,77 +2964,6 @@ body.english .section-bono .lang-en {
 }
 
 /* =========================
-   HERO VIDEO FULL WIDTH
-========================= */
-
-.section-hero-content {
-  padding: 0;
-}
-
-.hero-video-wrap {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  overflow: hidden;
-  height: 680px;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-video-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 80px;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-/* TITULO HERO */
-.section-hero-content .main-title {
-  text-align: center;
-  max-width: 900px;
-  margin: 60px auto 40px;
-  line-height: 1.05;
-  letter-spacing: 0.5px;
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-video-wrap {
-    height: 500px;
-  }
-
-  .hero-video-btn {
-    bottom: 40px;
-  }
-}
-
-/* HERO MOBILE */
-@media (max-width: 768px) {
-  .hero-video-wrap {
-    height: 360px;
-  }
-
-  .hero-video-btn {
-    bottom: 25px;
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .section-hero-content .main-title {
-    margin: 40px auto 25px;
-    font-size: 1.8rem;
-    padding: 0 20px;
-  }
-}
-
-/* =========================
    BONO FULL WIDTH
 ========================= */
 
@@ -3150,21 +3079,6 @@ html[lang="en"] .bono-img.lang-en {
   z-index: 10;
 }
 
-@media (min-width: 1025px) {
-  .hero-banner {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-  }
-
-  .hero-slider {
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 16 / 7;
-  }
-}
-
 /* HERO DEFINITIVO */
 .hero-final {
   width: 100%;
@@ -3266,5 +3180,21 @@ html[lang="en"] .bono-img.lang-en {
 @media (min-width: 1024px) {
   .hero-final-title h1 span:first-child {
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-final-title h1 {
+    font-size: clamp(3rem, 4.6vw, 5.2rem);
+  }
+}
+
+.hero-final-btn {
+  bottom: 40px;
+}
+
+@media (max-width: 1023px) {
+  .hero-final-btn {
+    bottom: 20px;
   }
 }
