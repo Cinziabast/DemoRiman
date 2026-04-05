@@ -714,12 +714,30 @@ ul {
 /* FAVORITOS */
 .products-showcase:nth-of-type(2) {
   flex-direction: row-reverse;
+  align-items: center;
 }
 
 .products-showcase:nth-of-type(2) .section-heading {
-  text-align: right;
+  width: 24%;
+  text-align: center;
   padding-left: 20px;
   padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-showcase:nth-of-type(2) .section-heading h2 {
+  font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+  line-height: 1.05;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.products-showcase:nth-of-type(2) .products-carousel {
+  width: 76%;
+  position: relative;
 }
 
 /* =========================
