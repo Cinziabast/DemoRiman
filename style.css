@@ -214,7 +214,7 @@ ul {
 /* BOTON HERO NO SE MUEVE */
 .hero-video-btn.btn-primary:hover,
 .hero-video-btn:hover {
-  transform: translateX(-50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 /* =========================
