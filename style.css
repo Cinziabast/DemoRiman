@@ -705,10 +705,10 @@ ul {
 }
 
 .products-showcase .section-heading h2 {
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  line-height: 1;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  font-size: clamp(2.2rem, 3.4vw, 3.6rem);
+  line-height: 1.05;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* FAVORITOS */
