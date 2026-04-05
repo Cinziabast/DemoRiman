@@ -3121,32 +3121,6 @@ body.english .section-bono .lang-en {
 }
 
 /* =========================
-   HERO SLIDER
-========================= */
-
-.hero-banner {
-  width: 100%;
-  background: #f5f3ee;
-}
-
-.hero-slider {
-  width: 100%;
-  background: #f5f3ee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.hero-slide-single {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* =========================
    FULL WIDTH SECTIONS
 ========================= */
 
@@ -3517,4 +3491,19 @@ html[lang="en"] .bono-img.lang-en {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+@media (min-width: 1025px) {
+  .hero-banner {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .hero-slider {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 7;
+  }
 }
