@@ -3526,3 +3526,25 @@ html[lang="en"] .bono-img.lang-en {
   margin: 60px auto 40px;
   line-height: 1.05;
 }
+
+/* HERO TABLET FIX */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .section-hero-content {
+    padding-top: 30px;
+  }
+
+  .section-hero-content .main-title {
+    position: relative;
+    z-index: 5;
+    margin: 30px auto 40px;
+    max-width: 600px;
+  }
+
+  .hero-video-wrap,
+  .hero-slider,
+  .hero-banner {
+    margin-top: 10px;
+  }
+
+}
