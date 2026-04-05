@@ -3205,14 +3205,15 @@ body.english .section-bono .lang-en {
 /* Texto arriba derecha */
 .final-text-top {
   position: absolute;
-  top: 40px;
-  right: 50px;
-  color: white;
-  font-size: 1.2rem;
+  top: 60px;
+  right: 70px;
+  color: #000;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
   font-weight: 600;
   letter-spacing: 1px;
   text-align: right;
-  max-width: 320px;
+  max-width: 420px;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Botón dentro del video abajo centrado */
