@@ -3312,11 +3312,12 @@ body.english .section-bono .lang-en {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
+  height: 680px;
 }
 
 .hero-video {
   width: 100%;
-  height: 85vh;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -3336,14 +3337,27 @@ body.english .section-bono .lang-en {
   margin: 60px auto 40px;
 }
 
-/* HERO MOBILE */
-@media (max-width: 768px) {
-  .hero-video {
-    height: 55vh;
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-video-wrap {
+    height: 500px;
   }
 
   .hero-video-btn {
-    bottom: 30px;
+    bottom: 40px;
+  }
+}
+
+/* HERO MOBILE */
+@media (max-width: 768px) {
+  .hero-video-wrap {
+    height: 360px;
+  }
+
+  .hero-video-btn {
+    bottom: 25px;
+    max-width: 90%;
+    text-align: center;
   }
 
   .section-hero-content .main-title {
