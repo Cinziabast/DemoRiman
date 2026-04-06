@@ -1587,15 +1587,6 @@ section {
   margin-bottom: 30px;
 }
 
-/* Titulo Reserva */
-.section-form .section-label {
-  font-size: 1.4rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #425e54;
-  margin-bottom: 30px;
-}
-
 /* BOTON HERO FIJO AL HACER HOVER */
 .hero-final-btn:hover,
 .hero-final-btn.btn-primary:hover {
