@@ -191,7 +191,29 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =========================
    FORMULARIO + GRACIAS
 ========================= */
+
 const klaviyoForm = document.getElementById("klaviyo-form");
+
+// 👇 AÑADE ESTO (te faltaba)
+const thanksPopup = document.getElementById("thanksPopup");
+const thanksTitle = document.getElementById("thanksTitle");
+const thanksText = document.getElementById("thanksText");
+const thanksBack = document.getElementById("thanksBack");
+const closeThanksPopup = document.getElementById("closeThanksPopup");
+
+// cerrar popup
+if (closeThanksPopup) {
+  closeThanksPopup.addEventListener("click", () => {
+    thanksPopup.classList.add("hidden");
+  });
+}
+
+if (thanksBack) {
+  thanksBack.addEventListener("click", (e) => {
+    e.preventDefault();
+    thanksPopup.classList.add("hidden");
+  });
+}
 
 if (klaviyoForm) {
   klaviyoForm.addEventListener("submit", function (e) {
@@ -200,13 +222,23 @@ if (klaviyoForm) {
     const lang = document.documentElement.lang || "es";
 
     if (lang === "en") {
-      window.location.href = "gracias-en.html";
+      thanksTitle.textContent = "Thank you for registering!";
+      thanksText.textContent = "Your advisor will contact you soon to share all the details of your Riman experience.";
+      thanksBack.textContent = "BACK TO PAGE";
     } else {
-      window.location.href = "gracias.html";
+      thanksTitle.textContent = "¡Gracias por registrarte!";
+      thanksText.textContent = "Muy pronto, tu asesor se pondrá en contacto contigo para compartirte todos los detalles de tu Experiencia con Riman.";
+      thanksBack.textContent = "VOLVER A LA PÁGINA";
     }
+
+    if (thanksPopup) {
+      thanksPopup.classList.remove("hidden");
+    }
+
+    klaviyoForm.reset();
   });
 }
-
+    
   /* =========================
      INICIO
   ========================= */
