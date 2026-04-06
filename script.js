@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function setLanguage(lang) {
+   function setLanguage(lang) {
     currentHeroLang = lang;
     currentHeroIndex = 0;
 
@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeroImage();
     startHeroSlider();
     updateLegalLinks();
+    openPopup(lang);
   }
-
+  
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       setLanguage(btn.dataset.lang);
