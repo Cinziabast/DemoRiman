@@ -1325,6 +1325,7 @@ video,
   overflow: hidden;
   background: #f3f0ea;
   position: relative;
+  padding: 20px 0;
 }
 
 .hero-slider {
@@ -1337,14 +1338,20 @@ video,
 .hero-slide {
   flex: 0 0 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f0ea;
 }
 
 .hero-slide img {
   width: 100%;
-  height: 380px;
+  max-width: 1200px;
+  height: 420px;
   object-fit: contain;
+  object-position: center;
   display: block;
-  background: #f3f0ea;
+  margin: 0 auto;
 }
 
 /* Animación automática */
@@ -1374,9 +1381,14 @@ body.english .hero-slider-en {
   display: flex;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+  .hero-slider-section {
+    padding: 12px 0;
+  }
+
   .hero-slide img {
-    height: 220px;
+    height: 260px;
   }
 }
  
