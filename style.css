@@ -1340,8 +1340,8 @@ video,
 }
 
 .hero-slide img {
-  width: 100vw;
-  height: 420px;
+  width: 100%;
+  height: 480px;       /* cambia el tamaño del banner */
   object-fit: cover;
   object-position: center;
   display: block;
