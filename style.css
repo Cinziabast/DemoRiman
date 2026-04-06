@@ -1299,18 +1299,19 @@ video,
 
 .hero-slider {
   display: flex;
+  flex-direction: row;
   width: 300%;
   animation: heroSlide 9s infinite;
 }
 
 .hero-slide {
-  width: 100%;
   flex: 0 0 100%;
+  width: 100%;
 }
 
 .hero-slide img {
   width: 100%;
-  height: clamp(420px, 55vw, 760px);
+  height: 520px;
   object-fit: cover;
   display: block;
 }
@@ -1347,105 +1348,4 @@ body.english .hero-slider-en {
     height: 320px;
   }
 }
-
-.hero-slider-section {
-  display: block !important;
-}
-
-.hero-slider {
-  display: flex !important;
-  flex-direction: row !important;
-  width: 300% !important;
-}
-
-.hero-slide {
-  flex: 0 0 100% !important;
-  width: 100% !important;
-}
-
-.hero-slider-section {
-  display: block !important;
-}
-
-.hero-slider {
-  display: flex !important;
-  flex-direction: row !important;
-  width: 300% !important;
-}
-
-.hero-slide {
-  flex: 0 0 100% !important;
-  width: 100% !important;
-}
-section {
-  height: auto !important;
-  min-height: auto !important;
-  overflow: visible !important;
-}
-
-section {
-  height: auto !important;
-  min-height: auto !important;
-  overflow: visible !important;
-}
-
-/* =========================
-   FIX EMERGENCIA VISIBILIDAD
-========================= */
-
-/* Mostrar todo aunque falle el JS */
-.reveal,
-.reveal.visible {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-/* Evitar que alguna sección tape a otra */
-section,
-div,
-img,
-video {
-  overflow: visible;
-}
-
-/* Asegurar que las secciones crezcan con su contenido */
-section {
-  height: auto !important;
-  min-height: auto !important;
-}
-
-/* Mostrar imágenes de idioma por defecto */
-.lang-es {
-  display: block !important;
-}
-
-.lang-en {
-  display: none !important;
-}
-
-body.english .lang-es {
-  display: none !important;
-}
-
-body.english .lang-en {
-  display: block !important;
-}
-
-/* HERO SLIDER TAMAÑO */
-.hero-slider-section {
-  width: 100%;
-  overflow: hidden;
-  background: #f3f0ea;
-}
-
-.hero-slide img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .hero-slide img {
-    height: 320px;
-  }
-}
+ 
