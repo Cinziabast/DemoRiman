@@ -1748,14 +1748,14 @@ video,
 /* BLOQUE VIDEO FINAL */
 .final-video-wrapper {
   width: 100%;
-  background: #000; /* o el color que quieras de fondo */
+  background: #000;
   overflow: hidden;
 }
 
-/* VIDEO SIN RECORTE */
 .final-video {
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
   display: block;
   object-fit: contain;
 }
