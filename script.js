@@ -118,3 +118,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+document.querySelectorAll('.footer-legal a').forEach(link => {
+  if (document.body.classList.contains('english')) {
+    if (link.getAttribute('href') === 'aviso-legal.html') {
+      link.setAttribute('href', 'legal-notice.html');
+    }
+    if (link.getAttribute('href') === 'privacidad.html') {
+      link.setAttribute('href', 'privacy-policy.html');
+    }
+    if (link.getAttribute('href') === 'cookies.html') {
+      link.setAttribute('href', 'cookies-policy.html');
+    }
+  }
+});
