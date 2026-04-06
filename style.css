@@ -387,11 +387,8 @@ section {
 
 .hero-slide img {
   width: 100%;
-  height: 520px;
-  object-fit: contain;
-  object-position: center;
   display: block;
-  background: #f3f0ea;
+  margin: 0 auto;
 }
 
 /* Animación */
