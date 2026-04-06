@@ -1274,7 +1274,7 @@ video,
 .popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1289,38 +1289,52 @@ video,
 .popup-box {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  background: #f3f0ea;
-  border-radius: 24px;
-  padding: 35px 25px;
+  max-width: 700px;
+  background: transparent;
+  padding: 0;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  box-shadow: none;
 }
 
-.popup-box h2 {
-  margin-bottom: 15px;
-  color: #5c4923;
-}
-
-.popup-box p {
-  margin-bottom: 22px;
-  line-height: 1.6;
-  color: #2f2f2f;
+.popup-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
 }
 
 .popup-close {
   position: absolute;
-  top: 12px;
-  right: 14px;
-  background: none;
+  top: 10px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   border: none;
-  font-size: 28px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  line-height: 1;
   cursor: pointer;
   color: #425e54;
+  z-index: 10;
 }
 
-.popup-btn {
-  display: inline-flex;
+@media (max-width: 768px) {
+  .popup-box {
+    max-width: 95%;
+  }
+
+  .popup-image {
+    border-radius: 16px;
+  }
+
+  .popup-close {
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
 }
 
 /* =========================
