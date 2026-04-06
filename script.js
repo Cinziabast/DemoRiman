@@ -24,6 +24,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const langButtons = document.querySelectorAll(".lang-btn");
   const translatableElements = document.querySelectorAll("[data-es][data-en]");
 
+  /* =========================
+     POPUP BIENVENIDA
+  ========================= */
+  const popup = document.getElementById("welcomePopup");
+  const closePopup = document.getElementById("closePopup");
+  const popupImage = document.getElementById("popupImage");
+
+  function openPopup(lang = "es") {
+    if (!popup || !popupImage) return;
+
+    const key = "popupShown_" + lang;
+
+    if (sessionStorage.getItem(key)) return;
+
+    if (lang === "en") {
+      popupImage.src = "images/imagenpopin.png";
+      popupImage.alt = "Glow experience for free";
+    } else {
+      popupImage.src = "images/imagenpopes.png";
+      popupImage.alt = "Experiencia Glow gratis";
+    }
+
+    popup.classList.remove("hidden");
+    sessionStorage.setItem(key, "true");
+  }
+
+  function closePopupBox() {
+    if (!popup) return;
+    popup.classList.add("hidden");
+  }
+
+  if (closePopup) {
+    closePopup.addEventListener("click", closePopupBox);
+  }
+
+  if (popup) {
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        closePopupBox();
+      }
+    });
+  }
+
+  /* =========================
+     FUNCIONES HERO
+  ========================= */
   function updateHeroImage() {
     if (!heroImg) return;
     heroImg.src = heroImages[currentHeroLang][currentHeroIndex];
@@ -67,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-   function setLanguage(lang) {
+  function setLanguage(lang) {
     currentHeroLang = lang;
     currentHeroIndex = 0;
 
@@ -76,7 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     translatableElements.forEach((el) => {
       const newText = el.getAttribute(`data-${lang}`);
-      if (newText) el.textContent = newText;
+      if (newText) {
+        el.textContent = newText;
+      }
     });
 
     langButtons.forEach((btn) => {
@@ -88,15 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLegalLinks();
     openPopup(lang);
   }
-  
+
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       setLanguage(btn.dataset.lang);
     });
   });
-
-  setLanguage("es");
-
 
   /* =========================
      CARRUSEL PRODUCTOS
@@ -123,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   /* =========================
      CARRUSEL TESTIMONIOS
   ========================= */
@@ -147,46 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-      /* =========================
-     POPUP BIENVENIDA
+  /* =========================
+     INICIO
   ========================= */
-  const popup = document.getElementById("welcomePopup");
-  const closePopup = document.getElementById("closePopup");
-  const popupImage = document.getElementById("popupImage");
+  setLanguage("es");
 
-  function openPopup(lang = "es") {
-    if (!popup || !popupImage) return;
-
-    const key = "popupShown_" + lang;
-
-    if (sessionStorage.getItem(key)) return;
-
-    if (lang === "en") {
-      popupImage.src = "images/imagenpopin.png";
-      popupImage.alt = "Glow experience for free";
-    } else {
-      popupImage.src = "images/imagenpopes.png";
-      popupImage.alt = "Experiencia Glow gratis";
-    }
-
-    popup.classList.remove("hidden");
-    sessionStorage.setItem(key, "true");
-  }
-
-  function closePopupBox() {
-    if (popup) {
-      popup.classList.add("hidden");
-    }
-  }
-
-  if (closePopup) {
-    closePopup.addEventListener("click", closePopupBox);
-  }
-
-  if (popup) {
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        closePopupBox();
-      }
-    });
-  }
+});
