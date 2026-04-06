@@ -1415,3 +1415,26 @@ section {
 .rutina {
   margin-top: 40px !important;
 }
+
+/* =========================
+   EXPERIENCIA VIDEOS
+========================= */
+.experience-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.experience-card {
+  flex: 1;
+  max-width: 320px;
+  overflow: hidden;
+}
+
+.experience-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
