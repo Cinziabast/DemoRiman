@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* =========================
+     HERO SLIDER + IDIOMA
+  ========================= */
   const heroImages = {
     es: [
       "images/hero/hero-es-1.png",
@@ -44,9 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     translatableElements.forEach((el) => {
       const newText = el.getAttribute(`data-${lang}`);
-      if (newText) {
-        el.textContent = newText;
-      }
+      if (newText) el.textContent = newText;
     });
 
     langButtons.forEach((btn) => {
@@ -64,4 +66,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   setLanguage("es");
+
+
+  /* =========================
+     CARRUSEL PRODUCTOS
+  ========================= */
+  document.querySelectorAll(".products-carousel").forEach((carousel) => {
+    const slider = carousel.querySelector(".products-slider");
+    const btnLeft = carousel.querySelector(".carousel-arrow-left");
+    const btnRight = carousel.querySelector(".carousel-arrow-right");
+
+    if (!slider || !btnLeft || !btnRight) return;
+
+    btnLeft.addEventListener("click", () => {
+      slider.scrollBy({
+        left: -slider.clientWidth,
+        behavior: "smooth"
+      });
+    });
+
+    btnRight.addEventListener("click", () => {
+      slider.scrollBy({
+        left: slider.clientWidth,
+        behavior: "smooth"
+      });
+    });
+  });
+
+
+  /* =========================
+     CARRUSEL TESTIMONIOS
+  ========================= */
+  const testimonialSlider = document.querySelector(".testimonials-slider");
+  const testimonialPrev = document.querySelector(".testimonials-arrow.prev");
+  const testimonialNext = document.querySelector(".testimonials-arrow.next");
+
+  if (testimonialSlider && testimonialPrev && testimonialNext) {
+    testimonialPrev.addEventListener("click", () => {
+      testimonialSlider.scrollBy({
+        left: -testimonialSlider.clientWidth,
+        behavior: "smooth"
+      });
+    });
+
+    testimonialNext.addEventListener("click", () => {
+      testimonialSlider.scrollBy({
+        left: testimonialSlider.clientWidth,
+        behavior: "smooth"
+      });
+    });
+  }
+
 });
