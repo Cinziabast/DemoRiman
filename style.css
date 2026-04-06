@@ -1349,3 +1349,17 @@ body.english .hero-slider-en {
   }
 }
  
+/* =========================
+   FIX EMERGENCIA VISIBILIDAD
+========================= */
+.reveal,
+.reveal.visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+section {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
