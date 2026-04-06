@@ -1347,3 +1347,18 @@ body.english .hero-slider-en {
     height: 320px;
   }
 }
+
+.hero-slider-section {
+  display: block !important;
+}
+
+.hero-slider {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 300% !important;
+}
+
+.hero-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+}
