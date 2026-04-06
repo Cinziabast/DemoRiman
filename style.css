@@ -891,11 +891,12 @@ body.english .hero-slider-en {
   display: none;
 }
 
+/* TARJETAS TIPO POLAROID */
 .testimonial-card {
   background: #ffffff;
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
   box-sizing: border-box;
-  overflow: hidden;
+  padding: 12px 12px 36px; /* más blanco abajo */
 }
 
 .testimonial-card img {
