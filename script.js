@@ -39,6 +39,34 @@ document.addEventListener("DOMContentLoaded", () => {
     heroInterval = setInterval(nextHeroSlide, 5000);
   }
 
+  function updateLegalLinks() {
+    document.querySelectorAll(".footer-legal a").forEach((link) => {
+      const href = link.getAttribute("href");
+
+      if (document.body.classList.contains("english")) {
+        if (href === "aviso-legal.html") {
+          link.setAttribute("href", "legal-notice.html");
+        }
+        if (href === "privacidad.html") {
+          link.setAttribute("href", "privacy-policy.html");
+        }
+        if (href === "cookies.html") {
+          link.setAttribute("href", "cookies-policy.html");
+        }
+      } else {
+        if (href === "legal-notice.html") {
+          link.setAttribute("href", "aviso-legal.html");
+        }
+        if (href === "privacy-policy.html") {
+          link.setAttribute("href", "privacidad.html");
+        }
+        if (href === "cookies-policy.html") {
+          link.setAttribute("href", "cookies.html");
+        }
+      }
+    });
+  }
+
   function setLanguage(lang) {
     currentHeroLang = lang;
     currentHeroIndex = 0;
@@ -57,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateHeroImage();
     startHeroSlider();
+    updateLegalLinks();
   }
 
   langButtons.forEach((btn) => {
@@ -67,32 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setLanguage("es");
 
-function updateLegalLinks() {
-  document.querySelectorAll('.footer-legal a').forEach(link => {
-    if (document.body.classList.contains('english')) {
-      if (link.getAttribute('href') === 'aviso-legal.html') {
-        link.setAttribute('href', 'legal-notice.html');
-      }
-      if (link.getAttribute('href') === 'privacidad.html') {
-        link.setAttribute('href', 'privacy-policy.html');
-      }
-      if (link.getAttribute('href') === 'cookies.html') {
-        link.setAttribute('href', 'cookies-policy.html');
-      }
-    } else {
-      if (link.getAttribute('href') === 'legal-notice.html') {
-        link.setAttribute('href', 'aviso-legal.html');
-      }
-      if (link.getAttribute('href') === 'privacy-policy.html') {
-        link.setAttribute('href', 'privacidad.html');
-      }
-      if (link.getAttribute('href') === 'cookies-policy.html') {
-        link.setAttribute('href', 'cookies.html');
-      }
-    }
-  });
-}
-  
+
   /* =========================
      CARRUSEL PRODUCTOS
   ========================= */
@@ -142,18 +146,4 @@ function updateLegalLinks() {
     });
   }
 
-});
-
-document.querySelectorAll('.footer-legal a').forEach(link => {
-  if (document.body.classList.contains('english')) {
-    if (link.getAttribute('href') === 'aviso-legal.html') {
-      link.setAttribute('href', 'legal-notice.html');
-    }
-    if (link.getAttribute('href') === 'privacidad.html') {
-      link.setAttribute('href', 'privacy-policy.html');
-    }
-    if (link.getAttribute('href') === 'cookies.html') {
-      link.setAttribute('href', 'cookies-policy.html');
-    }
-  }
 });
