@@ -16,39 +16,42 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header" id="top">
-    <div class="container header-container">
-   <a href="#top" class="logo-link">
-  <img src="images/logo_glow.png" alt="Glow Leaders" class="logo-img">
-</a>
+<!-- HEADER -->
+<header class="header" id="top">
+  <div class="container header-container">
 
-      <div class="header-right">
-        <div class="language-switcher">
-          <button type="button" class="lang-btn active" data-lang="es" aria-label="Español">
-            <img src="images/icons/banderaes.png" alt="Español" class="flag-icon" />
-          </button>
+    <a href="#top" class="logo-link">
+      <img src="images/logo_glow.png" alt="Glow Leaders" class="logo-img">
+    </a>
 
-          <button type="button" class="lang-btn" data-lang="en" aria-label="English">
-            <img src="images/icons/banderain.png" alt="English" class="flag-icon" />
-          </button>
-        </div>
+    <div class="header-right">
+      <div class="language-switcher">
+        <button type="button" class="lang-btn active" data-lang="es">
+          <img src="images/icons/banderaes.png" class="flag-icon" />
+        </button>
 
-        <nav class="nav">
-          <a href="#beneficios" data-es="Beneficios" data-en="Benefits">Beneficios</a>
-          <a href="#equipo" data-es="Glow Leaders" data-en="Glow Leaders">Glow Leaders</a>
-          <a href="#productos" data-es="Productos" data-en="Products">Productos</a>
-          <a href="#reserva" class="btn btn-nav" data-es="Reservar" data-en="Reserve">Reservar</a>
-        </nav>
+        <button type="button" class="lang-btn" data-lang="en">
+          <img src="images/icons/banderain.png" class="flag-icon" />
+        </button>
       </div>
+
+      <nav class="nav">
+        <a href="#beneficios" data-es="Beneficios" data-en="Benefits">Beneficios</a>
+        <a href="#equipo" data-es="Glow Leaders" data-en="Glow Leaders">Glow Leaders</a>
+        <a href="#productos" data-es="Productos" data-en="Products">Productos</a>
+        <a href="#reserva" class="btn btn-nav" data-es="Reservar" data-en="Reserve">Reservar</a>
+      </nav>
     </div>
-  </header>
-  
-<!-- HERO FINAL -->
+
+  </div>
+</header>
+
+  <!-- HERO FINAL -->
 <section class="hero-final">
 
   <div class="hero-final-title">
@@ -65,7 +68,6 @@
   <div class="hero-final-media">
     <video autoplay muted loop playsinline class="hero-final-video">
       <source src="videos/banner/videobanner.mp4" type="video/mp4" />
-      Tu navegador no soporta videos HTML5.
     </video>
 
     <a href="#reserva" class="btn btn-primary btn-large hero-final-btn">
@@ -76,17 +78,16 @@
   </div>
 
 </section>
-  
-<!-- BENEFICIOS -->
+
+  <!-- BENEFICIOS -->
 <section class="section section-benefits" id="beneficios">
   <div class="container">
+
     <h2>BENEFICIOS</h2>
-  </div>
-</section>
 
     <div class="benefit-row reveal">
       <div class="benefit-media">
-        <img src="images/icons/image0.png" alt="Piel más luminosa y cuidada" />
+        <img src="images/icons/image0.png" />
       </div>
       <div class="benefit-copy">
         <h3 data-es="PIEL MÁS LUMINOSA Y CUIDADA" data-en="BRIGHTER, HEALTHIER SKIN">
@@ -103,7 +104,7 @@
 
     <div class="benefit-row benefit-row-reverse reveal">
       <div class="benefit-media">
-        <img src="images/icons/image2.png" alt="Rutina personalizada" />
+        <img src="images/icons/image2.png" />
       </div>
       <div class="benefit-copy">
         <h3 data-es="RUTINA PERSONALIZADA" data-en="PERSONALIZED ROUTINE">
@@ -120,7 +121,7 @@
 
     <div class="benefit-row reveal">
       <div class="benefit-media">
-        <img src="images/icons/image1.png" alt="Experiencia guiada paso a paso" />
+        <img src="images/icons/image1.png" />
       </div>
       <div class="benefit-copy">
         <h3 data-es="EXPERIENCIA GUIADA PASO A PASO" data-en="STEP-BY-STEP GUIDED EXPERIENCE">
@@ -135,29 +136,89 @@
       </div>
     </div>
 
-<!-- BONO -->
+  </div>
+</section>
+
+  <!-- BENEFICIOS -->
+<section class="section section-benefits" id="beneficios">
+  <div class="container">
+
+    <h2>BENEFICIOS</h2>
+
+    <div class="benefit-row reveal">
+      <div class="benefit-media">
+        <img src="images/icons/image0.png" />
+      </div>
+      <div class="benefit-copy">
+        <h3 data-es="PIEL MÁS LUMINOSA Y CUIDADA" data-en="BRIGHTER, HEALTHIER SKIN">
+          PIEL MÁS LUMINOSA Y CUIDADA
+        </h3>
+        <p
+          data-es="Descubre una piel más luminosa, hidratada y visiblemente cuidada con una rutina guiada."
+          data-en="Discover brighter, hydrated and visibly healthier skin with a guided routine."
+        >
+          Descubre una piel más luminosa, hidratada y visiblemente cuidada con una rutina guiada.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit-row benefit-row-reverse reveal">
+      <div class="benefit-media">
+        <img src="images/icons/image2.png" />
+      </div>
+      <div class="benefit-copy">
+        <h3 data-es="RUTINA PERSONALIZADA" data-en="PERSONALIZED ROUTINE">
+          RUTINA PERSONALIZADA
+        </h3>
+        <p
+          data-es="Identificamos las necesidades de tu piel para proponerte una rutina simple y efectiva."
+          data-en="We identify your skin’s needs to suggest a simple and effective routine."
+        >
+          Identificamos las necesidades de tu piel para proponerte una rutina simple y efectiva.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit-row reveal">
+      <div class="benefit-media">
+        <img src="images/icons/image1.png" />
+      </div>
+      <div class="benefit-copy">
+        <h3 data-es="EXPERIENCIA GUIADA PASO A PASO" data-en="STEP-BY-STEP GUIDED EXPERIENCE">
+          EXPERIENCIA GUIADA PASO A PASO
+        </h3>
+        <p
+          data-es="Aprenderás el ritual coreano de forma práctica, sencilla y memorable."
+          data-en="Learn the Korean ritual in a practical, simple and memorable way."
+        >
+          Aprenderás el ritual coreano de forma práctica, sencilla y memorable.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- BONO -->
 <section class="section section-bono">
   <div class="container">
+
     <div class="bono-top-text reveal">
       <h2 data-es="Tu experiencia gratuita empieza aquí" data-en="Your free experience starts here">
         Tu experiencia gratuita empieza aquí
       </h2>
     </div>
 
-  <div class="bono-center reveal">
-  <div class="bono-image-wrap">
-    <img src="images/bonos/BONOES.png" alt="Bono Glow Leaders" class="bono-img lang-es" />
-    <img src="images/bonos/BONOIN.png" alt="Glow Leaders Voucher" class="bono-img lang-en" />
+    <div class="bono-center reveal">
+      <div class="bono-image-wrap">
+        <img src="images/bonos/BONOES.png" alt="Bono Glow Leaders" class="bono-img lang-es" />
+        <img src="images/bonos/BONOIN.png" alt="Glow Leaders Voucher" class="bono-img lang-en" />
 
-    <a href="#reserva"
-       class="bono-btn bono-btn-overlay"
-       data-es="RESERVA MI PLAZA"
-       data-en="BOOK MY SPOT"
-       style="position:absolute; left:50%; bottom:25px; transform:translateX(-50%); z-index:999; display:inline-block;">
-      RESERVA MI PLAZA
-    </a>
-  </div>
-</div>
+        <a href="#reserva" class="bono-btn bono-btn-overlay" data-es="RESERVA MI PLAZA" data-en="BOOK MY SPOT">
+          RESERVA MI PLAZA
+        </a>
+      </div>
+    </div>
 
     <div class="experience-steps">
       <div class="step-card">
@@ -192,237 +253,116 @@
         </p>
       </div>
     </div>
+
   </div>
 </section>
-  
-  <!-- GLOW LEADERS -->
-  <section class="section section-team" id="equipo">
-    <div class="container">
-      <div class="section-heading section-heading-large section-heading-light">
-        <h2 data-es="¿QUIÉNES SOMOS?" data-en="WHO ARE WE?">¿QUIÉNES SOMOS?</h2>
-      </div>
-
-        <div class="team-slider">
-          <article class="team-slide">
-            <img src="images/equipo/sandra5.png" alt="Sandra - Glow Leaders" />
-            <div class="team-card-content">
-              <h3>Sandra</h3>
-             <p class="leader-description"
-   data-es="Soy Networker en la industria Beauty, me enfoco en desarrollar equipos y formar líderes con visión. Ayudo a las personas a crecer, generar ingresos y construir un estilo de vida alineado, consciente y con proyección."
-   data-en="I am a Networker in the beauty industry focused on building teams and developing leaders with vision. I help people grow, generate income and build a conscious, aligned lifestyle with long-term projection.">
-   Soy Networker en la industria Beauty, me enfoco en desarrollar equipos y formar líderes con visión. Ayudo a las personas a crecer, generar ingresos y construir un estilo de vida alineado, consciente y con proyección.
-</p>
-              <a href="https://wa.me/34649803177" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="team-slide">
-            <img src="images/equipo/firas.png" alt="Firas - Glow Leaders" />
-            <div class="team-card-content">
-              <h3>Firas</h3>
-            <p class="leader-description"
-   data-es="Soy Estratega Digital y Creador de Contenido, enfocado en el bienestar y el crecimiento personal. Trabajo desde un enfoque integral: cuerpo, mente y energía, creando oportunidades para crecer, generar ingresos y construir una vida con propósito."
-   data-en="I am a Digital Strategist and Content Creator focused on wellness and personal growth. I work from a holistic approach: body, mind and energy, creating opportunities to grow, generate income and build a life with purpose.">
-   Soy Estratega Digital y Creador de Contenido, enfocado en el bienestar y el crecimiento personal. Trabajo desde un enfoque integral: cuerpo, mente y energía, creando oportunidades para crecer, generar ingresos y construir una vida con propósito.
-</p>
-            <a href="https://wa.me/34643724210" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-  </div>
-</article>
-          
-          <article class="team-slide">
-            <img src="images/equipo/maria.png" alt="María - Glow Leaders" />
-            <div class="team-card-content">
-              <h3>María</h3>
-             <p class="leader-description"
-   data-es="Soy Terapeuta Especializada en Nutrición y me apasiona todo lo relacionado con el bienestar, la belleza y el crecimiento personal. Me gusta acompañar a las personas a encontrar un equilibrio real en su vida, tanto a nivel físico como emocional y también financiero."
-   data-en="I am a Therapist specialized in Nutrition and I am passionate about everything related to wellness, beauty and personal growth. I like helping people find real balance in their lives, physically, emotionally and financially.">
-   Soy Terapeuta Especializada en Nutrición y me apasiona todo lo relacionado con el bienestar, la belleza y el crecimiento personal. Me gusta acompañar a las personas a encontrar un equilibrio real en su vida, tanto a nivel físico como emocional y también financiero.
-</p>
-              <a href="https://wa.me/34620509211" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-            </div>
-          </article>
-        </div>
-      
-    </div>
-  </section>
 
   <!-- PRODUCTOS -->
-  <section class="section section-products" id="productos">
-    <div class="container">
+<section class="section section-products" id="productos">
+  <div class="container">
 
-    <!-- LOS MÁS VENDIDOS -->
-<div class="products-showcase reveal">
+    <!-- BEST SELLERS -->
+    <div class="products-showcase reveal">
 
-  <div class="section-heading section-heading-large">
-    <h2 data-es="LOS MÁS VENDIDOS" data-en="BEST SELLERS">
-      LOS MÁS<br>VENDIDOS
-    </h2>
-  </div>
+      <div class="section-heading section-heading-large">
+        <h2 data-es="LOS MÁS VENDIDOS" data-en="BEST SELLERS">
+          LOS MÁS<br>VENDIDOS
+        </h2>
+      </div>
 
-  <div class="products-carousel">
-    <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
-      &#10094;
-    </button>
+      <div class="products-carousel">
+        <button class="carousel-arrow carousel-arrow-left">&#10094;</button>
 
-    <div class="products-slider">
-      <article class="product-card">
-        <img src="images/productos/botalab.png" alt="Best Seller 1" />
-        <div class="product-content">
-          <h4 data-es="BOTALAB DESERTICOLA PLUS SHAMPOO" data-en="BOTALAB DESERTICOLA PLUS SHAMPOO">BOTALAB DESERTICOLA PLUS SHAMPOO</h4>
-          <p
-            data-es="Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota."
-            data-en="Cleans, hydrates and balances the scalp. Hair feels lighter, fresher and shinier. A clean feeling you can really notice."
-          >
-            Limpia, hidrata y equilibra el cuero cabelludo. Cabello más ligero, fresco y brillante. Sensación de limpieza que se nota.
-          </p>
+        <div class="products-slider">
+          <!-- PRODUCTO -->
+          <article class="product-card">
+            <img src="images/productos/botalab.png" />
+            <div class="product-content">
+              <h4>BOTALAB DESERTICOLA PLUS SHAMPOO</h4>
+              <p>Limpia, hidrata y equilibra el cuero cabelludo.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="images/productos/icdoil.png" />
+            <div class="product-content">
+              <h4>ICD MOISTURE CLEANSING OIL</h4>
+              <p>Elimina el maquillaje e impurezas sin resecar.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="images/productos/multistick.png" />
+            <div class="product-content">
+              <h4>ICD MULTI STICK BALM</h4>
+              <p>Hidratación inmediata en cualquier momento.</p>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <article class="product-card">
-        <img src="images/productos/icdoil.png" alt="Best Seller 2" />
-        <div class="product-content">
-          <h4 data-es="ICD MOISTURE CLEANSING OIL" data-en="ICD MOISTURE CLEANSING OIL">ICD MOISTURE CLEANSING OIL</h4>
-          <p
-            data-es="Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa."
-            data-en="Removes makeup and impurities without drying the skin. Clean, soft and hydrated skin. The perfect first step for radiant skin."
-          >
-            Elimina el maquillaje e impurezas sin resecar. Piel limpia, suave e hidratada. El inicio perfecto para una piel luminosa.
-          </p>
-        </div>
-      </article>
+        <button class="carousel-arrow carousel-arrow-right">&#10095;</button>
+      </div>
 
-      <article class="product-card">
-        <img src="images/productos/multistick.png" alt="Best Seller 3" />
-        <div class="product-content">
-          <h4 data-es="ICD MULTI STICK BALM" data-en="ICD MULTI STICK BALM">ICD MULTI STICK BALM</h4>
-          <p
-            data-es="Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante."
-            data-en="Instant hydration anytime, anywhere. Adds a natural glow instantly. Fresh, nourished and radiant skin."
-          >
-            Hidratación inmediata en cualquier momento. Aporta glow natural al instante. Piel fresca, nutrida y radiante.
-          </p>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="images/productos/firstpackage.png" alt="Best Seller 4" />
-        <div class="product-content">
-          <h4 data-es="ICD DERMATOLOGY FIRST PACKAGE" data-en="ICD DERMATOLOGY FIRST PACKAGE">ICD DERMATOLOGY FIRST PACKAGE</h4>
-          <p
-            data-es="Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN."
-            data-en="Complete ritual to transform your skin. Improves texture, hydration and luminosity. Perfect to start your RIMAN skincare routine."
-          >
-            Ritual completo para transformar tu piel. Mejora textura, hidratación y luminosidad. Ideal para empezar con RIMAN.
-          </p>
-        </div>
-      </article>
     </div>
 
-    <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
-      &#10095;
-    </button>
-  </div>
-</div>
+    <!-- FAVORITOS -->
+    <div class="products-showcase products-showcase-reverse reveal">
 
-  <!-- FAVORITOS -->
-      <div class="products-showcase products-showcase-reverse reveal">
-        <div class="products-showcase-copy">
-          <h3 class="products-side-title" data-es="FAVORITOS" data-en="FAVORITES">FAVORITOS</h3>
-         
-        </div>
-
-        <div class="products-carousel">
-          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Anterior">
-            &#10094;
-          </button>
-
-          <div class="products-slider">
-            <article class="product-card">
-              <img src="images/productos/botalabplus.png" alt="Favorito 1" />
-              <div class="product-content">
-                <h4 data-es="BOTALAB DESERTICOLA PLUS CONDITIONER" data-en="BOTALAB DESERTICOLA PLUS CONDITIONER">BOTALAB DESERTICOLA PLUS CONDITIONER</h4>
-                <p
-                  data-es="Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable."
-                  data-en="Deeply nourishes and softens the hair. Improves texture and shine. Healthier, smoother and more manageable hair."
-                >
-                  Nutre y suaviza profundamente el cabello. Mejora la textura y el brillo. Cabello más sano y manejable.
-                </p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="images/productos/icdcream.png" alt="Favorito 2" />
-              <div class="product-content">
-                <h4 data-es="ICD DERMATOLOGY CREAM" data-en="ICD DERMATOLOGY CREAM">ICD DERMATOLOGY CREAM</h4>
-                <p
-                  data-es="Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort."
-                  data-en="Deep yet lightweight hydration. Softer and more elastic skin. Seals your skincare routine with comfort."
-                >
-                  Hidratación profunda y ligera. Piel más suave y elástica. Sella tu rutina con confort.
-                </p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="images/productos/protector.png" alt="Favorito 3" />
-              <div class="product-content">
-                <h4 data-es="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+" data-en="ICD MOISTURE LAYER SUN PROTECTOR SPF 50+">ICD MOISTURE LAYER SUN PROTECTOR SPF 50+</h4>
-                <p
-                  data-es="Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día."
-                  data-en="High protection with a lightweight texture. Hydrates without leaving residue. Protected and fresh skin all day long."
-                >
-                  Alta protección con textura ligera. Hidrata sin dejar residuo. Piel protegida y fresca todo el día.
-                </p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="images/productos/twophase.png" alt="Favorito 4" />
-              <div class="product-content">
-                <h4 data-es="ICD TWO-PHASE OIL MIST" data-en="ICD TWO-PHASE OIL MIST">ICD TWO-PHASE OIL MIST</h4>
-                <p
-                  data-es="Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos."
-                  data-en="Instantly hydrates and revitalizes. Adds natural luminosity. Refreshes your skin in seconds."
-                >
-                  Hidrata y revitaliza al instante. Aporta luminosidad natural. Refresca tu piel en segundos.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Siguiente">
-            &#10095;
-          </button>
-        </div>
+      <div class="products-showcase-copy">
+        <h3 class="products-side-title">FAVORITOS</h3>
       </div>
-      
-<!-- PRODUCTO ESTRELLA -->
+
+      <div class="products-carousel">
+        <button class="carousel-arrow carousel-arrow-left">&#10094;</button>
+
+        <div class="products-slider">
+          <article class="product-card">
+            <img src="images/productos/botalabplus.png" />
+            <div class="product-content">
+              <h4>BOTALAB DESERTICOLA PLUS CONDITIONER</h4>
+              <p>Nutre y suaviza profundamente el cabello.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="images/productos/icdcream.png" />
+            <div class="product-content">
+              <h4>ICD DERMATOLOGY CREAM</h4>
+              <p>Hidratación profunda y ligera.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="images/productos/protector.png" />
+            <div class="product-content">
+              <h4>ICD SUN PROTECTOR SPF 50+</h4>
+              <p>Alta protección con textura ligera.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow-right">&#10095;</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- PRODUCTO ESTRELLA -->
 <div class="products-showcase reveal star-layout">
 
   <div class="section-heading section-heading-large">
-    <h2 data-es="PRODUCTO ESTRELLA" data-en="STAR PRODUCT">
-      PRODUCTO ESTRELLA
-    </h2>
+    <h2>PRODUCTO ESTRELLA</h2>
   </div>
 
   <div class="star-product">
 
-    <!-- BLOQUE BLANCO -->
     <div class="star-product-copy">
-      <h4
-        data-es="ICD COLLAGEN 100 MELTING MASK"
-        data-en="ICD COLLAGEN 100 MELTING MASK">
-        ICD COLLAGEN 100 MELTING MASK
-      </h4>
-
-      <p
-        data-es="Mascarilla de colágeno puro al 100% que se funde en la piel. Hidrata intensamente y mejora la apariencia de firmeza y luminosidad. Un boost de cuidado visible desde el primer uso."
-        data-en="100% pure collagen mask that melts into the skin. Deeply hydrates and improves firmness and glow. A visible skincare boost from the first use.">
-        Mascarilla de colágeno puro al 100% que se funde en la piel.
-      </p>
+      <h4>ICD COLLAGEN 100 MELTING MASK</h4>
+      <p>Mascarilla de colágeno puro al 100% que se funde en la piel.</p>
     </div>
 
-    <!-- VIDEO -->
     <div class="star-product-media">
       <video class="star-product-video" autoplay muted loop playsinline>
         <source src="videos/banner/videomascarilla1.mp4" type="video/mp4">
@@ -432,721 +372,104 @@
   </div>
 
 </div>
-      
- <!-- RUTINA PERSONALIZADA -->
+
+  <!-- RUTINA PERSONALIZADA -->
 <section class="section rutina-section">
-
   <div class="rutina-banner">
-
-    <img src="images/icons/imagenrutina.png" alt="Rutina Riman" class="rutina-img">
-
+    <img src="images/icons/imagenrutina.png" class="rutina-img">
     <a href="#reserva" class="btn btn-primary rutina-btn">
-      <span
-        data-es="QUIERO MI RUTINA ESPECIALIZADA"
-        data-en="I WANT MY PERSONALIZED ROUTINE">
-        QUIERO MI RUTINA ESPECIALIZADA
-      </span>
+      QUIERO MI RUTINA ESPECIALIZADA
     </a>
-
   </div>
-
 </section>
-  
-  <!-- EXPERIENCIA -->
+
+<!-- EXPERIENCIA -->
 <section class="section section-experience">
   <div class="container">
-
     <div class="experience-grid reveal">
       <article class="experience-card">
         <video src="videos/banner/video1.mov" autoplay muted loop playsinline></video>
       </article>
-
       <article class="experience-card">
         <video src="videos/banner/video2.mov" autoplay muted loop playsinline></video>
       </article>
-
       <article class="experience-card">
         <video src="videos/banner/video3.mov" autoplay muted loop playsinline></video>
       </article>
     </div>
-
   </div>
 </section>
 
-  
- <section class="section testimonials-section">
+  <section class="section testimonials-section">
   <div class="container">
 
-   <div class="section-heading center-content reveal">
+    <div class="section-heading center-content reveal">
+      <h2>RITUAL 7 PASOS<br>SKINCARE COREANO</h2>
+    </div>
 
-  <h2>
-    <span data-es="RITUAL 7 PASOS" data-en="7-STEP KOREAN">
-      RITUAL 7 PASOS
-    </span><br>
-    <span data-es="SKINCARE COREANO" data-en="SKINCARE RITUAL">
-      SKINCARE COREANO
-    </span>
-  </h2>
-
-</div>
-    
     <div class="testimonials-carousel reveal">
-      <button class="carousel-arrow testimonials-arrow prev" aria-label="Anterior">&#10094;</button>
+      <button class="carousel-arrow testimonials-arrow prev">&#10094;</button>
 
       <div class="testimonials-slider" id="testimonialsSlider">
         <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio1.png" alt="Testimonio 1">
+          <img src="images/testimonios/testimonio1.png">
         </article>
-
         <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio2.png" alt="Testimonio 2">
+          <img src="images/testimonios/testimonio2.png">
         </article>
-
         <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio3.png" alt="Testimonio 3">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio4.png" alt="Testimonio 4">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio5.png" alt="Testimonio 5">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio6.png" alt="Testimonio 6">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio7.png" alt="Testimonio 7">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio8.png" alt="Testimonio 8">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio9.png" alt="Testimonio 9">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio10.png" alt="Testimonio 10">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio11.png" alt="Testimonio 11">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio12.png" alt="Testimonio 12">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio13.png" alt="Testimonio 13">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio14.jpeg" alt="Testimonio 14">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio15.jpeg" alt="Testimonio 15">
-        </article>
-
-        <article class="testimonial-card polaroid-card">
-          <img src="images/testimonios/testimonio16.jpeg" alt="Testimonio 16">
+          <img src="images/testimonios/testimonio3.png">
         </article>
       </div>
 
-      <button class="carousel-arrow testimonials-arrow next" aria-label="Siguiente">&#10095;</button>
+      <button class="carousel-arrow testimonials-arrow next">&#10095;</button>
     </div>
 
   </div>
 </section>
-      
-<!-- FORMULARIO -->
+
+  <!-- FORMULARIO -->
 <section class="section section-form" id="reserva">
   <div class="container">
 
     <div class="section-heading center-content">
-      <p
-        class="section-label form-label"
-        data-es="Reserva tu experiencia"
-        data-en="Book your experience">
-        Reserva tu experiencia
-      </p>
+      <p class="section-label form-label">Reserva tu experiencia</p>
     </div>
 
     <div class="form-box reveal">
-      <form id="klaviyo-form" class="reservation-form">
+      <form class="reservation-form">
 
         <div class="form-group">
-          <label for="nombre" data-es="Nombre completo" data-en="Full name">
-            Nombre completo
-          </label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+          <label>Nombre completo</label>
+          <input type="text" required />
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+          <label>Email</label>
+          <input type="email" required />
         </div>
 
         <div class="form-group">
-          <label for="telefono" data-es="Teléfono" data-en="Phone">
-            Teléfono
-          </label>
-          <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required />
+          <label>Teléfono</label>
+          <input type="tel" required />
         </div>
 
         <div class="form-group">
-          <label for="ciudad" data-es="Ciudad" data-en="City">
-            Ciudad
-          </label>
-          <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required />
+          <label>Ciudad</label>
+          <input type="text" required />
         </div>
 
-        <div class="form-group">
-          <label data-es="Elige tu asesor RIMAN" data-en="Choose your RIMAN advisor">
-            Elige tu asesor RIMAN
-          </label>
-
-          <div class="advisor-grid">
-            <label class="advisor-option">
-              <input type="radio" name="asesor" value="Sandra" required />
-              <img src="images/equipo/sandraformulario.png" alt="Sandra" />
-              <span>Sandra</span>
-            </label>
-
-            <label class="advisor-option">
-              <input type="radio" name="asesor" value="Firas" />
-              <img src="images/equipo/firasformulario.png" alt="Firas" />
-              <span>Firas</span>
-            </label>
-
-            <label class="advisor-option">
-              <input type="radio" name="asesor" value="María" />
-              <img src="images/equipo/mariaformulario.png" alt="María" />
-              <span>María</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- CAMPOS OCULTOS PARA KLAVIYO -->
-        <input type="hidden" name="advisor_name" id="advisor_name">
-        <input type="hidden" name="advisor_email" id="advisor_email">
-        <input type="hidden" name="advisor_phone" id="advisor_phone">
-        <input type="hidden" name="riman_link" id="riman_link">
-
-        <button type="submit" class="btn btn-primary btn-submit"
-          data-es="QUIERO MI RITUAL GRATUITO"
-          data-en="I WANT MY FREE RITUAL">
+        <button type="submit" class="btn btn-primary btn-submit">
           QUIERO MI RITUAL GRATUITO
         </button>
 
       </form>
     </div>
 
-    <p class="urgent-call"
-      data-es="PLAZAS LIMITADAS CADA SEMANA"
-      data-en="LIMITED SPOTS EACH WEEK">
-      PLAZAS LIMITADAS CADA SEMANA
-    </p>
-
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="section section-final-cta">
+<script src="script.js"></script>
 
-  <div class="final-video-wrapper">
-
-    <video class="final-video" autoplay muted loop playsinline>
-      <source src="videos/banner/videoultimaseccion.mp4" type="video/mp4">
-    </video>
-
-    <!-- Texto arriba derecha -->
-    <div class="final-text-top">
-      <p
-        data-es="Cuidarte no es un lujo, es una decisión"
-        data-en="Taking care of yourself is not a luxury, it's a decision">
-        Cuidarte no es un lujo, es una decisión
-      </p>
-    </div>
-
-    <!-- Botón dentro del video -->
-    <div class="final-button">
-      <a href="#reserva" class="btn btn-primary"
-         data-es="RESERVA TU EXPERIENCIA"
-         data-en="BOOK YOUR EXPERIENCE">
-         RESERVA TU EXPERIENCIA
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-<footer class="footer">
-  <div class="container footer-container">
-    
-    <img src="images/logo_glow.png" alt="Glow Leaders" class="footer-logo">
-
-    <p data-es="Glow Leaders · Experiencia skincare coreana" data-en="Glow Leaders · Korean skincare experience">
-      Glow Leaders · Experiencia skincare coreana
-    </p>
-
-  </div>
-</footer>
-
-  <!-- SCRIPT IDIOMA -->
-<script>
-  const langButtons = document.querySelectorAll('.lang-btn');
-  const translatableElements = document.querySelectorAll('[data-es][data-en]');
-  const savedLang = localStorage.getItem('lang') || 'es';
-
-  function setLanguage(lang) {
-    localStorage.setItem('lang', lang);
-    document.documentElement.lang = lang;
-
-    if (lang === 'en') {
-      document.body.classList.add('english');
-    } else {
-      document.body.classList.remove('english');
-    }
-
-    translatableElements.forEach(el => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) el.textContent = text;
-    });
-
-    const placeholders = {
-      es: {
-        nombre: 'Tu nombre completo',
-        email: 'Tu correo electrónico',
-        telefono: 'Tu número de teléfono',
-        ciudad: 'Tu ciudad'
-      },
-      en: {
-        nombre: 'Your full name',
-        email: 'Your email address',
-        telefono: 'Your phone number',
-        ciudad: 'Your city'
-      }
-    };
-
-    document.getElementById('nombre').placeholder = placeholders[lang].nombre;
-    document.getElementById('email').placeholder = placeholders[lang].email;
-    document.getElementById('telefono').placeholder = placeholders[lang].telefono;
-    document.getElementById('ciudad').placeholder = placeholders[lang].ciudad;
-
-    langButtons.forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
-  }
-
-  langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      setLanguage(btn.dataset.lang);
-    });
-  });
-
-  setLanguage(savedLang);
-</script>
-  
-  <!-- SCRIPT REVEAL -->
-  <script>
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach(el => observer.observe(el));
-  </script>
-
-  <!-- SCRIPT CARRUSELES -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const productCarousels = document.querySelectorAll(".products-carousel");
-
-      productCarousels.forEach((carousel) => {
-        const slider = carousel.querySelector(".products-slider");
-        const btnLeft = carousel.querySelector(".carousel-arrow-left");
-        const btnRight = carousel.querySelector(".carousel-arrow-right");
-
-        if (!slider || !btnLeft || !btnRight) return;
-
-        btnLeft.addEventListener("click", () => {
-          slider.scrollBy({
-            left: -slider.clientWidth * 0.9,
-            behavior: "smooth"
-          });
-        });
-
-        btnRight.addEventListener("click", () => {
-          slider.scrollBy({
-            left: slider.clientWidth * 0.9,
-            behavior: "smooth"
-          });
-        });
-      });
-
-      const teamCarousel = document.querySelector(".team-carousel");
-
-      if (teamCarousel) {
-        const slider = teamCarousel.querySelector(".team-slider");
-        const btnLeft = teamCarousel.querySelector(".team-arrow-left");
-        const btnRight = teamCarousel.querySelector(".team-arrow-right");
-
-        if (slider && btnLeft && btnRight) {
-          btnLeft.addEventListener("click", () => {
-            slider.scrollBy({
-              left: -slider.clientWidth * 0.9,
-              behavior: "smooth"
-            });
-          });
-
-          btnRight.addEventListener("click", () => {
-            slider.scrollBy({
-              left: slider.clientWidth * 0.9,
-              behavior: "smooth"
-            });
-          });
-        }
-      }
-    });
-  </script>
-
-<!-- SCRIPT KLAVIYO COMPLETO -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("klaviyo-form");
-
-  if (!form) {
-    console.error("No se encontró el formulario klaviyo-form");
-    return;
-  }
-
-  /* =============================
-     SELECCIÓN DE ASESOR
-  ============================= */
-  const advisorOptions = document.querySelectorAll('input[name="asesor"]');
-  const advisorName = document.getElementById("advisor_name");
-  const advisorEmail = document.getElementById("advisor_email");
-  const advisorPhone = document.getElementById("advisor_phone");
-  const rimanLink = document.getElementById("riman_link");
-
-  advisorOptions.forEach(option => {
-    option.addEventListener("change", function () {
-      if (this.value === "Firas") {
-        advisorName.value = "Firas";
-        advisorEmail.value = "firas@email.com";
-        advisorPhone.value = "600000000";
-        rimanLink.value = "https://growandglow.riman.com";
-      }
-
-      if (this.value === "Sandra") {
-        advisorName.value = "Sandra";
-        advisorEmail.value = "sandra@email.com";
-        advisorPhone.value = "600000001";
-        rimanLink.value = "https://sandraleader.riman.com";
-      }
-
-      if (this.value === "María") {
-        advisorName.value = "María";
-        advisorEmail.value = "maria@email.com";
-        advisorPhone.value = "600000002";
-        rimanLink.value = "https://haciatubelleza.riman.com";
-      }
-    });
-  });
-
-  /* =============================
-     ENVÍO A KLAVIYO
-  ============================= */
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const nombre = form.querySelector('input[name="nombre"]').value.trim();
-    const email = form.querySelector('input[name="email"]').value.trim();
-    const telefono = form.querySelector('input[name="telefono"]').value.trim();
-    const ciudad = form.querySelector('input[name="ciudad"]').value.trim();
-    const asesor = form.querySelector('input[name="asesor"]:checked')?.value || "";
-
-    const advisor_name = form.querySelector('input[name="advisor_name"]')?.value || "";
-    const advisor_email = form.querySelector('input[name="advisor_email"]')?.value || "";
-    const advisor_phone = form.querySelector('input[name="advisor_phone"]')?.value || "";
-    const riman_link = form.querySelector('input[name="riman_link"]')?.value || "";
-
-    const payload = {
-      data: {
-        type: "subscription",
-        attributes: {
-          profile: {
-            data: {
-              type: "profile",
-             attributes: {
-  email: email,
-  first_name: nombre,
-  properties: {
-    telefono: telefono,
-    ciudad: ciudad,
-    asesor: asesor,
-    advisor_name: advisor_name,
-    advisor_email: advisor_email,
-    advisor_phone: advisor_phone,
-    riman_link: riman_link,
-    experience_booked: "no"
-  }
-}
-            }
-          },
-          custom_source: "Glow Leaders Landing"
-        },
-        relationships: {
-          list: {
-            data: {
-              type: "list",
-              id: "TtUdz8"
-            }
-          }
-        }
-      }
-    };
-
-    try {
-      const response = await fetch("https://a.klaviyo.com/client/subscriptions/?company_id=XZjNH6", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-          "revision": "2024-10-15"
-        },
-        body: JSON.stringify(payload)
-      });
-
-      const responseText = await response.text();
-      console.log("STATUS KLAVIYO:", response.status);
-      console.log("RESPUESTA KLAVIYO:", responseText);
-      console.log("PAYLOAD ENVIADO:", payload);
-
-      if (response.ok) {
-        document.getElementById("success-modal").classList.remove("hidden");
-        updateModalLanguage();
-        form.reset();
-      } else {
-        alert("Error al enviar datos a Klaviyo");
-      }
-    } catch (error) {
-      console.error("ERROR FETCH:", error);
-      alert("Error de conexión");
-    }
-  });
-
-  /* =============================
-     MODAL DE CONFIRMACIÓN
-  ============================= */
-  const successModal = document.getElementById("success-modal");
-  const closeSuccessModal = document.getElementById("close-success-modal");
-  const successOk = document.getElementById("success-ok");
-
-  function closeSuccessPopup() {
-    successModal.classList.add("hidden");
-  }
-
-  if (closeSuccessModal) {
-    closeSuccessModal.addEventListener("click", closeSuccessPopup);
-  }
-
-  if (successOk) {
-    successOk.addEventListener("click", closeSuccessPopup);
-  }
-
-  if (successModal) {
-    successModal.addEventListener("click", function (e) {
-      if (e.target === successModal) {
-        closeSuccessPopup();
-      }
-    });
-  }
-});
-
-function updateModalLanguage() {
-  const lang = localStorage.getItem("lang") || "es";
-  const modalElements = document.querySelectorAll("#success-modal [data-es][data-en]");
-
-  modalElements.forEach(el => {
-    const text = el.getAttribute("data-" + lang);
-    if (text) el.textContent = text;
-  });
-}
-</script>
-      
-  <!-- MODAL GRACIAS -->
-<div id="success-modal" class="success-modal hidden">
-  <div class="success-modal-content">
-    <button id="close-success-modal" class="success-close">&times;</button>
-
-    <h2 data-es="¡Gracias por registrarte!" data-en="Thank you for registering!">
-  ¡Gracias por registrarte!
-</h2>
-
-<p data-es="Muy pronto, tu asesor se pondrá en contacto contigo para compartirte todos los detalles de tu Experiencia con Riman."
-   data-en="Very soon, your advisor will contact you to share all the details of your Experience with Riman.">
-  Muy pronto, tu asesor se pondrá en contacto contigo para compartirte todos los detalles de tu Experiencia con Riman.
-</p>
-
-<p data-es="Has obtenido tu Vale Exclusivo 2x1 para el Ritual Coreano de 7 Pasos, una experiencia diseñada para que descubras una nueva forma de cuidar tu piel."
-   data-en="You have received your Exclusive 2x1 Voucher for the 7-Step Korean Ritual, an experience designed for you to discover a new way to care for your skin.">
-  Has obtenido tu Vale Exclusivo 2x1 para el Ritual Coreano de 7 Pasos, una experiencia diseñada para que descubras una nueva forma de cuidar tu piel.
-</p>
-
-<p data-es="Las plazas son limitadas cada semana, por lo que te recomendamos estar atento/a a nuestro mensaje para confirmar tu reserva."
-   data-en="Spots are limited each week, so we recommend keeping an eye out for our message to confirm your reservation.">
-  Las plazas son limitadas cada semana, por lo que te recomendamos estar atento/a a nuestro mensaje para confirmar tu reserva.
-</p>
-
-<p data-es="¡Nos encantará acompañarte en este proceso!"
-   data-en="We would love to accompany you on this journey!">
-  ¡Nos encantará acompañarte en este proceso!
-</p>
-
-    <button id="success-ok" class="success-btn"
-      data-es="ENTENDIDO"
-      data-en="UNDERSTOOD">
-      ENTENDIDO
-    </button>
-  </div>
-</div>
-
-      <script>
-  const video = document.querySelector('.star-product-video');
-
-  if (video) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    }, {
-      threshold: 0.35
-    });
-
-    observer.observe(video);
-  }
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const advisorOptions = document.querySelectorAll('input[name="asesor"]');
-
-  const advisorName = document.getElementById('advisor_name');
-  const advisorEmail = document.getElementById('advisor_email');
-  const advisorPhone = document.getElementById('advisor_phone');
-  const rimanLink = document.getElementById('riman_link');
-
-  advisorOptions.forEach(option => {
-    option.addEventListener('change', function () {
-
-      if (this.value === 'Firas') {
-        advisorName.value = 'Firas';
-        advisorEmail.value = 'firas@email.com';
-        advisorPhone.value = '600000000';
-        rimanLink.value = 'https://growandglow.riman.com';
-      }
-
-      if (this.value === 'Sandra') {
-        advisorName.value = 'Sandra';
-        advisorEmail.value = 'sandra@email.com';
-        advisorPhone.value = '600000001';
-        rimanLink.value = 'https://sandraleader.riman.com';
-      }
-
-      if (this.value === 'María') {
-        advisorName.value = 'María';
-        advisorEmail.value = 'maria@email.com';
-        advisorPhone.value = '600000002';
-        rimanLink.value = 'https://haciatubelleza.riman.com';
-      }
-
-    });
-  });
-
-});
-</script>
-
-<script>
-  const testimonialsSlider = document.getElementById("testimonialsSlider");
-
-  if (testimonialsSlider) {
-    const prevBtn = document.querySelector(".testimonials-arrow.prev");
-    const nextBtn = document.querySelector(".testimonials-arrow.next");
-
-    const getScrollAmount = () => {
-      const card = testimonialsSlider.querySelector(".testimonial-card");
-      return card ? card.offsetWidth + 24 : 320;
-    };
-
-    prevBtn?.addEventListener("click", () => {
-      testimonialsSlider.scrollBy({
-        left: -getScrollAmount(),
-        behavior: "smooth"
-      });
-    });
-
-    nextBtn?.addEventListener("click", () => {
-      testimonialsSlider.scrollBy({
-        left: getScrollAmount(),
-        behavior: "smooth"
-      });
-    });
-  }
-</script>
-
-      <script>
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  let heroIndex = 0;
-
-  if (heroSlides.length > 0) {
-    setInterval(() => {
-      heroSlides[heroIndex].classList.remove('active');
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('active');
-    }, 3000);
-  }
-</script>
-
-      </section>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const heroSlides = document.querySelectorAll(".hero-slide");
-  let heroIndex = 0;
-
-  if (heroSlides.length > 0) {
-    setInterval(() => {
-      heroSlides[heroIndex].style.opacity = "0";
-      heroSlides[heroIndex].style.visibility = "hidden";
-      heroSlides[heroIndex].style.zIndex = "1";
-
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-
-      heroSlides[heroIndex].style.opacity = "1";
-      heroSlides[heroIndex].style.visibility = "visible";
-      heroSlides[heroIndex].style.zIndex = "2";
-    }, 3000);
-  }
-});
-</script>
-<script src="script.js"></script>      
 </body>
 </html>
