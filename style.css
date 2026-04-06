@@ -1287,3 +1287,63 @@ video,
   }
 }
 
+/* =========================
+   HERO SLIDER
+========================= */
+.hero-slider-section {
+  width: 100%;
+  overflow: hidden;
+  background: #f3f0ea;
+  position: relative;
+}
+
+.hero-slider {
+  display: flex;
+  width: 300%;
+  animation: heroSlide 9s infinite;
+}
+
+.hero-slide {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: clamp(420px, 55vw, 760px);
+  object-fit: cover;
+  display: block;
+}
+
+/* Animación automática */
+@keyframes heroSlide {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(0); }
+
+  33%  { transform: translateX(-100%); }
+  63%  { transform: translateX(-100%); }
+
+  66%  { transform: translateX(-200%); }
+  96%  { transform: translateX(-200%); }
+
+  100% { transform: translateX(0); }
+}
+
+/* Idiomas */
+.hero-slider-en {
+  display: none;
+}
+
+body.english .hero-slider-es {
+  display: none;
+}
+
+body.english .hero-slider-en {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .hero-slide img {
+    height: 320px;
+  }
+}
