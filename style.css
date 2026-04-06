@@ -378,6 +378,7 @@ section {
 
 .hero-slider {
   display: flex;
+  width: 100%;
   animation: heroSlide 18s infinite;
 }
 
@@ -422,12 +423,14 @@ body.english .hero-slider-en {
 @media (max-width: 1024px) {
   .hero-slide img {
     height: 420px;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 768px) {
   .hero-slide img {
     height: 240px;
+    object-fit: cover;
   }
 }
 
@@ -1729,48 +1732,5 @@ video,
   .leader-description,
   .team-card-content .btn {
     width: 100% !important;
-  }
-}
-
-/* =========================
-   HERO RESPONSIVE FINAL
-========================= */
-
-/* Ordenador grande */
-@media (min-width: 1201px) {
-  .hero-slide img {
-    height: 480px;
-    object-fit: contain;
-    object-position: center;
-    background: #f3f0ea;
-  }
-}
-
-/* Portátil / tablet horizontal */
-@media (max-width: 1200px) {
-  .hero-slide img {
-    height: 420px;
-    object-fit: contain;
-    object-position: center;
-    background: #f3f0ea;
-  }
-}
-
-/* Tablet vertical */
-@media (max-width: 900px) {
-  .hero-slide img {
-    height: 340px;
-    object-fit: contain;
-    object-position: center;
-    background: #f3f0ea;
-  }
-}
-
-/* Móvil */
-@media (max-width: 768px) {
-  .hero-slide img {
-    height: 240px;
-    object-fit: cover;
-    object-position: center;
   }
 }
