@@ -1406,3 +1406,12 @@ section {
     bottom: 20px;
   }
 }
+
+/* ESPACIO ENTRE PRODUCTO ESTRELLA Y RUTINA */
+.products-showcase.star-layout {
+  margin-bottom: 80px !important;
+}
+
+.rutina {
+  margin-top: 40px !important;
+}
