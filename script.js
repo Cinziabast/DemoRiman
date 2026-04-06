@@ -146,4 +146,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+    /* =========================
+     POPUP BIENVENIDA
+  ========================= */
+  const popup = document.getElementById("welcomePopup");
+  const closePopup = document.getElementById("closePopup");
+
+  if (popup && !sessionStorage.getItem("popupShown")) {
+    popup.classList.remove("hidden");
+    sessionStorage.setItem("popupShown", "true");
+  }
+
+  if (closePopup && popup) {
+    closePopup.addEventListener("click", () => {
+      popup.classList.add("hidden");
+    });
+  }
+
+  if (popup) {
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.classList.add("hidden");
+      }
+    });
+  }
 });
