@@ -1515,3 +1515,41 @@ section {
     max-width: 100%;
   }
 }
+
+<!-- FORMULARIO -->
+<section class="section section-form" id="reserva">
+  <div class="container">
+    <div class="section-heading" style="text-align:center; opacity:1; transform:none; position:relative; z-index:5;">
+      <p
+        class="section-label"
+        data-es="Reserva tu experiencia"
+        data-en="Book your experience"
+        style="color:#425e54 !important; opacity:1 !important;">
+        Reserva tu experiencia
+      </p>
+    </div>
+
+    <div class="form-box reveal">
+      <form id="klaviyo-form" class="reservation-form">
+
+.section-form .section-heading::after {
+  display: none;
+}
+
+/* Titulo Reserva */
+.section-form .section-label {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #425e54;
+  margin-bottom: 30px;
+}
+
+/* Titulo Reserva */
+.section-form .section-label {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #425e54;
+  margin-bottom: 30px;
+}
