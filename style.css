@@ -1301,7 +1301,7 @@ video,
   display: flex;
   flex-direction: row;
   width: 300%;
-  animation: heroSlide 9s infinite;
+  animation: heroSlide 15s infinite;
 }
 
 .hero-slide {
