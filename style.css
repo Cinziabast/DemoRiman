@@ -1806,16 +1806,6 @@ video,
   display: block;
 }
 
-.rutina-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-  z-index: 5;
-  text-align: center;
-  white-space: nowrap;
-}
-
 /* móvil */
 @media (max-width: 768px) {
   .rutina-btn {
@@ -1837,4 +1827,8 @@ video,
 
   /* 🔥 ESTO ES LO IMPORTANTE */
   transition: none !important;
+}
+
+.rutina-btn.btn:hover {
+  transform: translateX(-50%) !important;
 }
