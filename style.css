@@ -1363,6 +1363,26 @@ body.english .hero-slider-en {
   width: 100% !important;
 }
 
+.hero-slider-section {
+  display: block !important;
+}
+
+.hero-slider {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 300% !important;
+}
+
+.hero-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+}
+section {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
 section {
   height: auto !important;
   min-height: auto !important;
