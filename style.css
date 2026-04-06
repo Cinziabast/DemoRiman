@@ -435,21 +435,6 @@ body.english .hero-slider-en {
 }
 
 /* =========================
-   HERO RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .hero-slide img {
-    height: 420px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-slide img {
-    height: 240px;
-  }
-}
-
-/* =========================
    BENEFICIOS
 ========================= */
 .section-benefits {
@@ -1754,12 +1739,13 @@ video,
    HERO RESPONSIVE FINAL
 ========================= */
 
-/* Pantallas grandes */
-@media (min-width: 1400px) {
+/* Ordenador grande */
+@media (min-width: 1201px) {
   .hero-slide img {
-    height: 600px;
-    object-fit: cover;
-    object-position: center top;
+    height: 480px;
+    object-fit: contain;
+    object-position: center;
+    background: #f3f0ea;
   }
 }
 
@@ -1768,6 +1754,7 @@ video,
   .hero-slide img {
     height: 420px;
     object-fit: contain;
+    object-position: center;
     background: #f3f0ea;
   }
 }
@@ -1777,6 +1764,7 @@ video,
   .hero-slide img {
     height: 340px;
     object-fit: contain;
+    object-position: center;
     background: #f3f0ea;
   }
 }
