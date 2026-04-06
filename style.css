@@ -1703,3 +1703,48 @@ video,
     object-position: center !important;
   }
 }
+
+/* =========================
+   FIX SOCIOS MOVIL MISMO TAMAÑO
+========================= */
+@media (max-width: 768px) {
+  .team-slider {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 88% !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    padding: 0 16px 12px !important;
+  }
+
+  .team-slide {
+    width: 88vw !important;
+    min-width: 88vw !important;
+    max-width: 88vw !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    scroll-snap-align: center;
+  }
+
+  .team-slide img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .team-card-content {
+    width: 100% !important;
+    min-height: 420px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .team-card-content h3,
+  .leader-description,
+  .team-card-content .btn {
+    width: 100% !important;
+  }
+}
