@@ -894,9 +894,8 @@ body.english .hero-slider-en {
 /* TARJETAS TIPO POLAROID */
 .testimonial-card {
   background: #ffffff;
+  padding: 12px 12px 36px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-  box-sizing: border-box;
-  padding: 12px 12px 36px; /* más blanco abajo */
 }
 
 .testimonial-card img {
