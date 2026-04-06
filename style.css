@@ -1612,23 +1612,3 @@ section {
   display: none !important;
 }
 
-/* BEFORE AFTER FULL WIDTH */
-.before-after-section {
-  width: 100%;
-  padding: 80px 0;
-  background: #ececec;
-}
-
-.ba-slider {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.ba-slider img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
