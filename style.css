@@ -1362,3 +1362,9 @@ body.english .hero-slider-en {
   flex: 0 0 100% !important;
   width: 100% !important;
 }
+
+section {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
