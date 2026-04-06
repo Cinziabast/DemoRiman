@@ -67,7 +67,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setLanguage("es");
 
-
+function updateLegalLinks() {
+  document.querySelectorAll('.footer-legal a').forEach(link => {
+    if (document.body.classList.contains('english')) {
+      if (link.getAttribute('href') === 'aviso-legal.html') {
+        link.setAttribute('href', 'legal-notice.html');
+      }
+      if (link.getAttribute('href') === 'privacidad.html') {
+        link.setAttribute('href', 'privacy-policy.html');
+      }
+      if (link.getAttribute('href') === 'cookies.html') {
+        link.setAttribute('href', 'cookies-policy.html');
+      }
+    } else {
+      if (link.getAttribute('href') === 'legal-notice.html') {
+        link.setAttribute('href', 'aviso-legal.html');
+      }
+      if (link.getAttribute('href') === 'privacy-policy.html') {
+        link.setAttribute('href', 'privacidad.html');
+      }
+      if (link.getAttribute('href') === 'cookies-policy.html') {
+        link.setAttribute('href', 'cookies.html');
+      }
+    }
+  });
+}
+  
   /* =========================
      CARRUSEL PRODUCTOS
   ========================= */
