@@ -1,30 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
-     HERO SLIDER + IDIOMA
-  ========================= */
-  const heroImages = {
-    es: [
-      "images/hero/hero-es-1.png",
-      "images/hero/hero-es-2.png",
-      "images/hero/hero-es-3.png"
-    ],
-    en: [
-      "images/hero/hero-en-1.png",
-      "images/hero/hero-en-2.png",
-      "images/hero/hero-en-3.png"
-    ]
-  };
-
-  let currentHeroIndex = 0;
-  let currentHeroLang = "es";
-  let heroInterval;
-
-  const heroImg = document.getElementById("hero-slide-image");
-  const langButtons = document.querySelectorAll(".lang-btn");
-  const translatableElements = document.querySelectorAll("[data-es][data-en]");
-
-  /* =========================
      POPUP BIENVENIDA
   ========================= */
   const popup = document.getElementById("welcomePopup");
@@ -68,8 +44,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================
-     FUNCIONES HERO
+     HERO SLIDER + IDIOMA
   ========================= */
+  const heroImages = {
+    es: [
+      "images/hero/hero-es-1.png",
+      "images/hero/hero-es-2.png",
+      "images/hero/hero-es-3.png"
+    ],
+    en: [
+      "images/hero/hero-en-1.png",
+      "images/hero/hero-en-2.png",
+      "images/hero/hero-en-3.png"
+    ]
+  };
+
+  let currentHeroIndex = 0;
+  let currentHeroLang = "es";
+  let heroInterval;
+
+  const heroImg = document.getElementById("hero-slide-image");
+  const langButtons = document.querySelectorAll(".lang-btn");
+  const translatableElements = document.querySelectorAll("[data-es][data-en]");
+
   function updateHeroImage() {
     if (!heroImg) return;
     heroImg.src = heroImages[currentHeroLang][currentHeroIndex];
