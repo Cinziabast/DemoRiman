@@ -194,3 +194,23 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage("es");
 
 });
+
+/* =========================
+   FORMULARIO + GRACIAS
+========================= */
+const klaviyoForm = document.getElementById("klaviyo-form");
+
+if (klaviyoForm) {
+  klaviyoForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const lang = document.documentElement.lang || "es";
+
+    // aquí luego conectamos Klaviyo real
+    if (lang === "en") {
+      window.location.href = "gracias-en.html";
+    } else {
+      window.location.href = "gracias.html";
+    }
+  });
+}
