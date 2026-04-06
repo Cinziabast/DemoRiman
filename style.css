@@ -1155,46 +1155,46 @@ section {
 ========================= */
 .footer {
   background: var(--green);
-  padding: 28px 0;
+  padding: 60px 0 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--white);
 }
 
 .footer-container {
   text-align: center;
-  color: var(--white);
 }
 
 .footer-logo {
   width: 95px;
-  margin: 0 auto 12px;
-}
-
-.footer-disclaimer {
-  max-width: 800px;
-  margin: 18px auto;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  opacity: 0.75;
+  margin: 0 auto 18px;
 }
 
 .footer-legal {
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .footer-legal a {
   color: var(--white);
-  margin: 0 10px;
+  margin: 0 12px;
   font-size: 0.85rem;
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .footer-legal a:hover {
   text-decoration: underline;
 }
 
+.footer-disclaimer {
+  max-width: 850px;
+  margin: 30px auto 10px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
 .footer-copy {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 0.8rem;
   opacity: 0.7;
 }
