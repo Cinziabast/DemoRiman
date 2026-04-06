@@ -1330,8 +1330,7 @@ video,
 
 .hero-slider {
   display: flex;
-  flex-direction: row;
-  width: 300%;
+  width: 100%;
   animation: heroSlide 15s infinite;
 }
 
@@ -1359,11 +1358,11 @@ video,
   0%   { transform: translateX(0); }
   30%  { transform: translateX(0); }
 
-  33%  { transform: translateX(-100%); }
-  63%  { transform: translateX(-100%); }
+  33%  { transform: translateX(-100vw); }
+  63%  { transform: translateX(-100vw); }
 
-  66%  { transform: translateX(-200%); }
-  96%  { transform: translateX(-200%); }
+  66%  { transform: translateX(-200vw); }
+  96%  { transform: translateX(-200vw); }
 
   100% { transform: translateX(0); }
 }
