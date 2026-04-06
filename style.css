@@ -1734,3 +1734,26 @@ video,
     width: 100% !important;
   }
 }
+
+/* TEAM RESPONSIVE */
+.team-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 40px;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .team-slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* móvil */
+@media (max-width: 768px) {
+  .team-slider {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
