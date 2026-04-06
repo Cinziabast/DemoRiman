@@ -1528,3 +1528,147 @@ video,
     margin: 6px 8px;
   }
 }
+
+/* =========================
+   FIX FINAL MOVIL PRODUCTOS
+========================= */
+@media (max-width: 768px) {
+
+  .section-products {
+    margin-bottom: 70px;
+  }
+
+  .products-showcase,
+  .products-showcase-reverse {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 22px !important;
+    padding: 0 16px !important;
+    margin-top: 30px !important;
+  }
+
+  .products-showcase + .products-showcase {
+    margin-top: 60px !important;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel,
+  .products-showcase-copy,
+  .products-showcase-reverse .products-showcase-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .products-showcase .section-heading h2,
+  .products-side-title {
+    font-size: clamp(2.2rem, 10vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .products-carousel {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .products-slider {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 82% !important;
+    gap: 14px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    padding: 0 4px 10px !important;
+  }
+
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    scroll-snap-align: center;
+  }
+
+  .product-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: contain !important;
+    padding: 16px !important;
+    background: #fff !important;
+  }
+
+  .product-content {
+    padding: 16px 14px 18px !important;
+  }
+
+  .product-content h4 {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+  }
+
+  .product-content p {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .carousel-arrow,
+  .carousel-arrow-left,
+  .carousel-arrow-right {
+    display: none !important;
+  }
+}
+
+/* =========================
+   FIX FINAL MOVIL SOCIOS
+========================= */
+@media (max-width: 768px) {
+  .team-carousel {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .team-slider {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 86% !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    padding: 0 16px 10px !important;
+  }
+
+  .team-slide {
+    width: 100% !important;
+    scroll-snap-align: center;
+  }
+
+  .team-slide img {
+    height: 320px !important;
+    object-fit: cover !important;
+  }
+
+  .team-arrow-left,
+  .team-arrow-right {
+    display: none !important;
+  }
+}
+
+/* =========================
+   FIX FINAL HERO MOVIL
+========================= */
+@media (max-width: 768px) {
+  .hero-slider-section {
+    padding: 0 !important;
+  }
+
+  .hero-slide img {
+    width: 100vw !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
