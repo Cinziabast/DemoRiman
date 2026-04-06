@@ -1607,3 +1607,16 @@ section {
 .bono-btn:hover {
   transform: translateX(-50%) !important;
 }
+
+/* QUITAR LINEAS EN RESERVA */
+.section-form .section-label::after {
+  display: none !important;
+}
+
+.section-form .section-heading::after {
+  display: none !important;
+}
+
+.section-form hr {
+  display: none !important;
+}
