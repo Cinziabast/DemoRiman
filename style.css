@@ -378,13 +378,11 @@ section {
 
 .hero-slider {
   display: flex;
-  width: 100%;
   animation: heroSlide 18s infinite;
 }
 
 .hero-slide {
   min-width: 100%;
-  position: relative;
 }
 
 .hero-slide img {
@@ -420,6 +418,19 @@ body.english .hero-slider-es {
 
 body.english .hero-slider-en {
   display: flex;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-slide img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slide img {
+    height: 240px;
+  }
 }
 
 /* =========================
