@@ -1311,9 +1311,10 @@ video,
 
 .hero-slide img {
   width: 100%;
-  height: 520px;
-  object-fit: cover;
+  height: 380px;
+  object-fit: contain;
   display: block;
+  background: #f3f0ea;
 }
 
 /* Animación automática */
@@ -1345,7 +1346,7 @@ body.english .hero-slider-en {
 
 @media (max-width: 768px) {
   .hero-slide img {
-    height: 320px;
+    height: 220px;
   }
 }
  
