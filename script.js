@@ -146,28 +146,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    /* =========================
+      /* =========================
      POPUP BIENVENIDA
   ========================= */
   const popup = document.getElementById("welcomePopup");
   const closePopup = document.getElementById("closePopup");
+  const popupImage = document.getElementById("popupImage");
 
-  if (popup && !sessionStorage.getItem("popupShown")) {
+  function openPopup(lang = "es") {
+    if (!popup || !popupImage) return;
+
+    const key = "popupShown_" + lang;
+
+    if (sessionStorage.getItem(key)) return;
+
+    if (lang === "en") {
+      popupImage.src = "images/imagenpopin.png";
+      popupImage.alt = "Glow experience for free";
+    } else {
+      popupImage.src = "images/imagenpopes.png";
+      popupImage.alt = "Experiencia Glow gratis";
+    }
+
     popup.classList.remove("hidden");
-    sessionStorage.setItem("popupShown", "true");
+    sessionStorage.setItem(key, "true");
   }
 
-  if (closePopup && popup) {
-    closePopup.addEventListener("click", () => {
+  function closePopupBox() {
+    if (popup) {
       popup.classList.add("hidden");
-    });
+    }
+  }
+
+  if (closePopup) {
+    closePopup.addEventListener("click", closePopupBox);
   }
 
   if (popup) {
     popup.addEventListener("click", (e) => {
       if (e.target === popup) {
-        popup.classList.add("hidden");
+        closePopupBox();
       }
     });
   }
-});
