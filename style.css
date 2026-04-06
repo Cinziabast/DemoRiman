@@ -1449,3 +1449,49 @@ section {
     max-width: 320px;
   }
 }
+
+/* =========================
+   PRODUCTO ESTRELLA
+========================= */
+.star-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-side-title {
+  color: #5c4923 !important;
+  font-size: clamp(2.8rem, 3.5vw, 3.8rem);
+  letter-spacing: 2px;
+}
+
+.star-product {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-content {
+  text-align: left;
+  max-width: 420px;
+}
+
+.product-content h4 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #5c4923;
+}
+
+.product-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.star-product-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
