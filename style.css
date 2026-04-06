@@ -347,8 +347,8 @@ section {
 .hero-final-video {
   display: block;
   width: 100%;
-  height: clamp(320px, 52vw, 760px);
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-final-btn {
@@ -1087,16 +1087,9 @@ body.english .hero-slider-en {
 
 .final-video {
   width: 100%;
-  height: 520px;
-  object-fit: cover;
+  height: auto;
   display: block;
-}
-
-.final-video-button {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
+  object-fit: contain;
 }
 
 /* =========================
@@ -1439,10 +1432,6 @@ video,
     gap: 4px;
   }
 
-  .hero-final-video {
-    height: 420px;
-  }
-
   .hero-final-btn {
     bottom: 20px;
     width: calc(100% - 32px);
@@ -1517,9 +1506,6 @@ video,
     font-size: 12px;
   }
 
-  .final-video {
-    height: 320px;
-  }
 
   .final-video-button {
     bottom: 20px;
