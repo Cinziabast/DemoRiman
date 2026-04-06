@@ -1757,3 +1757,18 @@ video,
     padding: 0 20px;
   }
 }
+
+/* BLOQUE VIDEO FINAL */
+.final-video-wrapper {
+  width: 100%;
+  background: #000; /* o el color que quieras de fondo */
+  overflow: hidden;
+}
+
+/* VIDEO SIN RECORTE */
+.final-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
