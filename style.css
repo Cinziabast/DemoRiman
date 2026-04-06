@@ -1595,3 +1595,15 @@ section {
   color: #425e54;
   margin-bottom: 30px;
 }
+
+/* BOTON HERO FIJO AL HACER HOVER */
+.hero-final-btn:hover,
+.hero-final-btn.btn-primary:hover {
+  transform: translateX(-50%) !important;
+}
+
+/* BOTON BONO FIJO AL HACER HOVER */
+.bono-btn-overlay:hover,
+.bono-btn:hover {
+  transform: translateX(-50%) !important;
+}
