@@ -1388,3 +1388,45 @@ section {
   min-height: auto !important;
   overflow: visible !important;
 }
+
+/* =========================
+   FIX EMERGENCIA VISIBILIDAD
+========================= */
+
+/* Mostrar todo aunque falle el JS */
+.reveal,
+.reveal.visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Evitar que alguna sección tape a otra */
+section,
+div,
+img,
+video {
+  overflow: visible;
+}
+
+/* Asegurar que las secciones crezcan con su contenido */
+section {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Mostrar imágenes de idioma por defecto */
+.lang-es {
+  display: block !important;
+}
+
+.lang-en {
+  display: none !important;
+}
+
+body.english .lang-es {
+  display: none !important;
+}
+
+body.english .lang-en {
+  display: block !important;
+}
