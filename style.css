@@ -1093,6 +1093,21 @@ body.english .hero-slider-en {
   object-fit: contain;
 }
 
+.final-video-button {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 5;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .final-video-button {
+    bottom: 14px;
+  }
+}
+
 /* =========================
    EXPERIENCIA VIDEOS
 ========================= */
