@@ -595,6 +595,7 @@
     <div class="form-box reveal">
       <form id="klaviyo-form" class="reservation-form">
 
+        <!-- NOMBRE -->
         <div class="form-group">
           <label for="nombre" data-es="Nombre completo" data-en="Full name">
             Nombre completo
@@ -609,6 +610,7 @@
             required />
         </div>
 
+        <!-- EMAIL -->
         <div class="form-group">
           <label for="email" data-es="Email" data-en="Email">Email</label>
           <input
@@ -621,6 +623,7 @@
             required />
         </div>
 
+        <!-- TELEFONO -->
         <div class="form-group">
           <label for="telefono" data-es="Teléfono" data-en="Phone">
             Teléfono
@@ -635,6 +638,7 @@
             required />
         </div>
 
+        <!-- CIUDAD -->
         <div class="form-group">
           <label for="ciudad" data-es="Ciudad" data-en="City">
             Ciudad
@@ -649,6 +653,19 @@
             required />
         </div>
 
+        <!-- NUEVO: FECHA DE NACIMIENTO -->
+        <div class="form-group">
+          <label for="fecha_nacimiento" data-es="Fecha de nacimiento" data-en="Date of birth">
+            Fecha de nacimiento
+          </label>
+          <input
+            type="date"
+            id="fecha_nacimiento"
+            name="fecha_nacimiento"
+            required />
+        </div>
+
+        <!-- ASESOR -->
         <div class="form-group">
           <label data-es="Elige tu asesor RIMAN" data-en="Choose your RIMAN advisor">
             Elige tu asesor RIMAN
@@ -675,11 +692,13 @@
           </div>
         </div>
 
+        <!-- HIDDEN -->
         <input type="hidden" name="advisor_name" id="advisor_name">
         <input type="hidden" name="advisor_email" id="advisor_email">
         <input type="hidden" name="advisor_phone" id="advisor_phone">
         <input type="hidden" name="riman_link" id="riman_link">
 
+        <!-- BOTON -->
         <button type="submit" class="btn btn-primary btn-submit"
           data-es="QUIERO MI RITUAL GRATUITO"
           data-en="I WANT MY FREE RITUAL">
@@ -688,6 +707,7 @@
 
       </form>
 
+      <!-- POPUP GRACIAS -->
       <div id="thanksPopup" class="thanks-popup hidden">
         <div class="thanks-popup-box">
           <button id="closeThanksPopup" class="thanks-close">&times;</button>
