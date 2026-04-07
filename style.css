@@ -1893,10 +1893,6 @@ video,
   }
 }
 
-.hero-final-btn {
-  display: none !important;
-}
-
 /* =========================
    TEAM MOBILE FIX
 ========================= */
@@ -1939,9 +1935,4 @@ video,
   .team-content {
     background: #6f857b !important; /* igualar el color abajo */
   }
-}
-
-/* 🚫 ELIMINAR SOLO BOTÓN DEL SLIDER (3 IMÁGENES) */
-.hero-slider-section .btn {
-  display: none !important;
 }
