@@ -1903,3 +1903,47 @@ video,
 .hero-slide .btn {
   display: none !important;
 }
+
+/* =========================
+   TEAM MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+  .team-carousel {
+    display: block;
+    overflow: hidden;
+  }
+
+  .team-slider {
+    display: flex;
+    gap: 0 !important;             /* quita separación entre cards */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .team-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .team-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    border: none !important;       /* quita líneas verticales */
+    box-shadow: none !important;   /* por si la línea viene de sombra */
+    background: #6f857b !important; /* mismo verde sólido */
+    margin: 0 !important;
+  }
+
+  .team-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .team-text,
+  .team-info,
+  .team-content {
+    background: #6f857b !important; /* igualar el color abajo */
+  }
+}
