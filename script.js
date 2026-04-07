@@ -188,133 +188,170 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =========================
-   FORMULARIO + GRACIAS
+ /* =========================
+   FORMULARIO + GRACIAS + KLAVIYO
 ========================= */
-
 const klaviyoForm = document.getElementById("klaviyo-form");
-
-// 👇 AÑADE ESTO (te faltaba)
 const thanksPopup = document.getElementById("thanksPopup");
 const thanksTitle = document.getElementById("thanksTitle");
 const thanksText = document.getElementById("thanksText");
 const thanksBack = document.getElementById("thanksBack");
 const closeThanksPopup = document.getElementById("closeThanksPopup");
 
-// cerrar popup
+function closeThanksModal() {
+  if (thanksPopup) thanksPopup.classList.add("hidden");
+}
+
 if (closeThanksPopup) {
-  closeThanksPopup.addEventListener("click", () => {
-    thanksPopup.classList.add("hidden");
-  });
+  closeThanksPopup.addEventListener("click", closeThanksModal);
 }
 
 if (thanksBack) {
   thanksBack.addEventListener("click", (e) => {
     e.preventDefault();
-    thanksPopup.classList.add("hidden");
+    closeThanksModal();
   });
 }
 
-klaviyoForm.addEventListener("submit", async function (e) {
-  e.preventDefault();
+if (thanksPopup) {
+  thanksPopup.addEventListener("click", (e) => {
+    if (e.target === thanksPopup) {
+      closeThanksModal();
+    }
+  });
+}
 
-  const lang = document.documentElement.lang || "es";
+/* DATOS ASESOR */
+const advisorOptions = document.querySelectorAll('input[name="asesor"]');
+const advisorName = document.getElementById("advisor_name");
+const advisorEmail = document.getElementById("advisor_email");
+const advisorPhone = document.getElementById("advisor_phone");
+const rimanLink = document.getElementById("riman_link");
 
-  const nombre = document.getElementById("nombre")?.value.trim() || "";
-  const email = document.getElementById("email")?.value.trim() || "";
-  const telefono = document.getElementById("telefono")?.value.trim() || "";
-  const ciudad = document.getElementById("ciudad")?.value.trim() || "";
-  const asesor = document.querySelector('input[name="asesor"]:checked')?.value || "";
+advisorOptions.forEach((option) => {
+  option.addEventListener("change", function () {
+    if (!advisorName || !advisorEmail || !advisorPhone || !rimanLink) return;
 
-  // 🔑 TU API (ya la tienes)
-  const KLAVIYO_COMPANY_ID = "XZjNH6";
+    if (this.value === "Firas") {
+      advisorName.value = "Firas";
+      advisorEmail.value = "firas@email.com";
+      advisorPhone.value = "600000000";
+      rimanLink.value = "https://growandglow.riman.com";
+    }
 
-  // ❗ AQUI TIENES QUE PONER TU LIST ID
-  const KLAVIYO_LIST_ID = "TtUdz8";
+    if (this.value === "Sandra") {
+      advisorName.value = "Sandra";
+      advisorEmail.value = "sandra@email.com";
+      advisorPhone.value = "600000001";
+      rimanLink.value = "https://sandraleader.riman.com";
+    }
 
-  const payload = {
-    data: {
-      type: "subscription",
-      attributes: {
-        profile: {
-          data: {
-            type: "profile",
-            attributes: {
-              email: email,
-              first_name: nombre,
-              phone_number: telefono || undefined,
-              properties: {
-                ciudad: ciudad,
-                asesor: asesor,
-                source: "Landing RIMAN"
+    if (this.value === "María") {
+      advisorName.value = "María";
+      advisorEmail.value = "maria@email.com";
+      advisorPhone.value = "600000002";
+      rimanLink.value = "https://haciatubelleza.riman.com";
+    }
+  });
+});
+
+if (klaviyoForm) {
+  klaviyoForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const lang = document.documentElement.lang || "es";
+
+    const nombre = klaviyoForm.querySelector('input[name="nombre"]')?.value.trim() || "";
+    const email = klaviyoForm.querySelector('input[name="email"]')?.value.trim() || "";
+    const telefono = klaviyoForm.querySelector('input[name="telefono"]')?.value.trim() || "";
+    const ciudad = klaviyoForm.querySelector('input[name="ciudad"]')?.value.trim() || "";
+    const asesor = klaviyoForm.querySelector('input[name="asesor"]:checked')?.value || "";
+
+    const advisor_name = klaviyoForm.querySelector('input[name="advisor_name"]')?.value || "";
+    const advisor_email = klaviyoForm.querySelector('input[name="advisor_email"]')?.value || "";
+    const advisor_phone = klaviyoForm.querySelector('input[name="advisor_phone"]')?.value || "";
+    const riman_link = klaviyoForm.querySelector('input[name="riman_link"]')?.value || "";
+
+    const payload = {
+      data: {
+        type: "subscription",
+        attributes: {
+          profile: {
+            data: {
+              type: "profile",
+              attributes: {
+                email: email,
+                first_name: nombre,
+                properties: {
+                  telefono: telefono,
+                  ciudad: ciudad,
+                  asesor: asesor,
+                  advisor_name: advisor_name,
+                  advisor_email: advisor_email,
+                  advisor_phone: advisor_phone,
+                  riman_link: riman_link,
+                  experience_booked: "no"
+                }
               }
             }
-          }
+          },
+          custom_source: "Glow Leaders Landing"
         },
-        subscriptions: {
-          email: {
-            marketing: {
-              consent: "SUBSCRIBED"
+        relationships: {
+          list: {
+            data: {
+              type: "list",
+              id: "TtUdz8"
             }
           }
         }
-      },
-      relationships: {
-        list: {
-          data: {
-            type: "list",
-            id: KLAVIYO_LIST_ID
-          }
+      }
+    };
+
+    try {
+      const response = await fetch(
+        "https://a.klaviyo.com/client/subscriptions/?company_id=XZjNH6",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "revision": "2024-10-15"
+          },
+          body: JSON.stringify(payload)
         }
+      );
+
+      const responseText = await response.text();
+      console.log("STATUS KLAVIYO:", response.status);
+      console.log("RESPUESTA KLAVIYO:", responseText);
+      console.log("PAYLOAD ENVIADO:", payload);
+
+      if (response.ok) {
+        if (lang === "en") {
+          thanksTitle.textContent = "Thank you for registering!";
+          thanksText.textContent = "Your advisor will contact you soon to share all the details of your Riman experience.";
+          thanksBack.textContent = "BACK TO PAGE";
+        } else {
+          thanksTitle.textContent = "¡Gracias por registrarte!";
+          thanksText.textContent = "Muy pronto, tu asesor se pondrá en contacto contigo para compartirte todos los detalles de tu Experiencia con Riman.";
+          thanksBack.textContent = "VOLVER A LA PÁGINA";
+        }
+
+        if (thanksPopup) {
+          thanksPopup.classList.remove("hidden");
+        }
+
+        klaviyoForm.reset();
+      } else {
+        alert(lang === "en" ? "Error submitting form" : "Error al enviar datos a Klaviyo");
       }
+    } catch (error) {
+      console.error("ERROR FETCH:", error);
+      alert(lang === "en" ? "Connection error" : "Error de conexión");
     }
-  };
-
-  try {
-    const response = await fetch(
-      `https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_COMPANY_ID}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "revision": "2026-01-15"
-        },
-        body: JSON.stringify(payload)
-      }
-    );
-
-    if (!response.ok) {
-      console.error("Error Klaviyo");
-      alert(lang === "en"
-        ? "Error submitting form"
-        : "Error al enviar el formulario");
-      return;
-    }
-
-    // 👉 SOLO SI FUNCIONA → mostramos popup
-    if (lang === "en") {
-      thanksTitle.textContent = "Thank you for registering!";
-      thanksText.textContent = "Your advisor will contact you soon to share all the details of your Riman experience.";
-      thanksBack.textContent = "BACK TO PAGE";
-    } else {
-      thanksTitle.textContent = "¡Gracias por registrarte!";
-      thanksText.textContent = "Muy pronto, tu asesor se pondrá en contacto contigo para compartirte todos los detalles de tu Experiencia con Riman.";
-      thanksBack.textContent = "VOLVER A LA PÁGINA";
-    }
-
-    if (thanksPopup) {
-      thanksPopup.classList.remove("hidden");
-    }
-
-    klaviyoForm.reset();
-
-  } catch (error) {
-    console.error(error);
-    alert(lang === "en"
-      ? "Connection error"
-      : "Error de conexión");
-  }
-});
+  });
+}
     
   /* =========================
      INICIO
