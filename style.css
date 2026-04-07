@@ -2120,7 +2120,7 @@ video,
 
 .popup-cta {
   position: absolute;
-  bottom: 90px;
+  bottom: 90px; /* 🔥 MÁS ARRIBA */
   left: 50%;
   transform: translateX(-50%);
   
