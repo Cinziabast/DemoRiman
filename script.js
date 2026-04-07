@@ -442,35 +442,3 @@ if (popupCTA) {
   });
 }
 
-/* =========================
-   EQUIPO CENTRADO REAL
-========================= */
-.team-slide {
-  text-align: center;
-}
-
-.team-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.team-card-content h3 {
-  font-family: 'Belleza', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center;
-  width: 100%;
-}
-
-.team-card-content .leader-description {
-  text-align: center;
-  max-width: 260px;
-  margin: 0 auto 24px;
-}
-
-.team-card-content .btn-whatsapp {
-  margin-left: auto;
-  margin-right: auto;
-}
