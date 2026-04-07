@@ -2140,13 +2140,15 @@ video,
   .popup-cta {
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 45px;
 
-    max-width: 260px;
-    padding: 10px 14px;
-    font-size: 13px;
+    max-width: 200px; /* 🔥 más estrecho */
+    padding: 7px 10px; /* 🔥 más pequeño */
+    font-size: 11px; /* 🔥 más fino */
 
-    white-space: normal; /* 🔥 CAMBIO CLAVE */
+    border-radius: 20px;
+    white-space: normal;
     text-align: center;
   }
 }
+
