@@ -215,12 +215,83 @@ if (thanksBack) {
   });
 }
 
-if (klaviyoForm) {
-  klaviyoForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+klaviyoForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const lang = document.documentElement.lang || "es";
+  const lang = document.documentElement.lang || "es";
 
+  const nombre = document.getElementById("nombre")?.value.trim() || "";
+  const email = document.getElementById("email")?.value.trim() || "";
+  const telefono = document.getElementById("telefono")?.value.trim() || "";
+  const ciudad = document.getElementById("ciudad")?.value.trim() || "";
+  const asesor = document.querySelector('input[name="asesor"]:checked')?.value || "";
+
+  // 🔑 TU API (ya la tienes)
+  const KLAVIYO_COMPANY_ID = "XZjNH6";
+
+  // ❗ AQUI TIENES QUE PONER TU LIST ID
+  const KLAVIYO_LIST_ID = "TtUdz8";
+
+  const payload = {
+    data: {
+      type: "subscription",
+      attributes: {
+        profile: {
+          data: {
+            type: "profile",
+            attributes: {
+              email: email,
+              first_name: nombre,
+              phone_number: telefono || undefined,
+              properties: {
+                ciudad: ciudad,
+                asesor: asesor,
+                source: "Landing RIMAN"
+              }
+            }
+          }
+        },
+        subscriptions: {
+          email: {
+            marketing: {
+              consent: "SUBSCRIBED"
+            }
+          }
+        }
+      },
+      relationships: {
+        list: {
+          data: {
+            type: "list",
+            id: KLAVIYO_LIST_ID
+          }
+        }
+      }
+    }
+  };
+
+  try {
+    const response = await fetch(
+      `https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_COMPANY_ID}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "revision": "2026-01-15"
+        },
+        body: JSON.stringify(payload)
+      }
+    );
+
+    if (!response.ok) {
+      console.error("Error Klaviyo");
+      alert(lang === "en"
+        ? "Error submitting form"
+        : "Error al enviar el formulario");
+      return;
+    }
+
+    // 👉 SOLO SI FUNCIONA → mostramos popup
     if (lang === "en") {
       thanksTitle.textContent = "Thank you for registering!";
       thanksText.textContent = "Your advisor will contact you soon to share all the details of your Riman experience.";
@@ -236,8 +307,14 @@ if (klaviyoForm) {
     }
 
     klaviyoForm.reset();
-  });
-}
+
+  } catch (error) {
+    console.error(error);
+    alert(lang === "en"
+      ? "Connection error"
+      : "Error de conexión");
+  }
+});
     
   /* =========================
      INICIO
