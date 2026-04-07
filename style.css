@@ -2138,7 +2138,14 @@ video,
 
 @media (max-width: 768px) {
   .popup-cta {
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 70px;
+
     width: calc(100% - 40px);
+    max-width: 320px;
+
+    white-space: normal;
+    text-align: center;
   }
 }
