@@ -1887,3 +1887,53 @@ video,
   display: inline-block;
   text-decoration: none;
 }
+
+.section-final-cta {
+  padding: 0;
+  background: var(--soft-white);
+}
+
+.final-cta-layout {
+  max-width: 100%;
+  padding: 0;
+}
+
+.final-cta-image {
+  position: relative;
+  width: 100%;
+}
+
+.final-video {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+.final-button {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 5;
+  text-align: center;
+}
+
+.final-button .btn {
+  white-space: nowrap;
+}
+
+.final-button .btn:hover {
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  .final-button {
+    bottom: 20px;
+  }
+
+  .final-button .btn {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
