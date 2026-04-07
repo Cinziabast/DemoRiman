@@ -429,10 +429,30 @@ body.english .hero-slider-en {
 }
 
 @media (max-width: 768px) {
-  .hero-slide img {
-    height: 240px;
-    object-fit: cover;
+
+  .hero-final-title {
+    padding: 20px 16px 18px;
   }
+
+  .hero-final-title h1 {
+    font-size: clamp(1.35rem, 7vw, 2.1rem);
+    line-height: 1.15;
+    gap: 4px;
+  }
+
+  /* 👇 AÑADE AQUÍ */
+  .hero-final-btn {
+    bottom: 20px;
+    width: calc(100% - 32px);
+    max-width: 340px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero-slide img {
+    height: 260px;
+  }
+
 }
 
 /* =========================
