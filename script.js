@@ -127,34 +127,38 @@ window.addEventListener("load", () => {
   }
 
   function setLanguage(lang) {
-    currentHeroLang = lang;
-    currentHeroIndex = 0;
+  currentHeroLang = lang;
+  currentHeroIndex = 0;
 
-    document.documentElement.lang = lang;
-    document.body.classList.toggle("english", lang === "en");
+  document.documentElement.lang = lang;
+  document.body.classList.toggle("english", lang === "en");
 
-    translatableElements.forEach((el) => {
-      const newText = el.getAttribute(`data-${lang}`);
-      if (newText) {
-        el.textContent = newText;
-      }
-    });
+  translatableElements.forEach((el) => {
+    const newText = el.getAttribute(`data-${lang}`);
+    if (newText) {
+      el.textContent = newText;
+    }
+  });
 
-    langButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
-    });
+  // 🔥 AÑADE ESTE BLOQUE AQUÍ
+  const placeholderFields = document.querySelectorAll("[data-placeholder-es][data-placeholder-en]");
 
-    updateHeroImage();
-    startHeroSlider();
-    updateLegalLinks();
-    openPopup(lang);
-  }
+  placeholderFields.forEach((field) => {
+    field.placeholder =
+      lang === "en"
+        ? field.dataset.placeholderEn
+        : field.dataset.placeholderEs;
+  });
 
   langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      setLanguage(btn.dataset.lang);
-    });
+    btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+
+  updateHeroImage();
+  startHeroSlider();
+  updateLegalLinks();
+  openPopup(lang);
+}
 
   /* =========================
      CARRUSEL PRODUCTOS
