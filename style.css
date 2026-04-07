@@ -1896,3 +1896,10 @@ video,
 .hero-final-btn {
   display: none !important;
 }
+
+/* 🚫 ELIMINAR BOTÓN DEL HERO DEFINITIVAMENTE */
+.hero-slider .btn,
+.hero-slider .hero-final-btn,
+.hero-slide .btn {
+  display: none !important;
+}
