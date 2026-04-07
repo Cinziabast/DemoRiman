@@ -2121,8 +2121,8 @@ video,
 .popup-cta {
   position: absolute;
   bottom: 90px;
-  left: 64%;
-  transform: translateX(-35%); /* 🔥 ajuste fino final */
+  left: 67%;
+  transform: translateX(-35%);
   
   background: #425e54;
   color: #fff;
