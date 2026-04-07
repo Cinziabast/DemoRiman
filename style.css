@@ -2407,3 +2407,35 @@ h2,
   }
 
 }
+
+/* =========================
+   HERO / CTA IMAGES FIX TABLET-ANDROID
+========================= */
+@media (max-width: 1024px) {
+
+  /* imágenes de la franja entre hero y beneficios */
+  .hero-final-video,
+  .hero-final img,
+  .hero-final-media img,
+  .section-rutina img,
+  .rutina-img,
+  .final-video,
+  .final-cta-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+  }
+
+  /* si el contenedor estaba recortando */
+  .hero-final-media,
+  .section-rutina,
+  .rutina-box,
+  .final-cta-image,
+  .hero-final,
+  .section-final-cta {
+    overflow: visible !important;
+  }
+}
