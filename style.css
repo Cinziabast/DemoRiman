@@ -2346,3 +2346,40 @@ h2,
     object-fit: contain !important; /* 🔥 muestra completa */
   }
 }
+
+/* =========================
+   TEXTO DESCRIPTIVO MÁS GRANDE
+========================= */
+.section-benefits p,
+.section-ritual p,
+.section-products p {
+  font-size: 1.15rem; /* 🔥 antes 1.05 aprox */
+  line-height: 1.7;
+}
+
+/* =========================
+   CENTRAR BLOQUES TEXTO + IMAGEN
+========================= */
+.products-showcase,
+.products-showcase-reverse {
+  align-items: center; /* 🔥 centra vertical */
+}
+
+/* texto */
+.products-showcase-copy {
+  max-width: 520px; /* 🔥 limita ancho (MUY IMPORTANTE) */
+  margin: 0 auto; /* 🔥 centra */
+  text-align: center; /* 🔥 centra texto */
+}
+
+/* títulos */
+.products-showcase-copy h3,
+.products-showcase-copy h4 {
+  text-align: center;
+}
+
+/* párrafos */
+.products-showcase-copy p {
+  text-align: center;
+  margin: 0 auto;
+}
