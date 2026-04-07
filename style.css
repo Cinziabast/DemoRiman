@@ -2323,3 +2323,16 @@ h2,
 .footer .highlight {
   color: #ffffff;
 }
+
+.plazas-text {
+  font-family: 'Belleza', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  font-size: clamp(1.4rem, 2.5vw, 2rem); /* 🔥 tamaño responsive */
+  
+  text-align: center;
+  margin-top: 24px;
+
+  color: #8b2c2c; /* opcional: rojo elegante */
+}
