@@ -1892,3 +1892,7 @@ video,
     padding: 10px 16px;
   }
 }
+
+.hero-final-btn {
+  display: none !important;
+}
