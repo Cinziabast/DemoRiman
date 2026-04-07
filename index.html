@@ -784,6 +784,60 @@
   </div>
 </div>
 
+<!-- =========================
+   COOKIE BANNER
+========================= -->
+<div id="cookieBanner" class="cookie-banner hidden">
+  <div class="cookie-banner-box">
+    <p class="cookie-title">Uso de cookies</p>
+
+    <p class="cookie-text">
+      Este sitio web utiliza cookies técnicas necesarias para su funcionamiento y,
+      con tu consentimiento, cookies de análisis para mejorar la experiencia.
+      Puedes aceptar, rechazar o configurar tus preferencias.
+    </p>
+
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="cookie-btn">ACEPTAR</button>
+      <button id="configCookies" class="cookie-btn">CONFIGURAR</button>
+      <button id="rejectCookies" class="cookie-btn">RECHAZAR</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+   COOKIE MODAL
+========================= -->
+<div id="cookieModal" class="cookie-modal hidden">
+  <div class="cookie-modal-box">
+    <button id="closeCookieModal" class="cookie-close" type="button">&times;</button>
+
+    <h3>Configuración de cookies</h3>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" checked disabled>
+        Cookies técnicas (siempre activas)
+      </label>
+      <p>Son necesarias para que la página funcione correctamente.</p>
+    </div>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" id="analyticsCookies">
+        Cookies de análisis
+      </label>
+      <p>Nos ayudan a mejorar el sitio web y entender cómo navegan los usuarios.</p>
+    </div>
+
+    <div class="cookie-modal-actions">
+      <button id="saveCookieSettings" class="cookie-btn" type="button">
+        GUARDAR CONFIGURACIÓN
+      </button>
+    </div>
+  </div>
+</div>
+  
   <script src="script.js"></script>
 </body>
 </html>
