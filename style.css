@@ -2336,3 +2336,13 @@ h2,
 
   color: #8b2c2c; /* opcional: elegante */
 }
+
+/* =========================
+   FIX FINAL MOBILE EQUIPO
+========================= */
+@media (max-width: 768px) {
+  .team-slide img {
+    height: auto !important; /* 🔥 rompe el recorte */
+    object-fit: contain !important; /* 🔥 muestra completa */
+  }
+}
