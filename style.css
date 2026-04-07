@@ -2121,7 +2121,7 @@ video,
 .popup-cta {
   position: absolute;
   bottom: 90px;
-  left: 67%;
+  left: 68%;
   transform: translateX(-35%);
   
   background: #425e54;
@@ -2132,6 +2132,8 @@ video,
   font-weight: 600;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+
+  white-space: nowrap; /* 🔥 esto lo arregla */
 }
 
 @media (max-width: 768px) {
