@@ -358,4 +358,67 @@ if (klaviyoForm) {
   ========================= */
   setLanguage("es");
 
+  /* =========================
+   COOKIE BANNER
+========================= */
+const cookieBanner = document.getElementById("cookieBanner");
+const cookieModal = document.getElementById("cookieModal");
+
+const acceptCookies = document.getElementById("acceptCookies");
+const rejectCookies = document.getElementById("rejectCookies");
+const configCookies = document.getElementById("configCookies");
+const closeCookieModal = document.getElementById("closeCookieModal");
+const saveCookieSettings = document.getElementById("saveCookieSettings");
+const analyticsCookies = document.getElementById("analyticsCookies");
+
+const savedCookieConsent = localStorage.getItem("cookieConsent");
+
+if (!savedCookieConsent && cookieBanner) {
+  cookieBanner.classList.remove("hidden");
+}
+
+if (acceptCookies) {
+  acceptCookies.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: true
+    }));
+    cookieBanner.classList.add("hidden");
+  });
+}
+
+if (rejectCookies) {
+  rejectCookies.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: false
+    }));
+    cookieBanner.classList.add("hidden");
+  });
+}
+
+if (configCookies) {
+  configCookies.addEventListener("click", () => {
+    cookieModal.classList.remove("hidden");
+  });
+}
+
+if (closeCookieModal) {
+  closeCookieModal.addEventListener("click", () => {
+    cookieModal.classList.add("hidden");
+  });
+}
+
+if (saveCookieSettings) {
+  saveCookieSettings.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: analyticsCookies ? analyticsCookies.checked : false
+    }));
+
+    cookieModal.classList.add("hidden");
+    cookieBanner.classList.add("hidden");
+  });
+}
+
 });
