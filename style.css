@@ -2133,3 +2133,10 @@ video,
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
+
+@media (max-width: 768px) {
+  .popup-cta {
+    bottom: 70px;
+    width: calc(100% - 40px);
+  }
+}
