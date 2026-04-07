@@ -126,7 +126,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  function setLanguage(lang) {
+ function setLanguage(lang) {
   currentHeroLang = lang;
   currentHeroIndex = 0;
 
@@ -140,7 +140,6 @@ window.addEventListener("load", () => {
     }
   });
 
-  // 🔥 AÑADE ESTE BLOQUE AQUÍ
   const placeholderFields = document.querySelectorAll("[data-placeholder-es][data-placeholder-en]");
 
   placeholderFields.forEach((field) => {
@@ -160,6 +159,12 @@ window.addEventListener("load", () => {
   openPopup(lang);
 }
 
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setLanguage(btn.dataset.lang);
+  });
+});
+  
   /* =========================
      CARRUSEL PRODUCTOS
   ========================= */
