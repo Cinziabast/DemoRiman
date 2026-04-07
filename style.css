@@ -1069,46 +1069,6 @@ body.english .hero-slider-en {
 }
 
 /* =========================
-   CTA FINAL
-========================= */
-.section-final-cta {
-  padding: 0;
-  background: var(--soft-white);
-}
-
-.final-cta-layout {
-  max-width: 100%;
-  padding: 0;
-}
-
-.final-cta-image {
-  position: relative;
-  width: 100%;
-}
-
-.final-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.final-video-button {
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  z-index: 5;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .final-video-button {
-    bottom: 14px;
-  }
-}
-
-/* =========================
    EXPERIENCIA VIDEOS
 ========================= */
 .experience-grid {
