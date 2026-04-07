@@ -8,8 +8,10 @@ const closePopup = document.getElementById("closePopup");
 const popupImage = document.getElementById("popupImage");
 const popupCTA = document.querySelector(".popup-cta");
 
+let popupClosedManually = false;
+
 function openPopup(lang = "es") {
-  if (!popup || !popupImage) return;
+  if (!popup || !popupImage || popupClosedManually) return;
 
   if (lang === "en") {
     popupImage.src = "images/imagenpopin.png";
@@ -25,6 +27,7 @@ function openPopup(lang = "es") {
 function closePopupBox() {
   if (!popup) return;
   popup.classList.add("hidden");
+  popupClosedManually = true;
 }
 
 if (closePopup) {
