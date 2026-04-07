@@ -1,47 +1,54 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
-     POPUP BIENVENIDA
-  ========================= */
-  const popup = document.getElementById("welcomePopup");
-  const closePopup = document.getElementById("closePopup");
-  const popupImage = document.getElementById("popupImage");
+   POPUP BIENVENIDA
+========================= */
+const popup = document.getElementById("welcomePopup");
+const closePopup = document.getElementById("closePopup");
+const popupImage = document.getElementById("popupImage");
+const popupCTA = document.querySelector(".popup-cta");
 
-  function openPopup(lang = "es") {
-    if (!popup || !popupImage) return;
+function openPopup(lang = "es") {
+  if (!popup || !popupImage) return;
 
-    const key = "popupShown_" + lang;
+  if (lang === "en") {
+    popupImage.src = "images/imagenpopin.png";
+    popupImage.alt = "Glow experience for free";
+  } else {
+    popupImage.src = "images/imagenpopes.png";
+    popupImage.alt = "Experiencia Glow gratis";
+  }
 
-    if (sessionStorage.getItem(key)) return;
+  popup.classList.remove("hidden");
+}
 
-    if (lang === "en") {
-      popupImage.src = "images/imagenpopin.png";
-      popupImage.alt = "Glow experience for free";
-    } else {
-      popupImage.src = "images/imagenpopes.png";
-      popupImage.alt = "Experiencia Glow gratis";
+function closePopupBox() {
+  if (!popup) return;
+  popup.classList.add("hidden");
+}
+
+if (closePopup) {
+  closePopup.addEventListener("click", closePopupBox);
+}
+
+if (popup) {
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      closePopupBox();
     }
+  });
+}
 
-    popup.classList.remove("hidden");
-    sessionStorage.setItem(key, "true");
-  }
+if (popupCTA) {
+  popupCTA.addEventListener("click", () => {
+    closePopupBox();
+  });
+}
 
-  function closePopupBox() {
-    if (!popup) return;
-    popup.classList.add("hidden");
-  }
-
-  if (closePopup) {
-    closePopup.addEventListener("click", closePopupBox);
-  }
-
-  if (popup) {
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        closePopupBox();
-      }
-    });
-  }
+/* mostrar popup al cargar */
+window.addEventListener("load", () => {
+  openPopup("es");
+});
 
   /* =========================
      HERO SLIDER + IDIOMA
