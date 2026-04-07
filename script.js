@@ -147,6 +147,7 @@ window.addEventListener("load", () => {
     updateHeroImage();
     startHeroSlider();
     updateLegalLinks();
+    openPopup(lang);
   }
 
   langButtons.forEach((btn) => {
