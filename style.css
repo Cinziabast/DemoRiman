@@ -242,7 +242,7 @@ section {
 }
 
 .logo-img {
-  height: 55px;
+  height: 75px;
   width: auto;
   display: block;
 }
@@ -1201,8 +1201,8 @@ body.english .hero-slider-en {
 }
 
 .footer-logo {
-  width: 95px;
-  margin: 0 auto 18px;
+  width: 160px;
+  margin: 0 auto 30px;
 }
 
 .footer-legal {
