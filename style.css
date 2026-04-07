@@ -2468,3 +2468,26 @@ h2,
   }
 
 }
+
+/* =========================
+   HERO BOTÓN FIX MÓVIL (COMPACTO)
+========================= */
+@media (max-width: 768px) {
+
+  .hero-video-btn .btn,
+  .hero-final-btn,
+  .btn-primary {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+
+    width: auto !important;
+    max-width: fit-content !important;
+
+    border-radius: 22px !important;
+    text-align: center;
+
+    white-space: nowrap !important; /* 🔥 clave: una sola línea */
+    display: inline-block !important;
+  }
+
+}
