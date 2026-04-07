@@ -8,10 +8,15 @@ const closePopup = document.getElementById("closePopup");
 const popupImage = document.getElementById("popupImage");
 const popupCTA = document.querySelector(".popup-cta");
 
-let popupClosedManually = false;
+let currentPopupLang = "es";
 
 function openPopup(lang = "es") {
-  if (!popup || !popupImage || popupClosedManually) return;
+  if (!popup || !popupImage) return;
+
+  currentPopupLang = lang;
+
+  const key = "popupShown_" + lang;
+  if (sessionStorage.getItem(key) === "true") return;
 
   if (lang === "en") {
     popupImage.src = "images/imagenpopin.png";
@@ -26,8 +31,9 @@ function openPopup(lang = "es") {
 
 function closePopupBox() {
   if (!popup) return;
+
   popup.classList.add("hidden");
-  popupClosedManually = true;
+  sessionStorage.setItem("popupShown_" + currentPopupLang, "true");
 }
 
 if (closePopup) {
