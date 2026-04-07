@@ -2152,3 +2152,11 @@ video,
   }
 }
 
+h1, h2, h3,
+.section-heading h2,
+.section-label,
+.main-title {
+  font-family: 'Belleza', sans-serif;
+  letter-spacing: 3px;   /* 🔥 más aire como en la imagen */
+  font-weight: 400;      /* 🔥 más fino */
+}
