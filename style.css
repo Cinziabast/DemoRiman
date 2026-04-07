@@ -2410,3 +2410,22 @@ h2,
   }
 
 }
+
+/* =========================
+   BONO FIX TABLET (REAL)
+========================= */
+@media (max-width: 1024px) {
+
+  .bono-image-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bono-btn-overlay {
+    position: static !important; /* 🔥 clave */
+    margin-top: 16px;
+    display: inline-block;
+  }
+
+}
