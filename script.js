@@ -490,8 +490,10 @@ if (saveCookieSettings) {
   });
 }
 
-});
-
-openPopup("es");
+  /* =========================
+     INICIO
+  ========================= */
+  setLanguage("es");
+  openPopup("es");
 
 });
