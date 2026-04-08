@@ -1,58 +1,112 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
-   POPUP BIENVENIDA
-========================= */
-const popup = document.getElementById("welcomePopup");
-const closePopup = document.getElementById("closePopup");
-const popupImage = document.getElementById("popupImage");
-const popupCTA = document.querySelector(".popup-cta");
+     POPUP BIENVENIDA
+  ========================= */
+  const popup = document.getElementById("welcomePopup");
+  const closePopup = document.getElementById("closePopup");
+  const popupImage = document.getElementById("popupImage");
+  const popupCTA = document.getElementById("popupCta");
+  const popupImageLink = document.getElementById("popupImageLink");
 
-let currentPopupLang = "es";
+  let currentPopupLang = "es";
 
-function openPopup(lang = "es") {
-  if (!popup || !popupImage) return;
+  function updatePopupContent(lang = "es") {
+    if (!popup || !popupImage || !popupCTA) return;
 
-  currentPopupLang = lang;
+    currentPopupLang = lang;
 
-  const key = "popupShown_" + lang;
-  if (sessionStorage.getItem(key) === "true") return;
-
-  if (lang === "en") {
-    popupImage.src = "images/imagenpopin.png";
-    popupImage.alt = "Glow experience for free";
-  } else {
-    popupImage.src = "images/imagenpopes.png";
-    popupImage.alt = "Experiencia Glow gratis";
+    if (lang === "en") {
+      popupImage.src = "images/imagenpopin.png";
+      popupImage.alt = "Glow experience for free";
+      popupCTA.textContent = popupCTA.dataset.en;
+    } else {
+      popupImage.src = "images/imagenpopes.png";
+      popupImage.alt = "Experiencia Glow gratis";
+      popupCTA.textContent = popupCTA.dataset.es;
+    }
   }
 
-  popup.classList.remove("hidden");
-}
+  function openPopup(lang = "es") {
+    if (!popup || !popupImage) return;
 
-function closePopupBox() {
-  if (!popup) return;
+    currentPopupLang = lang;
 
-  popup.classList.add("hidden");
-  sessionStorage.setItem("popupShown_" + currentPopupLang, "true");
-}
+    const key = "popupShown_" + lang;
+    if (sessionStorage.getItem(key) === "true") return;
 
-if (closePopup) {
-  closePopup.addEventListener("click", closePopupBox);
-}
+    updatePopupContent(lang);
+    popup.classList.remove("hidden");
+  }
 
-if (popup) {
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
+  function closePopupBox() {
+    if (!popup) return;
+
+    popup.classList.add("hidden");
+    sessionStorage.setItem("popupShown_" + currentPopupLang, "true");
+  }
+
+  if (closePopup) {
+    closePopup.addEventListener("click", closePopupBox);
+  }
+
+  if (popup) {
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        closePopupBox();
+      }
+    });
+  }
+
+  if (popupCTA) {
+    popupCTA.addEventListener("click", () => {
       closePopupBox();
-    }
-  });
-}
+    });
+  }
 
-if (popupCTA) {
-  popupCTA.addEventListener("click", () => {
-    closePopupBox();
+  if (popupImageLink) {
+    popupImageLink.addEventListener("click", () => {
+      closePopupBox();
+    });
+  }
+
+  /* mostrar popup al cargar */
+  window.addEventListener("load", () => {
+    openPopup("es");
   });
-}
+
+  /* =========================
+     CAMBIO DE IDIOMA
+  ========================= */
+  const langButtons = document.querySelectorAll(".lang-btn");
+  const translatableElements = document.querySelectorAll("[data-es][data-en]");
+
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.body.classList.toggle("english", lang === "en");
+
+    translatableElements.forEach((el) => {
+      const newText = el.getAttribute(`data-${lang}`);
+      if (newText) {
+        el.textContent = newText;
+      }
+    });
+
+    langButtons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    updatePopupContent(lang);
+    openPopup(lang);
+  }
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+});
 
 /* mostrar popup al cargar */
 window.addEventListener("load", () => {
