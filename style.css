@@ -2406,3 +2406,63 @@ h2,
     margin-top: 12px;
   }
 }
+
+/* =========================================
+   BAJAR BOTÓN HERO / VIDEO
+========================================= */
+
+/* Asegura que el contenedor del hero sea la referencia */
+.video-wrapper,
+.hero-video,
+.hero-slider-section,
+.final-cta-image {
+  position: relative;
+}
+
+/* Botón principal */
+.hero-final-btn,
+.final-video-button,
+.final-video-button .btn {
+  z-index: 20;
+}
+
+/* Si el botón está dentro de un contenedor tipo overlay */
+.hero-final-btn,
+.final-video-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px !important; /* escritorio: más abajo */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-final-btn a,
+.final-video-button a,
+.final-video-button .btn {
+  pointer-events: auto;
+}
+
+/* MÓVIL: bajarlo todavía más */
+@media (max-width: 768px) {
+  .hero-final-btn,
+  .final-video-button {
+    bottom: 14px !important;
+  }
+}
+
+/* =========================================
+   ARREGLAR ANCHO BOTÓN EN IPAD + ORDENADOR
+========================================= */
+
+@media (min-width: 769px) {
+  .hero-final-btn {
+    width: auto !important;
+    max-width: 420px;
+    display: inline-flex !important;
+    justify-content: center;
+    padding: 16px 28px;
+  }
+}
