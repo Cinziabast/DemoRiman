@@ -1464,7 +1464,7 @@ video,
     padding: 7px 10px !important;
     font-size: 0.58rem !important;
     line-height: 1.1 !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
   }
 }
 
