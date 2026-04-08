@@ -2372,15 +2372,15 @@ h2,
 ========================= */
 @media (min-width: 769px) {
   .popup-cta {
-    left: 60% !important;
+    left: 65% !important;
     bottom: 70px !important;
-    transform: translateX(-18%) !important;
+    transform: translateX(-25%) !important;
     max-width: 210px !important;
     padding: 8px 12px !important;
     font-size: 0.68rem !important;
   }
 
   .popup-cta:hover {
-    transform: translateX(-18%) !important;
+    transform: translateX(-25%) !important;
   }
 }
