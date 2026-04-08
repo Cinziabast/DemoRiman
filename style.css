@@ -1280,35 +1280,6 @@ video,
   border-radius: 0 !important;
 }
 
-.popup-cta {
-  position: absolute;
-  left: 72%;
-  bottom: 52px;
-  transform: translateX(-35%);
-  z-index: 20;
-  display: inline-block;
-  width: auto;
-  max-width: 220px;
-  padding: 9px 14px;
-  background: #425e54;
-  color: #fff;
-  border-radius: 999px;
-  text-decoration: none;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  font-family: 'Belleza', sans-serif !important;
-  font-size: 0.72rem;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: normal;
-}
-
-.popup-cta:hover {
-  transform: translateX(-35%) !important;
-}
-
 /* =========================
    THANKS POPUP
 ========================= */
@@ -2216,6 +2187,25 @@ h2,
   border-radius: 20px;
 }
 
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #425e54;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* =========================
    POPUP CTA FIX
 ========================= */
@@ -2260,6 +2250,14 @@ h2,
   .popup-image {
     border-radius: 16px;
   }
+
+   .popup-close {
+  top: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
+  font-size: 1.4rem;
+   }
 
   .popup-cta {
     left: 50%;
@@ -2394,39 +2392,5 @@ h2,
 
   .cookie-modal-box h3 {
     font-size: 1.7rem !important;
-  }
-}
-
-/* =========================
-   POPUP MOVIL DEFINITIVO
-========================= */
-@media (max-width: 768px) {
-  #welcomePopup .popup-box {
-    position: relative !important;
-    max-width: 95% !important;
-  }
-
-  #welcomePopup .popup-image {
-    border-radius: 16px !important;
-  }
-
-    width: 38px !important;
-    height: 38px !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    border-radius: 50% !important;
-    background: rgba(255,255,255,0.95) !important;
-    z-index: 999999 !important;
-  }
-
-  #welcomePopup .popup-cta {
-    left: 50% !important;
-    bottom: 14px !important;
-    transform: translateX(-50%) !important;
   }
 }
