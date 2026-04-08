@@ -1950,21 +1950,6 @@ h2,
     padding: 24px 18px;
   }
 
-  .rutina-btn {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 12px !important;
-    padding: 10px 18px !important;
-    font-size: 0.78rem !important;
-    line-height: 1.25 !important;
-    width: auto !important;
-    max-width: 72% !important;
-    text-align: center !important;
-    white-space: normal !important;
-    border-radius: 999px !important;
-  }
-
   .bono-btn-overlay {
     bottom: 10px;
     max-width: 170px;
