@@ -492,19 +492,6 @@ if (saveCookieSettings) {
 
 });
 
-/* =========================
-   BOTÓN POPUP → CERRAR + SCROLL
-========================= */
-
-const popupCTA = document.querySelector(".popup-cta");
-
-if (popupCTA) {
-  popupCTA.addEventListener("click", () => {
-    closePopupBox(); // 👈 usa tu función existente
-  });
-}
-
 openPopup("es");
 
 });
-
