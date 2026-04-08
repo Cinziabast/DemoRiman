@@ -381,7 +381,7 @@ if (klaviyoForm) {
   ========================= */
   setLanguage("es");
 
-  /* =========================
+ /* =========================
    COOKIE BANNER
 ========================= */
 const cookieBanner = document.getElementById("cookieBanner");
@@ -394,10 +394,25 @@ const closeCookieModal = document.getElementById("closeCookieModal");
 const saveCookieSettings = document.getElementById("saveCookieSettings");
 const analyticsCookies = document.getElementById("analyticsCookies");
 
-const savedCookieConsent = localStorage.getItem("cookieConsent");
+function getCookieConsent() {
+  const saved = localStorage.getItem("cookieConsent");
+  if (!saved) return null;
+
+  try {
+    return JSON.parse(saved);
+  } catch (error) {
+    return null;
+  }
+}
+
+const savedCookieConsent = getCookieConsent();
 
 if (!savedCookieConsent && cookieBanner) {
   cookieBanner.classList.remove("hidden");
+}
+
+if (savedCookieConsent && analyticsCookies) {
+  analyticsCookies.checked = !!savedCookieConsent.analytics;
 }
 
 if (acceptCookies) {
@@ -406,7 +421,13 @@ if (acceptCookies) {
       necessary: true,
       analytics: true
     }));
-    cookieBanner.classList.add("hidden");
+
+    if (analyticsCookies) {
+      analyticsCookies.checked = true;
+    }
+
+    if (cookieBanner) cookieBanner.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
   });
 }
 
@@ -416,19 +437,31 @@ if (rejectCookies) {
       necessary: true,
       analytics: false
     }));
-    cookieBanner.classList.add("hidden");
+
+    if (analyticsCookies) {
+      analyticsCookies.checked = false;
+    }
+
+    if (cookieBanner) cookieBanner.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
   });
 }
 
 if (configCookies) {
   configCookies.addEventListener("click", () => {
-    cookieModal.classList.remove("hidden");
+    const currentConsent = getCookieConsent();
+
+    if (analyticsCookies) {
+      analyticsCookies.checked = currentConsent ? !!currentConsent.analytics : false;
+    }
+
+    if (cookieModal) cookieModal.classList.remove("hidden");
   });
 }
 
 if (closeCookieModal) {
   closeCookieModal.addEventListener("click", () => {
-    cookieModal.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
   });
 }
 
@@ -439,11 +472,19 @@ if (saveCookieSettings) {
       analytics: analyticsCookies ? analyticsCookies.checked : false
     }));
 
-    cookieModal.classList.add("hidden");
-    cookieBanner.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
+    if (cookieBanner) cookieBanner.classList.add("hidden");
   });
 }
 
+if (cookieModal) {
+  cookieModal.addEventListener("click", (e) => {
+    if (e.target === cookieModal) {
+      cookieModal.classList.add("hidden");
+    }
+  });
+}
+    
   /* =========================
      INICIO
   ========================= */
