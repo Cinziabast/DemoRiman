@@ -2490,3 +2490,10 @@ h2,
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+/* CENTRAR BOTÓN FORMULARIO */
+.section-form .btn,
+.section-form button {
+  display: block;
+  margin: 20px auto 0 auto;
+}
