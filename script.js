@@ -103,11 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* mostrar popup al cargar */
-window.addEventListener("load", () => {
-  openPopup("es");
-});
-
   /* =========================
      HERO SLIDER + IDIOMA
   ========================= */
