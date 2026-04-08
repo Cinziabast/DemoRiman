@@ -70,11 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* mostrar popup al cargar */
-  window.addEventListener("load", () => {
-    openPopup("es");
-  });
-
   /* =========================
      CAMBIO DE IDIOMA
   ========================= */
@@ -513,4 +508,8 @@ if (popupCTA) {
     closePopupBox(); // 👈 usa tu función existente
   });
 }
+
+openPopup("es");
+
+});
 
