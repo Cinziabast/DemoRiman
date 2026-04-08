@@ -422,10 +422,7 @@ if (acceptCookies) {
       analytics: true
     }));
 
-    if (analyticsCookies) {
-      analyticsCookies.checked = true;
-    }
-
+    if (analyticsCookies) analyticsCookies.checked = true;
     if (cookieBanner) cookieBanner.classList.add("hidden");
     if (cookieModal) cookieModal.classList.add("hidden");
   });
@@ -438,10 +435,7 @@ if (rejectCookies) {
       analytics: false
     }));
 
-    if (analyticsCookies) {
-      analyticsCookies.checked = false;
-    }
-
+    if (analyticsCookies) analyticsCookies.checked = false;
     if (cookieBanner) cookieBanner.classList.add("hidden");
     if (cookieModal) cookieModal.classList.add("hidden");
   });
