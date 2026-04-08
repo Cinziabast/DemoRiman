@@ -1323,16 +1323,20 @@ video,
 @media (max-width: 768px) {
   .popup-cta {
     left: 50%;
-    bottom: 20px;
+    bottom: 14px;
     transform: translateX(-50%);
-    max-width: 170px;
-    padding: 6px 10px;
-    font-size: 0.58rem;
-    line-height: 1.1;
+
+    max-width: 145px;
+    padding: 5px 8px;
+    font-size: 0.5rem;
+    line-height: 1.05;
+
     white-space: normal;
+    text-align: center;
     border-radius: 999px;
   }
 }
+
 /* =========================
    THANKS POPUP
 ========================= */
