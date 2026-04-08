@@ -2505,3 +2505,25 @@ h2,
     font-size: 1.7rem !important;
   }
 }
+
+/* =========================
+   FIX BOTON POPUP MOVIL
+========================= */
+@media (max-width: 768px) {
+  .popup-close {
+    top: 8px !important;
+    right: 8px !important;
+    left: auto !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    font-size: 1.8rem !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999 !important;
+  }
+}
