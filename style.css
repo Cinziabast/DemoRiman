@@ -355,15 +355,33 @@ section {
 .hero-final-btn {
   position: absolute;
   left: 50%;
-  bottom: 38px;
+  bottom: 18px;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 5;
   white-space: nowrap;
 }
 
 .hero-final-btn:hover,
 .hero-final-btn.btn-primary:hover {
   transform: translateX(-50%) !important;
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+  .hero-final-btn {
+    bottom: 10px;
+    white-space: normal;
+    width: calc(100% - 32px);
+    max-width: 340px;
+    text-align: center;
+  }
+}
+
+/* ORDENADOR */
+@media (min-width: 769px) {
+  .hero-final-btn {
+    bottom: 28px;
+  }
 }
 
 /* =========================
