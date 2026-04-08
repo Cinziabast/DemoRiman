@@ -393,21 +393,16 @@ section {
   display: block;
 }
 
-/* Animación */
 @keyframes heroSlide {
   0% { transform: translateX(0); }
   30% { transform: translateX(0); }
-
   33% { transform: translateX(-100%); }
   63% { transform: translateX(-100%); }
-
   66% { transform: translateX(-200%); }
   96% { transform: translateX(-200%); }
-
   100% { transform: translateX(0); }
 }
 
-/* Idiomas */
 .hero-slider-en {
   display: none;
 }
@@ -418,41 +413,6 @@ body.english .hero-slider-es {
 
 body.english .hero-slider-en {
   display: flex;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-slide img {
-    height: 420px;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .hero-final-title {
-    padding: 20px 16px 18px;
-  }
-
-  .hero-final-title h1 {
-    font-size: clamp(1.35rem, 7vw, 2.1rem);
-    line-height: 1.15;
-    gap: 4px;
-  }
-
-  /* 👇 AÑADE AQUÍ */
-  .hero-final-btn {
-    bottom: 20px;
-    width: calc(100% - 32px);
-    max-width: 340px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .hero-slide img {
-    height: 260px;
-  }
-
 }
 
 /* =========================
@@ -583,10 +543,25 @@ body.english .hero-slider-en {
 .bono-btn-overlay {
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 18px;
   transform: translateX(-50%);
   z-index: 20;
-  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  max-width: 220px;
+  padding: 8px 16px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(66, 94, 84, 0.28);
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: normal;
 }
 
 .bono-btn-overlay:hover {
@@ -694,6 +669,7 @@ body.english .hero-slider-en {
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-align: center;
 }
 
 .team-slide img {
@@ -707,10 +683,16 @@ body.english .hero-slider-en {
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-items: center;
+  text-align: center;
 }
 
 .team-card-content h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Belleza', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 100%;
   font-size: 2rem;
   margin-bottom: 16px;
   color: #f2ede1;
@@ -721,10 +703,19 @@ body.english .hero-slider-en {
   line-height: 1.5;
   color: #f3ead4;
   margin-bottom: 24px;
+  text-align: center;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-card-content .btn {
   margin-top: auto;
+}
+
+.team-card-content .btn-whatsapp {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -785,6 +776,9 @@ body.english .hero-slider-en {
   justify-content: center;
   align-items: center;
   padding-left: 20px;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .products-side-title {
@@ -794,6 +788,16 @@ body.english .hero-slider-en {
   color: #f5f1e8;
   text-align: center;
   margin: 0;
+}
+
+.products-showcase-copy h3,
+.products-showcase-copy h4,
+.products-showcase-copy p {
+  text-align: center;
+}
+
+.products-showcase-copy p {
+  margin: 0 auto;
 }
 
 .products-carousel {
@@ -851,6 +855,7 @@ body.english .hero-slider-en {
   margin-bottom: 10px;
   color: #5c4923;
   font-family: 'Cormorant Garamond', serif;
+  text-align: center;
 }
 
 .product-content p {
@@ -911,7 +916,6 @@ body.english .hero-slider-en {
   display: none;
 }
 
-/* TARJETAS TIPO POLAROID */
 .testimonial-card {
   background: #ffffff;
   padding: 12px 12px 36px;
@@ -1078,6 +1082,12 @@ body.english .hero-slider-en {
   font-size: 0.98rem;
 }
 
+.section-form .btn,
+.section-form button {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
 .urgent-call {
   margin-top: 24px;
   text-align: center;
@@ -1086,6 +1096,9 @@ body.english .hero-slider-en {
   color: #8f2d2d;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-family: 'Belleza', sans-serif !important;
+  letter-spacing: 3px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
 }
 
 /* =========================
@@ -1120,6 +1133,7 @@ body.english .hero-slider-en {
 
 .rutina {
   margin-top: 40px !important;
+  padding: 0;
 }
 
 .star-title {
@@ -1170,10 +1184,13 @@ body.english .hero-slider-en {
    FOOTER
 ========================= */
 .footer {
-  background: var(--green);
+  background: #4c6f62;
   padding: 60px 0 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--white);
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -1190,7 +1207,7 @@ body.english .hero-slider-en {
 }
 
 .footer-legal a {
-  color: var(--white);
+  color: #1f1f1f;
   margin: 0 12px;
   font-size: 0.85rem;
   text-decoration: none;
@@ -1199,6 +1216,7 @@ body.english .hero-slider-en {
 
 .footer-legal a:hover {
   text-decoration: underline;
+  color: #000000;
 }
 
 .footer-disclaimer {
@@ -1213,6 +1231,20 @@ body.english .hero-slider-en {
   margin-top: 10px;
   font-size: 0.8rem;
   opacity: 0.7;
+}
+
+.footer p,
+.footer a,
+.footer .footer-disclaimer,
+.footer .footer-copy {
+  font-family: 'Arapey', serif;
+  color: #1f1f1f;
+}
+
+.footer strong,
+.footer h3,
+.footer .highlight {
+  color: #ffffff;
 }
 
 /* =========================
@@ -1299,501 +1331,25 @@ video,
   z-index: 10;
 }
 
-@media (max-width: 768px) {
-  .popup-box {
-    max-width: 95%;
-  }
-
-  .popup-image {
-    border-radius: 16px;
-  }
-
-  .popup-close {
-    top: 8px;
-    right: 8px;
-    width: 38px;
-    height: 38px;
-    font-size: 1.7rem;
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1100px) {
-  .experience-steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero-final-title {
-    padding: 24px 18px 20px;
-  }
-
-  .hero-final-video {
-    height: clamp(300px, 58vw, 620px);
-  }
-
-  .hero-final-btn {
-    bottom: 28px;
-  }
-}
-
-@media (max-width: 900px) {
-  .header-container {
-    flex-direction: column;
-    justify-content: center;
-    padding: 14px 0;
-  }
-
-  .header-right {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .nav {
-    justify-content: center;
-  }
-
-  .benefit-row,
-  .benefit-row-reverse {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .benefit-row-reverse .benefit-media,
-  .benefit-row-reverse .benefit-copy {
-    order: initial;
-  }
-
-  .benefit-copy {
-    text-align: center;
-  }
-
-  .team-slider {
-    grid-template-columns: 1fr;
-  }
-
-  .products-showcase,
-  .products-showcase-reverse {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .products-showcase .section-heading,
-  .products-showcase .products-carousel,
-  .products-showcase-copy {
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .star-product {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .star-product .product-content {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .experience-grid {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .experience-card {
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 860px) {
-  .testimonials-carousel {
-    padding: 0 20px;
-  }
-
-  .testimonials-arrow {
-    display: none;
-  }
-
-  .testimonials-slider {
-    grid-auto-columns: 84%;
-    gap: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .hero-final-title {
-    padding: 20px 16px 18px;
-  }
-
-  .hero-final-title h1 {
-    font-size: clamp(1.35rem, 7vw, 2.1rem);
-    line-height: 1.15;
-    gap: 4px;
-  }
-
-  .hero-final-btn {
-    bottom: 20px;
-    width: calc(100% - 32px);
-    max-width: 340px;
-    text-align: center;
-    white-space: normal;
-  }
-
-  .hero-slide img {
-    height: 260px;
-  }
-
-  .experience-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .team-carousel {
-    display: block;
-    position: relative;
-  }
-
-  .team-slider {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 85%;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0 20px 10px;
-  }
-
-  .team-slide {
-    scroll-snap-align: center;
-  }
-
-  .products-slider {
-    grid-auto-columns: 85%;
-    gap: 16px;
-  }
-
-  .product-card img {
-    height: 260px;
-    object-fit: cover;
-    padding: 0;
-  }
-
-  .advisor-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-box {
-    padding: 24px 18px;
-  }
-
-  .rutina-btn {
-    bottom: 20px;
-    padding: 10px 16px;
-    font-size: 12px;
-  }
-
-  .team-arrow-left,
-  .team-arrow-right,
-  .carousel-arrow,
-  .carousel-arrow-left,
-  .carousel-arrow-right,
-  .testimonials-arrow {
-    display: none !important;
-  }
-}
-
-@media (max-width: 560px) {
-  .testimonials-slider {
-    grid-auto-columns: 88%;
-  }
-
-  .footer-legal a {
-    display: inline-block;
-    margin: 6px 8px;
-  }
-}
-
-/* =========================
-   FIX FINAL MOVIL PRODUCTOS
-========================= */
-@media (max-width: 768px) {
-
-  .section-products {
-    margin-bottom: 70px;
-  }
-
-  .products-showcase,
-  .products-showcase-reverse {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 22px !important;
-    padding: 0 16px !important;
-    margin-top: 30px !important;
-  }
-
-  .products-showcase + .products-showcase {
-    margin-top: 60px !important;
-  }
-
-  .products-showcase .section-heading,
-  .products-showcase .products-carousel,
-  .products-showcase-copy,
-  .products-showcase-reverse .products-showcase-copy {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: center !important;
-  }
-
-  .products-showcase .section-heading h2,
-  .products-side-title {
-    font-size: clamp(2.2rem, 10vw, 3.2rem) !important;
-    line-height: 1.05 !important;
-    text-align: center !important;
-    margin: 0 0 8px 0 !important;
-  }
-
-  .products-carousel {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .products-slider {
-    display: grid !important;
-    grid-auto-flow: column !important;
-    grid-auto-columns: 82% !important;
-    gap: 14px !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
-    padding: 0 4px 10px !important;
-  }
-
-  .product-card {
-    width: 100% !important;
-    min-width: 0 !important;
-    scroll-snap-align: center;
-  }
-
-  .product-card img {
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: contain !important;
-    padding: 16px !important;
-    background: #fff !important;
-  }
-
-  .product-content {
-    padding: 16px 14px 18px !important;
-  }
-
-  .product-content h4 {
-    font-size: 1.15rem !important;
-    line-height: 1.2 !important;
-    word-break: break-word;
-  }
-
-  .product-content p {
-    font-size: 0.92rem !important;
-    line-height: 1.45 !important;
-  }
-
-  .carousel-arrow,
-  .carousel-arrow-left,
-  .carousel-arrow-right {
-    display: none !important;
-  }
-}
-
-/* =========================
-   FIX FINAL MOVIL SOCIOS
-========================= */
-@media (max-width: 768px) {
-  .team-carousel {
-    display: block !important;
-    width: 100% !important;
-  }
-
-  .team-slider {
-    display: grid !important;
-    grid-auto-flow: column !important;
-    grid-auto-columns: 86% !important;
-    gap: 16px !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
-    padding: 0 16px 10px !important;
-  }
-
-  .team-slide {
-    width: 100% !important;
-    scroll-snap-align: center;
-  }
-
-  .team-slide img {
-    height: 320px !important;
-    object-fit: cover !important;
-  }
-
-  .team-arrow-left,
-  .team-arrow-right {
-    display: none !important;
-  }
-}
-
-/* =========================
-   FIX FINAL HERO MOVIL
-========================= */
-@media (max-width: 768px) {
-  .hero-slider-section {
-    padding: 0 !important;
-  }
-
-  .hero-slide img {
-    width: 100vw !important;
-    height: 240px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-}
-
-/* =========================
-   FIX SOCIOS MOVIL MISMO TAMAÑO
-========================= */
-@media (max-width: 768px) {
-  .team-slider {
-    display: grid !important;
-    grid-auto-flow: column !important;
-    grid-auto-columns: 88% !important;
-    gap: 16px !important;
-    overflow-x: auto !important;
-    padding: 0 16px 12px !important;
-  }
-
-  .team-slide {
-    width: 88vw !important;
-    min-width: 88vw !important;
-    max-width: 88vw !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    scroll-snap-align: center;
-  }
-
-  .team-slide img {
-    width: 100% !important;
-    height: 320px !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-
-  .team-card-content {
-    width: 100% !important;
-    min-height: 420px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-  }
-
-  .team-card-content h3,
-  .leader-description,
-  .team-card-content .btn {
-    width: 100% !important;
-  }
-}
-
-/* TEAM RESPONSIVE */
-.team-slider {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 40px;
-}
-
-/* tablet */
-@media (max-width: 1024px) {
-  .team-slider {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* móvil */
-@media (max-width: 768px) {
-  .team-slider {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-  }
-}
-
-/* BLOQUE VIDEO FINAL */
-.final-video-wrapper {
-  width: 100%;
-  background: #000;
-  overflow: hidden;
-}
-
-.final-video {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  display: block;
-  object-fit: contain;
-}
-
-/* =========================
-   RUTINA PERSONALIZADA
-========================= */
-.rutina {
-  padding: 0;
-}
-
-.rutina-box {
-  position: relative; /* CLAVE */
-  width: 100%;
-}
-
-.rutina-img {
-  width: 100%;
-  display: block;
-}
-
-/* móvil */
-@media (max-width: 768px) {
-  .rutina-btn {
-    bottom: 18px;
-    padding: 10px 16px;
-    font-size: 12px;
-    white-space: normal;
-    width: calc(100% - 40px);
-    max-width: 320px;
-  }
-}
-
-.rutina-btn {
+.popup-cta {
   position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-  z-index: 5;
-
-  /* 🔥 ESTO ES LO IMPORTANTE */
-  transition: none !important;
+  bottom: 90px;
+  left: 68%;
+  transform: translateX(-35%);
+  background: #425e54;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  white-space: nowrap;
 }
 
-.rutina-btn.btn:hover {
-  transform: translateX(-50%) !important;
-}
-
+/* =========================
+   THANKS POPUP
+========================= */
 .thanks-popup {
   position: fixed;
   inset: 0;
@@ -1849,6 +1405,9 @@ video,
   text-decoration: none;
 }
 
+/* =========================
+   FINAL CTA
+========================= */
 .section-final-cta {
   padding: 0;
   background: var(--soft-white);
@@ -1864,11 +1423,18 @@ video,
   width: 100%;
 }
 
+.final-video-wrapper {
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
 .final-video {
   width: 100%;
   display: block;
   height: auto;
   object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 .final-button {
@@ -1888,59 +1454,30 @@ video,
   transform: none !important;
 }
 
-@media (max-width: 768px) {
-  .final-button {
-    bottom: 20px;
-  }
-
-  .final-button .btn {
-    font-size: 12px;
-    padding: 10px 16px;
-  }
+/* =========================
+   RUTINA PERSONALIZADA
+========================= */
+.rutina-box {
+  position: relative;
+  width: 100%;
 }
 
-/* =========================
-   TEAM MOBILE FIX
-========================= */
-@media (max-width: 768px) {
-  .team-carousel {
-    display: block;
-    overflow: hidden;
-  }
+.rutina-img {
+  width: 100%;
+  display: block;
+}
 
-  .team-slider {
-    display: flex;
-    gap: 0 !important;             /* quita separación entre cards */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
+.rutina-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: none !important;
+}
 
-  .team-slider::-webkit-scrollbar {
-    display: none;
-  }
-
-  .team-slide {
-    min-width: 100%;
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    border: none !important;       /* quita líneas verticales */
-    box-shadow: none !important;   /* por si la línea viene de sombra */
-    background: #6f857b !important; /* mismo verde sólido */
-    margin: 0 !important;
-  }
-
-  .team-slide img {
-    display: block;
-    width: 100%;
-  }
-
-  .team-text,
-  .team-info,
-  .team-content {
-    background: #6f857b !important; /* igualar el color abajo */
-  }
+.rutina-btn.btn:hover {
+  transform: translateX(-50%) !important;
 }
 
 /* =========================
@@ -2071,74 +1608,6 @@ video,
 }
 
 /* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-  .cookie-banner {
-    padding: 14px;
-  }
-
-  .cookie-title {
-    font-size: 1.5rem;
-  }
-
-  .cookie-text {
-    font-size: 0.9rem;
-  }
-
-  .cookie-buttons {
-    flex-direction: column;
-  }
-
-  .cookie-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .cookie-modal-box h3 {
-    font-size: 1.7rem;
-  }
-}
-
-.popup-box {
-  position: relative;
-}
-
-.popup-cta {
-  position: absolute;
-  bottom: 90px;
-  left: 68%;
-  transform: translateX(-35%);
-  
-  background: #425e54;
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-
-  white-space: nowrap; /* 🔥 esto lo arregla */
-}
-
-@media (max-width: 768px) {
-  .popup-cta {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 45px;
-
-    max-width: 200px; /* 🔥 más estrecho */
-    padding: 7px 10px; /* 🔥 más pequeño */
-    font-size: 11px; /* 🔥 más fino */
-
-    border-radius: 20px;
-    white-space: normal;
-    text-align: center;
-  }
-}
-
-/* =========================
    TIPOGRAFÍA BASE
 ========================= */
 body,
@@ -2204,56 +1673,19 @@ h2,
   letter-spacing: 4px;
 }
 
-/* =========================
-   BOTONES
-========================= */
 .btn {
   letter-spacing: 2px;
 }
 
-/* =========================
-   PRODUCTOS
-========================= */
-.product-card h4 {
-  text-align: center;
-}
-
-/* =========================
-   EQUIPO CENTRADO REAL
-========================= */
-.team-slide {
-  text-align: center;
-}
-
-.team-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.team-card-content h3 {
+.plazas-text {
   font-family: 'Belleza', sans-serif !important;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
   text-align: center;
-  width: 100%;
+  margin-top: 20px;
 }
 
-.team-card-content .leader-description {
-  text-align: center;
-  max-width: 260px;
-  margin: 0 auto 24px;
-}
-
-.team-card-content .btn-whatsapp {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* =========================
-   BLOQUE FINAL EN BELLEZA
-========================= */
 .section-final-cta .btn,
 .section-final-cta .btn span,
 .hero-final-btn {
@@ -2269,67 +1701,6 @@ h2,
   letter-spacing: 2px;
 }
 
-.plazas-text {
-  font-family: 'Belleza', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  background: #4c6f62;
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
-}
-
-.footer p,
-.footer a,
-.footer .footer-disclaimer,
-.footer .footer-copy {
-  font-family: 'Arapey', serif;
-  color: #1f1f1f;
-}
-
-.footer .footer-legal a {
-  color: #1f1f1f;
-}
-
-.footer .footer-legal a:hover {
-  color: #000000;
-}
-
-.footer strong,
-.footer h3,
-.footer .highlight {
-  color: #ffffff;
-}
-
-.urgent-call {
-  font-family: 'Belleza', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  text-align: center;
-  margin-top: 24px;
-  color: #8b2c2c;
-}
-
-/* =========================
-   FIX FINAL MOBILE EQUIPO
-========================= */
-@media (max-width: 768px) {
-  .team-slide img {
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
-
 /* =========================
    TEXTO DESCRIPTIVO MÁS GRANDE
 ========================= */
@@ -2341,43 +1712,18 @@ h2,
 }
 
 /* =========================
-   CENTRAR BLOQUES TEXTO + IMAGEN
-========================= */
-.products-showcase,
-.products-showcase-reverse {
-  align-items: center;
-}
-
-.products-showcase-copy {
-  max-width: 520px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.products-showcase-copy h3,
-.products-showcase-copy h4 {
-  text-align: center;
-}
-
-.products-showcase-copy p {
-  text-align: center;
-  margin: 0 auto;
-}
-
-/* =========================
    BONO BOTÓN POSICIÓN PERFECTA TABLET
 ========================= */
 @media (max-width: 1024px) {
-
   .bono-image-wrap {
     position: relative;
   }
+}
 
 /* =========================
    HERO / CTA IMAGES FIX TABLET-ANDROID
 ========================= */
 @media (max-width: 1024px) {
-
   .hero-final-video,
   .hero-final img,
   .hero-final-media img,
@@ -2401,40 +1747,219 @@ h2,
   .section-final-cta {
     overflow: visible !important;
   }
-}
 
-.team-slide img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* =========================
-   HERO BOTÓN FIX MÓVIL (COMPACTO)
-========================= */
-@media (max-width: 768px) {
-
-  .hero-video-btn .btn,
-  .hero-final-btn,
-  .btn-primary {
-    padding: 8px 14px !important;
-    font-size: 11px !important;
-    width: auto !important;
-    max-width: fit-content !important;
-    border-radius: 22px !important;
-    text-align: center;
-    white-space: nowrap !important;
-    display: inline-block !important;
+  .hero-final-title {
+    padding: 24px 18px 20px;
   }
 
+  .hero-final-video {
+    height: clamp(300px, 58vw, 620px);
+  }
+
+  .hero-final-btn {
+    bottom: 28px;
+  }
+
+  .hero-slide img {
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .team-slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* =========================
-   RUTINA - AJUSTE SOLO MÓVIL
+   RESPONSIVE
 ========================= */
+@media (max-width: 1100px) {
+  .experience-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .benefit-row,
+  .benefit-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .benefit-row-reverse .benefit-media,
+  .benefit-row-reverse .benefit-copy {
+    order: initial;
+  }
+
+  .benefit-copy {
+    text-align: center;
+  }
+
+  .team-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .products-showcase,
+  .products-showcase-reverse {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel,
+  .products-showcase-copy {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .star-product {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .star-product .product-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .experience-grid {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .experience-card {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 860px) {
+  .testimonials-carousel {
+    padding: 0 20px;
+  }
+
+  .testimonials-arrow {
+    display: none;
+  }
+
+  .testimonials-slider {
+    grid-auto-columns: 84%;
+    gap: 18px;
+  }
+}
+
 @media (max-width: 768px) {
-  .rutina-box {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-final-title {
+    padding: 20px 16px 18px;
+  }
+
+  .hero-final-title h1 {
+    font-size: clamp(1.35rem, 7vw, 2.1rem);
+    line-height: 1.15;
+    gap: 4px;
+  }
+
+  .hero-final-btn {
+    bottom: 20px;
+    width: calc(100% - 32px);
+    max-width: 340px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero-slide img {
+    height: 260px;
+  }
+
+  .experience-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .team-carousel {
+    display: block;
     position: relative;
+    overflow: hidden;
+    width: 100% !important;
+  }
+
+  .team-slider {
+    display: flex !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 !important;
+  }
+
+  .team-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .team-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    border: none !important;
+    box-shadow: none !important;
+    background: #6f857b !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .team-slide img {
+    height: auto !important;
+    object-fit: contain !important;
+    display: block;
+    width: 100%;
+  }
+
+  .team-text,
+  .team-info,
+  .team-content {
+    background: #6f857b !important;
+  }
+
+  .products-slider {
+    grid-auto-columns: 85%;
+    gap: 16px;
+  }
+
+  .product-card img {
+    height: 260px;
+    object-fit: cover;
+    padding: 0;
+  }
+
+  .advisor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-box {
+    padding: 24px 18px;
   }
 
   .rutina-btn {
@@ -2451,112 +1976,215 @@ h2,
     white-space: normal !important;
     border-radius: 999px !important;
   }
-}
 
-/* CONTENEDOR BONO */
-.bono-image {
-  position: relative;
-}
-
-/* BOTÓN BONO */
-
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.75rem; /* más pequeño */
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: none;
-  line-height: 1.1;
-
-  padding: 6px 14px; /* clave: reducir padding */
-  width: auto; /* MUY IMPORTANTE */
-  max-width: fit-content; /* evita que se estire */
-  white-space: nowrap;
-
-  border-radius: 999px;
-  text-align: center;
-}
-
-/* CENTRAR BOTÓN FORMULARIO */
-.section-form .btn,
-.section-form button {
-  display: block;
-  margin: 20px auto 0 auto;
-}
-
-/* =========================
-   BONO BOTÓN DEFINITIVO
-========================= */
-.bono-image {
-  position: relative;
-}
-
-.bono-image .btn,
-.bono-image .bono-btn,
-.bono-image .bono-btn-overlay {
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
-  z-index: 20;
-
-  display: inline-block;
-  width: auto;
-  max-width: 58%;
-  padding: 6px 12px;
-
-  background: var(--green);
-  color: #fff;
-  border-radius: 999px;
-  box-shadow: 0 10px 25px rgba(66, 94, 84, 0.28);
-
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.72rem;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  text-transform: none;
-
-  white-space: normal;
-  text-align: center;
-}
-
-.bono-image .btn:hover,
-.bono-image .bono-btn:hover,
-.bono-image .bono-btn-overlay:hover {
-  transform: translateX(-50%);
-}
-
-@media (max-width: 768px) {
-  .bono-image .btn,
-  .bono-image .bono-btn,
-  .bono-image .bono-btn-overlay {
+  .bono-btn-overlay {
     bottom: 10px;
-    max-width: 56%;
-    padding: 5px 10px;
-    font-size: 0.66rem;
+    max-width: 170px;
+    padding: 6px 12px;
+    font-size: 0.58rem;
+    line-height: 1.1;
+    white-space: normal;
+  }
+
+  .final-button {
+    bottom: 20px;
+  }
+
+  .final-button .btn {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .hero-video-btn .btn,
+  .hero-final-btn {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    border-radius: 22px !important;
+    text-align: center;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+
+  .popup-box {
+    max-width: 95%;
+  }
+
+  .popup-image {
+    border-radius: 16px;
+  }
+
+  .popup-close {
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
+
+  .popup-cta {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 45px;
+    max-width: 200px;
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .cookie-banner {
+    padding: 14px;
+  }
+
+  .cookie-title {
+    font-size: 1.5rem;
+  }
+
+  .cookie-text {
+    font-size: 0.9rem;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+  }
+
+  .cookie-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cookie-modal-box h3 {
+    font-size: 1.7rem;
+  }
+
+  .team-arrow-left,
+  .team-arrow-right,
+  .carousel-arrow,
+  .carousel-arrow-left,
+  .carousel-arrow-right,
+  .testimonials-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .testimonials-slider {
+    grid-auto-columns: 88%;
+  }
+
+  .footer-legal a {
+    display: inline-block;
+    margin: 6px 8px;
   }
 }
 
 /* =========================
-   FIX BOTÓN BONO MÓVIL
+   FIX FINAL MOVIL PRODUCTOS
 ========================= */
 @media (max-width: 768px) {
-
-  .section-bono .btn,
-  .bono-image .btn {
-    position: absolute;
-    left: 50%;
-    bottom: 14px;
-    transform: translateX(-50%);
-
-    width: auto !important;
-    max-width: 85% !important;
-
-    padding: 8px 16px !important;
-    font-size: 0.75rem !important;
-
-    display: inline-block !important;
-    white-space: nowrap;
+  .section-products {
+    margin-bottom: 70px;
   }
 
+  .products-showcase,
+  .products-showcase-reverse {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 22px !important;
+    padding: 0 16px !important;
+    margin-top: 30px !important;
+  }
+
+  .products-showcase + .products-showcase {
+    margin-top: 60px !important;
+  }
+
+  .products-showcase .section-heading,
+  .products-showcase .products-carousel,
+  .products-showcase-copy,
+  .products-showcase-reverse .products-showcase-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .products-showcase .section-heading h2,
+  .products-side-title {
+    font-size: clamp(2.2rem, 10vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .products-carousel {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .products-slider {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 82% !important;
+    gap: 14px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    padding: 0 4px 10px !important;
+  }
+
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    scroll-snap-align: center;
+  }
+
+  .product-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: contain !important;
+    padding: 16px !important;
+    background: #fff !important;
+  }
+
+  .product-content {
+    padding: 16px 14px 18px !important;
+  }
+
+  .product-content h4 {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+  }
+
+  .product-content p {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .carousel-arrow,
+  .carousel-arrow-left,
+  .carousel-arrow-right {
+    display: none !important;
+  }
+}
+
+/* =========================
+   FIX FINAL HERO MOVIL
+========================= */
+@media (max-width: 768px) {
+  .hero-slider-section {
+    padding: 0 !important;
+  }
+
+  .hero-slide img {
+    width: 100vw !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
 }
