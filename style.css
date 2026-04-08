@@ -2328,13 +2328,10 @@ h2,
   font-family: 'Belleza', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 3px;
-
-  font-size: clamp(1.4rem, 2.5vw, 2rem); /* 🔥 más grande */
-
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
   text-align: center;
   margin-top: 24px;
-
-  color: #8b2c2c; /* opcional: elegante */
+  color: #8b2c2c;
 }
 
 /* =========================
@@ -2342,8 +2339,8 @@ h2,
 ========================= */
 @media (max-width: 768px) {
   .team-slide img {
-    height: auto !important; /* 🔥 rompe el recorte */
-    object-fit: contain !important; /* 🔥 muestra completa */
+    height: auto !important;
+    object-fit: contain !important;
   }
 }
 
@@ -2353,7 +2350,7 @@ h2,
 .section-benefits p,
 .section-ritual p,
 .section-products p {
-  font-size: 1.15rem; /* 🔥 antes 1.05 aprox */
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -2362,23 +2359,20 @@ h2,
 ========================= */
 .products-showcase,
 .products-showcase-reverse {
-  align-items: center; /* 🔥 centra vertical */
+  align-items: center;
 }
 
-/* texto */
 .products-showcase-copy {
-  max-width: 520px; /* 🔥 limita ancho (MUY IMPORTANTE) */
-  margin: 0 auto; /* 🔥 centra */
-  text-align: center; /* 🔥 centra texto */
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* títulos */
 .products-showcase-copy h3,
 .products-showcase-copy h4 {
   text-align: center;
 }
 
-/* párrafos */
 .products-showcase-copy p {
   text-align: center;
   margin: 0 auto;
@@ -2397,9 +2391,7 @@ h2,
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    
-    bottom: 20px; /* 👈 CLAVE: ajusta altura */
-    
+    bottom: 20px;
     padding: 10px 18px;
     font-size: 13px;
     max-width: 240px;
@@ -2413,7 +2405,6 @@ h2,
 ========================= */
 @media (max-width: 1024px) {
 
-  /* imágenes de la franja entre hero y beneficios */
   .hero-final-video,
   .hero-final img,
   .hero-final-media img,
@@ -2429,7 +2420,6 @@ h2,
     display: block !important;
   }
 
-  /* si el contenedor estaba recortando */
   .hero-final-media,
   .section-rutina,
   .rutina-box,
@@ -2456,38 +2446,47 @@ h2,
   .btn-primary {
     padding: 8px 14px !important;
     font-size: 11px !important;
-
     width: auto !important;
     max-width: fit-content !important;
-
     border-radius: 22px !important;
     text-align: center;
-
-    white-space: nowrap !important; /* 🔥 clave: una sola línea */
+    white-space: nowrap !important;
     display: inline-block !important;
   }
 
 }
 
 /* =========================
-   HERO BOTÓN FIX MÓVIL (COMPACTO)
+   RUTINA - AJUSTE SOLO MÓVIL
 ========================= */
 @media (max-width: 768px) {
-
-  .hero-video-btn .btn,
-  .hero-final-btn,
-  .btn-primary {
-    padding: 8px 14px !important;
-    font-size: 11px !important;
-
-    width: auto !important;
-    max-width: fit-content !important;
-
-    border-radius: 22px !important;
-    text-align: center;
-
-    white-space: nowrap !important; /* 🔥 clave: una sola línea */
-    display: inline-block !important;
+  .rutina-box {
+    position: relative;
   }
 
+  .rutina-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px !important;
+    padding: 10px 18px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+    width: auto !important;
+    max-width: 72% !important;
+    text-align: center !important;
+    white-space: normal !important;
+    border-radius: 999px !important;
+  }
+}
+
+/* =========================
+   BOTÓN BONO EN BELLEZA
+========================= */
+.bono-btn-overlay,
+.bono-btn-overlay .btn,
+.section-bono .btn {
+  font-family: 'Belleza', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
