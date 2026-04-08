@@ -1281,72 +1281,58 @@ video,
 }
 
 /* =========================
-   POPUP
+   POPUP CTA FIX
 ========================= */
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 9999;
-}
-
-.popup-overlay.hidden {
-  display: none;
-}
-
 .popup-box {
   position: relative;
-  width: 100%;
-  max-width: 700px;
-  background: transparent;
-  padding: 0;
-  text-align: center;
-  box-shadow: none;
-}
-
-.popup-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.85);
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  color: #425e54;
-  z-index: 10;
 }
 
 .popup-cta {
   position: absolute;
-  bottom: 90px;
-  left: 68%;
-  transform: translateX(-35%);
+  left: 50%;
+  bottom: 38px;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  display: inline-block;
+  width: auto;
+  max-width: 220px;
+  padding: 9px 14px;
+
   background: #425e54;
   color: #fff;
-  padding: 14px 22px;
-  border-radius: 30px;
+  border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  white-space: nowrap;
+
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  white-space: normal;
 }
 
+.popup-cta:hover {
+  transform: translateX(-50%) !important;
+}
+
+@media (max-width: 768px) {
+  .popup-cta {
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    max-width: 170px;
+    padding: 6px 10px;
+    font-size: 0.58rem;
+    line-height: 1.1;
+    white-space: normal;
+    border-radius: 999px;
+  }
+}
 /* =========================
    THANKS POPUP
 ========================= */
@@ -1455,7 +1441,7 @@ video,
 }
 
 /* =========================
-   RUTINA PERSONALIZADA
+   RUTINA BTN FIX
 ========================= */
 .rutina-box {
   position: relative;
@@ -1470,14 +1456,40 @@ video,
 .rutina-btn {
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 24px;
   transform: translateX(-50%);
-  z-index: 5;
-  transition: none !important;
+  z-index: 10;
+
+  display: inline-block;
+  width: auto;
+  max-width: 230px;
+  padding: 10px 16px;
+
+  text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+
+  border-radius: 999px;
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.rutina-btn.btn:hover {
+.rutina-btn:hover {
   transform: translateX(-50%) !important;
+}
+
+@media (max-width: 768px) {
+  .rutina-btn {
+    bottom: 14px !important;
+    max-width: 185px !important;
+    padding: 7px 10px !important;
+    font-size: 0.58rem !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+  }
 }
 
 /* =========================
