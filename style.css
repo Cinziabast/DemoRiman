@@ -2213,59 +2213,6 @@ h2,
   position: relative;
 }
 
-.popup-cta {
-  position: absolute;
-  left: 58%;
-  bottom: 40px; /* ⬇️ baja un poco */
-  transform: translateX(-10%);
-  z-index: 20;
-  display: inline-block;
-  width: auto;
-  max-width: 190px; /* ⬇️ más pequeño */
-  padding: 7px 12px; /* ⬇️ más compacto */
-  background: #425e54;
-  color: #fff;
-  border-radius: 999px;
-  text-decoration: none;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  font-family: 'Belleza', sans-serif !important;
-  font-size: 0.65rem; /* ⬇️ texto más fino */
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: normal;
-}
-
-.popup-cta:hover {
-  transform: translateX(-10%) !important;
-}
-
-@media (max-width: 768px) {
-  .popup-box {
-    max-width: 95%;
-  }
-
-  .popup-image {
-    border-radius: 16px;
-  }
-
-   .popup-close {
-  top: 8px;
-  right: 8px;
-  width: 34px;
-  height: 34px;
-  font-size: 1.4rem;
-   }
-   
-   .popup-cta {
-  left: 58%;
-  bottom: 30px;
-  transform: translateX(-10%);
-   }
-}
-
 /* =========================
    BONO BOTÓN MÁS GRANDE SOLO DESKTOP
 ========================= */
@@ -2385,5 +2332,37 @@ h2,
 
   .cookie-modal-box h3 {
     font-size: 1.7rem !important;
+  }
+}
+
+/* =========================
+   POPUP CTA DEFINITIVO
+========================= */
+.popup-cta {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45px;
+  z-index: 20;
+  display: inline-block;
+  max-width: 200px;
+  padding: 7px 10px;
+  background: #425e54;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .popup-cta {
+    left: 58%;
+    bottom: 30px;
+    transform: translateX(-10%);
   }
 }
