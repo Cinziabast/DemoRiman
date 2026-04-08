@@ -2204,3 +2204,121 @@ h2,
     object-position: center !important;
   }
 }
+
+/* =========================
+   POPUP
+========================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.popup-overlay.hidden {
+  display: none;
+}
+
+.popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  background: transparent;
+  padding: 0;
+  text-align: center;
+  box-shadow: none;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #425e54;
+  z-index: 10;
+}
+
+/* =========================
+   POPUP CTA FIX
+========================= */
+.popup-box {
+  position: relative;
+}
+
+.popup-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: inline-block;
+  width: auto;
+  max-width: 220px;
+  padding: 9px 14px;
+  background: #425e54;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.popup-cta:hover {
+  transform: translateX(-50%) !important;
+}
+
+@media (max-width: 768px) {
+  .popup-box {
+    max-width: 95%;
+  }
+
+  .popup-image {
+    border-radius: 16px;
+  }
+
+  .popup-close {
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
+
+  .popup-cta {
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    max-width: 145px;
+    padding: 5px 8px;
+    font-size: 0.5rem;
+    line-height: 1.05;
+    white-space: normal;
+    text-align: center;
+    border-radius: 999px;
+  }
+}
