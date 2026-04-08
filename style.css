@@ -2480,15 +2480,32 @@ h2,
   }
 }
 
-/* =========================
-   BOTÓN BONO EN BELLEZA
-========================= */
-.bono-btn-overlay,
-.bono-btn-overlay .btn,
-.section-bono .btn {
-  font-family: 'Belleza', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* CONTENEDOR BONO */
+.bono-image {
+  position: relative;
+}
+
+/* BOTÓN BONO */
+.bono-image .btn {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem; /* más pequeño */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  line-height: 1.1;
+
+  padding: 6px 14px; /* clave: reducir padding */
+  width: auto; /* MUY IMPORTANTE */
+  max-width: fit-content; /* evita que se estire */
+  white-space: nowrap;
+
+  border-radius: 999px;
+  text-align: center;
 }
 
 /* CENTRAR BOTÓN FORMULARIO */
