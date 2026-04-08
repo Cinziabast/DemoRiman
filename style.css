@@ -2215,9 +2215,9 @@ h2,
 
 .popup-cta {
   position: absolute;
-  left: 50%;
-  bottom: 38px;
-  transform: translateX(-50%);
+  left: 58%;
+  bottom: 56px;
+  transform: translateX(-10%);
   z-index: 20;
   display: inline-block;
   width: auto;
@@ -2239,7 +2239,7 @@ h2,
 }
 
 .popup-cta:hover {
-  transform: translateX(-50%) !important;
+  transform: translateX(-10%) !important;
 }
 
 @media (max-width: 768px) {
