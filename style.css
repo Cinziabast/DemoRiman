@@ -2384,3 +2384,25 @@ h2,
     transform: translateX(-25%) !important;
   }
 }
+
+/* =========================
+   EQUIPO - FIX IPAD / TABLET
+========================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .team-slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    display: block !important;
+  }
+
+  .team-slide {
+    height: auto !important;
+  }
+
+  .team-card-content {
+    margin-top: 12px;
+  }
+}
