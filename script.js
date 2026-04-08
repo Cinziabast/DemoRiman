@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================
+    /* =========================
      POPUP BIENVENIDA
   ========================= */
   const popup = document.getElementById("welcomePopup");
@@ -71,37 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================
-     CAMBIO DE IDIOMA
-  ========================= */
-  const langButtons = document.querySelectorAll(".lang-btn");
-  const translatableElements = document.querySelectorAll("[data-es][data-en]");
-
-  function setLanguage(lang) {
-    document.documentElement.lang = lang;
-    document.body.classList.toggle("english", lang === "en");
-
-    translatableElements.forEach((el) => {
-      const newText = el.getAttribute(`data-${lang}`);
-      if (newText) {
-        el.textContent = newText;
-      }
-    });
-
-      langButtons.forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  updatePopupContent(lang);
-  openPopup(lang);
-}
-
-langButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    setLanguage(btn.dataset.lang);
-  });
-});
-  
-  /* =========================
      HERO SLIDER + IDIOMA
   ========================= */
   const heroImages = {
@@ -145,67 +114,54 @@ langButtons.forEach((btn) => {
       const href = link.getAttribute("href");
 
       if (document.body.classList.contains("english")) {
-        if (href === "aviso-legal.html") {
-          link.setAttribute("href", "legal-notice.html");
-        }
-        if (href === "privacidad.html") {
-          link.setAttribute("href", "privacy-policy.html");
-        }
-        if (href === "cookies.html") {
-          link.setAttribute("href", "cookies-policy.html");
-        }
+        if (href === "aviso-legal.html") link.setAttribute("href", "legal-notice.html");
+        if (href === "privacidad.html") link.setAttribute("href", "privacy-policy.html");
+        if (href === "cookies.html") link.setAttribute("href", "cookies-policy.html");
       } else {
-        if (href === "legal-notice.html") {
-          link.setAttribute("href", "aviso-legal.html");
-        }
-        if (href === "privacy-policy.html") {
-          link.setAttribute("href", "privacidad.html");
-        }
-        if (href === "cookies-policy.html") {
-          link.setAttribute("href", "cookies.html");
-        }
+        if (href === "legal-notice.html") link.setAttribute("href", "aviso-legal.html");
+        if (href === "privacy-policy.html") link.setAttribute("href", "privacidad.html");
+        if (href === "cookies-policy.html") link.setAttribute("href", "cookies.html");
       }
     });
   }
 
- function setLanguage(lang) {
-  currentHeroLang = lang;
-  currentHeroIndex = 0;
+  function setLanguage(lang) {
+    currentHeroLang = lang;
+    currentHeroIndex = 0;
 
-  document.documentElement.lang = lang;
-  document.body.classList.toggle("english", lang === "en");
+    document.documentElement.lang = lang;
+    document.body.classList.toggle("english", lang === "en");
 
-  translatableElements.forEach((el) => {
-    const newText = el.getAttribute(`data-${lang}`);
-    if (newText) {
-      el.textContent = newText;
-    }
-  });
+    translatableElements.forEach((el) => {
+      const newText = el.getAttribute(`data-${lang}`);
+      if (newText) {
+        el.textContent = newText;
+      }
+    });
 
-  const placeholderFields = document.querySelectorAll("[data-placeholder-es][data-placeholder-en]");
-
-  placeholderFields.forEach((field) => {
-    field.placeholder =
-      lang === "en"
+    const placeholderFields = document.querySelectorAll("[data-placeholder-es][data-placeholder-en]");
+    placeholderFields.forEach((field) => {
+      field.placeholder = lang === "en"
         ? field.dataset.placeholderEn
         : field.dataset.placeholderEs;
-  });
+    });
+
+    langButtons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    updateHeroImage();
+    startHeroSlider();
+    updateLegalLinks();
+    updatePopupContent(lang);
+    openPopup(lang);
+  }
 
   langButtons.forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
+    btn.addEventListener("click", () => {
+      setLanguage(btn.dataset.lang);
+    });
   });
-
-  updateHeroImage();
-  startHeroSlider();
-  updateLegalLinks();
-  openPopup(lang);
-}
-
-langButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    setLanguage(btn.dataset.lang);
-  });
-});
   
   /* =========================
      CARRUSEL PRODUCTOS
@@ -492,6 +448,5 @@ if (saveCookieSettings) {
      INICIO
   ========================= */
   setLanguage("es");
-  openPopup("es");
-
+  
 });
