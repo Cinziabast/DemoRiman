@@ -2372,7 +2372,7 @@ h2,
 ========================= */
 @media (min-width: 769px) {
   .popup-cta {
-    left: 65% !important;
+    left: 69% !important;
     bottom: 70px !important;
     transform: translateX(-25%) !important;
     max-width: 210px !important;
