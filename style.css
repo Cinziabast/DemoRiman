@@ -1458,20 +1458,6 @@ video,
     grid-template-columns: 1fr;
   }
 
-  .section-bono .bono-btn-overlay {
-    bottom: 7%;
-    padding: 6px 12px;
-    font-size: 10px;
-    max-width: 62%;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .section-bono .bono-top-text h2 {
-    font-size: 32px;
-    line-height: 1.15;
-  }
-
   .team-carousel {
     display: block;
     position: relative;
@@ -2387,19 +2373,6 @@ h2,
     position: relative;
   }
 
-  .bono-btn-overlay {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    padding: 10px 18px;
-    font-size: 13px;
-    max-width: 240px;
-    text-align: center;
-  }
-
-}
-
 /* =========================
    HERO / CTA IMAGES FIX TABLET-ANDROID
 ========================= */
@@ -2486,11 +2459,6 @@ h2,
 }
 
 /* BOTÓN BONO */
-.bono-image .btn {
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
 
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.75rem; /* más pequeño */
@@ -2515,10 +2483,56 @@ h2,
   margin: 20px auto 0 auto;
 }
 
+/* =========================
+   BONO BOTÓN DEFINITIVO
+========================= */
+.bono-image {
+  position: relative;
+}
+
+.bono-image .btn,
+.bono-image .bono-btn,
+.bono-image .bono-btn-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  display: inline-block;
+  width: auto;
+  max-width: 58%;
+  padding: 6px 12px;
+
+  background: var(--green);
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(66, 94, 84, 0.28);
+
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: none;
+
+  white-space: normal;
+  text-align: center;
+}
+
+.bono-image .btn:hover,
+.bono-image .bono-btn:hover,
+.bono-image .bono-btn-overlay:hover {
+  transform: translateX(-50%);
+}
+
 @media (max-width: 768px) {
-  .bono-image .btn {
+  .bono-image .btn,
+  .bono-image .bono-btn,
+  .bono-image .bono-btn-overlay {
     bottom: 10px;
-    font-size: 0.7rem;
-    padding: 5px 12px;
+    max-width: 56%;
+    padding: 5px 10px;
+    font-size: 0.66rem;
   }
 }
