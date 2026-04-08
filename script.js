@@ -87,22 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    langButtons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
-    });
-
-    updatePopupContent(lang);
-    openPopup(lang);
-  }
-
-  langButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      setLanguage(btn.dataset.lang);
-    });
+      langButtons.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
   });
 
-});
+  updatePopupContent(lang);
+  openPopup(lang);
+}
 
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setLanguage(btn.dataset.lang);
+  });
+});
+  
   /* =========================
      HERO SLIDER + IDIOMA
   ========================= */
