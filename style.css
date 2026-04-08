@@ -2536,3 +2536,27 @@ h2,
     font-size: 0.66rem;
   }
 }
+
+/* =========================
+   FIX BOTÓN BONO MÓVIL
+========================= */
+@media (max-width: 768px) {
+
+  .section-bono .btn,
+  .bono-image .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+
+    width: auto !important;
+    max-width: 85% !important;
+
+    padding: 8px 16px !important;
+    font-size: 0.75rem !important;
+
+    display: inline-block !important;
+    white-space: nowrap;
+  }
+
+}
