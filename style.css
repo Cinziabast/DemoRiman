@@ -2527,3 +2527,36 @@ h2,
     z-index: 99999 !important;
   }
 }
+
+/* =========================
+   FIX DEFINITIVO POPUP CLOSE (MOVIL)
+========================= */
+@media (max-width: 768px) {
+  .popup-box {
+    position: relative !important;
+  }
+
+  .popup-close {
+    position: absolute !important;
+
+    top: -12px !important;
+    right: -12px !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: 38px !important;
+    height: 38px !important;
+
+    font-size: 20px !important;
+    line-height: 1 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+    background: rgba(255,255,255,0.95) !important;
+
+    z-index: 999999 !important;
+  }
+}
