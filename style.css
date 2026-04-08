@@ -2336,3 +2336,19 @@ h2,
     border-radius: 999px;
   }
 }
+
+/* =========================
+   BONO BOTÓN MÁS GRANDE SOLO DESKTOP
+========================= */
+@media (min-width: 1025px) {
+
+  .bono-image .btn,
+  .bono-image .bono-btn,
+  .bono-image .bono-btn-overlay {
+    
+    padding: 10px 20px;   /* ⬅️ un poco más grande */
+    font-size: 0.82rem;   /* ⬅️ ligeramente mayor */
+    max-width: 62%;       /* ⬅️ un pelín más ancho */
+  }
+
+}
