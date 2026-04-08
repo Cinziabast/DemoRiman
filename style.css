@@ -1282,27 +1282,35 @@ video,
 
 .popup-cta {
   position: absolute;
-  left: 68%;
-  bottom: 38px;
+
+  left: 72%;              /* 👉 más a la derecha */
+  bottom: 52px;           /* 👉 más arriba */
+
   transform: translateX(-35%);
   z-index: 20;
+
   display: inline-block;
   width: auto;
   max-width: 220px;
   padding: 9px 14px;
+
   background: #425e54;
   color: #fff;
   border-radius: 999px;
   text-decoration: none;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+
   font-family: 'Belleza', sans-serif !important;
   font-size: 0.72rem;
-  font-weight: 400;
-  line-height: 1.15;
   letter-spacing: 1px;
   text-transform: uppercase;
-  white-space: normal;
+
+  white-space: nowrap;
+}
+
+.popup-cta:hover {
+  transform: translateX(-35%) !important;
 }
 
 .popup-cta:hover {
