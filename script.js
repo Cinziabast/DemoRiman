@@ -478,10 +478,101 @@ if (cookieModal) {
     }
   });
 }
-    
-  /* =========================
+
+/* =========================
+   COOKIE BANNER FORZADO
+========================= */
+const cookieBanner = document.getElementById("cookieBanner");
+const cookieModal = document.getElementById("cookieModal");
+const acceptCookies = document.getElementById("acceptCookies");
+const rejectCookies = document.getElementById("rejectCookies");
+const configCookies = document.getElementById("configCookies");
+const closeCookieModal = document.getElementById("closeCookieModal");
+const saveCookieSettings = document.getElementById("saveCookieSettings");
+const analyticsCookies = document.getElementById("analyticsCookies");
+
+function getCookieConsent() {
+  const saved = localStorage.getItem("cookieConsent");
+  if (!saved) return null;
+  try {
+    return JSON.parse(saved);
+  } catch (e) {
+    return null;
+  }
+}
+
+const savedCookieConsent = getCookieConsent();
+
+if (!savedCookieConsent && cookieBanner) {
+  cookieBanner.classList.remove("hidden");
+}
+
+if (savedCookieConsent && analyticsCookies) {
+  analyticsCookies.checked = !!savedCookieConsent.analytics;
+}
+
+if (acceptCookies) {
+  acceptCookies.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: true
+    }));
+    if (cookieBanner) cookieBanner.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
+  });
+}
+
+if (rejectCookies) {
+  rejectCookies.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: false
+    }));
+    if (cookieBanner) cookieBanner.classList.add("hidden");
+    if (cookieModal) cookieModal.classList.add("hidden");
+  });
+}
+
+if (configCookies) {
+  configCookies.addEventListener("click", () => {
+    const currentConsent = getCookieConsent();
+    if (analyticsCookies) {
+      analyticsCookies.checked = currentConsent ? !!currentConsent.analytics : false;
+    }
+    if (cookieModal) cookieModal.classList.remove("hidden");
+  });
+}
+
+if (closeCookieModal) {
+  closeCookieModal.addEventListener("click", () => {
+    if (cookieModal) cookieModal.classList.add("hidden");
+  });
+}
+
+if (saveCookieSettings) {
+  saveCookieSettings.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", JSON.stringify({
+      necessary: true,
+      analytics: analyticsCookies ? analyticsCookies.checked : false
+    }));
+    if (cookieModal) cookieModal.classList.add("hidden");
+    if (cookieBanner) cookieBanner.classList.add("hidden");
+  });
+}
+
+if (cookieModal) {
+  cookieModal.addEventListener("click", (e) => {
+    if (e.target === cookieModal) {
+      cookieModal.classList.add("hidden");
+    }
+  });
+}
+
+     /* =========================
      INICIO
   ========================= */
   setLanguage("es");
-  
+  openPopup("es");
+
 });
+                        
