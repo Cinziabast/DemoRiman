@@ -2484,3 +2484,22 @@ h2,
     padding: 16px 28px;
   }
 }
+
+@media (max-width: 1024px) {
+  .popup-cta {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 40px !important;
+    width: auto !important;
+    max-width: 220px !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero img {
+    object-fit: contain !important;
+    width: 100%;
+    height: auto;
+  }
+}
